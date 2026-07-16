@@ -329,7 +329,11 @@ h3 {
 
 .contact { padding-block: 120px; border-top: 1px solid var(--line); text-align: center; }
 .contact h2 { max-width: 820px; margin: 0 auto 36px; }
+.contact-actions { justify-content: center; }
 .site-footer { display: flex; justify-content: space-between; padding-block: 28px 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.site-footer a { color: inherit; text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
+.site-footer a:hover { color: var(--text); }
+.footer-links { display: flex; gap: 22px; }
 
 /* Case studies */
 .case-hero { padding-block: 72px 66px; }
