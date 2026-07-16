@@ -386,7 +386,6 @@ h3 {
 .video-meta a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: 4px; }
 .case-cover { margin-bottom: 120px; }
 .case-cover img { width: 100%; max-height: 720px; border-radius: 22px; object-fit: cover; }
-.project-cover { margin-bottom: 72px; }
 figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; }
 .case-section { padding-block: 110px; border-top: 1px solid var(--line); }
 .case-section.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; }
