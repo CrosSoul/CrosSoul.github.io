@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ray Zheng — level designer focused on readable, interconnected spaces and systemic gameplay.">
+  <title>Ray Zheng — Level Designer</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Ray Zheng, home">
+      <span class="brand-mark">RZ</span>
+      <span>Ray Zheng</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+    <nav class="site-nav" id="site-nav" data-nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="mailto:zz2916@nyu.edu">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Level design portfolio · New York</p>
+        <h1>I design spaces that make players <em>read, choose, and remember.</em></h1>
+        <p class="hero-lede">I’m Ray Zheng, a level designer working in Unreal Engine. My work explores interconnected layouts, spatial guidance, encounter pacing, and systemic player choice.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="#work">View selected work</a>
+          <a class="button button-quiet" href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a>
+        </div>
+      </div>
+
+      <div class="route-panel reveal" aria-label="Abstract level route diagram">
+        <div class="route-grid"></div>
+        <span class="route-label route-label-a">Entry</span>
+        <span class="route-label route-label-b">Choice</span>
+        <span class="route-label route-label-c">Loopback</span>
+        <span class="route-label route-label-d">Goal</span>
+        <span class="route-node node-a"></span>
+        <span class="route-node node-b"></span>
+        <span class="route-node node-c"></span>
+        <span class="route-node node-d"></span>
+        <svg class="route-lines" viewBox="0 0 600 460" role="img" aria-label="A branching route reconnecting at the goal">
+          <path d="M70 345 C150 345 155 248 250 248 S350 112 455 112" />
+          <path d="M250 248 C330 280 335 350 450 350 C515 350 535 280 505 220 C490 190 470 155 455 112" />
+        </svg>
+        <p class="route-caption">Readable choices.<br>Meaningful returns.</p>
+      </div>
+    </section>
+
+    <section class="work section-shell" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Two ways of studying space: building it and breaking it down.</h2>
+      </div>
+
+      <article class="project-card project-card-featured reveal">
+        <a class="project-visual demo-visual" href="projects/original-level.html" aria-label="View original UE5 level design project">
+          <span class="visual-status">Video processing · 1440p60</span>
+          <div class="demo-plan" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <span class="visual-index">01</span>
+        </a>
+        <div class="project-card-copy">
+          <p class="project-kicker">Original level · Unreal Engine 5</p>
+          <h3><a href="projects/original-level.html">Interconnected Action Level</a></h3>
+          <p>A third-person whitebox level built to demonstrate layered traversal, spatial reorientation, combat pacing, and shortcut-driven progression.</p>
+          <ul class="tag-list" aria-label="Project tags">
+            <li>Level blockout</li>
+            <li>Blueprint scripting</li>
+            <li>Player guidance</li>
+          </ul>
+          <a class="text-link" href="projects/original-level.html">View case study <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <a class="project-visual image-visual" href="projects/kcd2-analysis.html" aria-label="View Kingdom Come Deliverance II level analysis">
+          <img src="assets/images/kcd2-castle.webp" alt="Aerial view of Trosky Castle from Kingdom Come: Deliverance II">
+          <span class="visual-index">02</span>
+        </a>
+        <div class="project-card-copy">
+          <p class="project-kicker">Level analysis · Kingdom Come: Deliverance II</p>
+          <h3><a href="projects/kcd2-analysis.html">For Whom the Bell Tolls</a></h3>
+          <p>A systems-focused breakdown of a timed castle infiltration: spatial zoning, lawful and emergent routes, diegetic pressure, AI behavior, and actionable redesign proposals.</p>
+          <ul class="tag-list" aria-label="Project tags">
+            <li>Spatial analysis</li>
+            <li>Immersive sim</li>
+            <li>Post-mortem</li>
+          </ul>
+          <a class="text-link" href="projects/kcd2-analysis.html">Read analysis <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="about section-shell" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">About</p>
+        <h2>Design through observation, iteration, and player intent.</h2>
+      </div>
+      <div class="about-grid reveal">
+        <p>I’m an NYU undergraduate transitioning my analytical background into level design. I build playable spaces in Unreal Engine and study shipped levels to understand how layout, rules, AI, and presentation shape player decisions.</p>
+        <dl class="fact-list">
+          <div><dt>Focus</dt><dd>Level Design</dd></div>
+          <div><dt>Tools</dt><dd>Unreal Engine 5 · Blueprints</dd></div>
+          <div><dt>Location</dt><dd>New York, NY</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact section-shell reveal">
+      <p class="eyebrow">Let’s talk</p>
+      <h2>Interested in how I think about playable space?</h2>
+      <a class="button button-primary" href="mailto:zz2916@nyu.edu">Email Ray</a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <span>© <span data-year></span> Ray Zheng</span>
+    <span>Level design portfolio</span>
+  </footer>
+</body>
+</html>
