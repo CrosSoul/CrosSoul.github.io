@@ -110,12 +110,52 @@
     <section class="case-section section-shell">
       <div class="section-heading reveal">
         <p class="eyebrow">04 · Design breakdown</p>
-        <h2>Key moments to document next.</h2>
+        <h2>Iteration made visible.</h2>
       </div>
-      <div class="breakdown-list">
-        <article class="breakdown reveal"><div class="media-slot">Opening route media</div><div><span>01</span><h3>Establishing direction</h3><p>How the opening composition communicates the first objective and frames later destinations.</p></div></article>
-        <article class="breakdown reveal"><div class="media-slot">Shortcut media</div><div><span>02</span><h3>Elevator loopback</h3><p>How call levers, traversal state, and two floors turn an interaction into spatial progression.</p></div></article>
-        <article class="breakdown reveal"><div class="media-slot">Encounter media</div><div><span>03</span><h3>Risk and reward placement</h3><p>How enemy positions, pickups, and optional spaces create deliberate changes in pace.</p></div></article>
+      <div class="case-gallery">
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>01</span><h3>Visual guidance</h3><p>Landmarks, elevation, framed openings, and contrasting interaction surfaces keep the next destination readable without reducing the space to a corridor.</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="Visual guidance image gallery">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><img src="../assets/images/demo-guide-start.webp" alt="Opening view toward the elevated structure and nearby enemies" loading="lazy"><figcaption>The opening view establishes both immediate danger and the elevated structure that anchors the route.</figcaption></figure>
+              <figure class="carousel-slide"><img src="../assets/images/demo-guide-mid.webp" alt="Mid-route street with repeated landmarks and highlighted interaction surfaces" loading="lazy"><figcaption>Repeated landmarks and orange interaction surfaces help the player reorient midway through the level.</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>02</span><h3>Layered space and loopback</h3><p>The church turns vertical traversal into a change of perspective, while the elevator converts that spatial knowledge into a useful return route.</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="Layered space image gallery">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><img src="../assets/images/demo-church-interior.webp" alt="Whitebox church interior with overhead traversal structures" loading="lazy"><figcaption>The church interior layers floor-level combat with overhead traversal and long sightlines.</figcaption></figure>
+              <figure class="carousel-slide"><img src="../assets/images/demo-elevator.webp" alt="Whitebox elevator room and interaction point" loading="lazy"><figcaption>The elevator room provides a functional shortcut between floors rather than a purely decorative loopback.</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>03</span><h3>Scale and camera iteration</h3><p>Playtesting exposed places where terrain and narrow circulation interfered with the third-person camera. Clearances were adjusted to keep movement and combat readable.</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="Scale and camera iteration image gallery">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><img src="../assets/images/demo-camera-collision.webp" alt="Camera collision issue during playtesting" loading="lazy"><figcaption>Playtest evidence: terrain pushes the camera into an obstructed view. Animation source pending.</figcaption></figure>
+              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">Before</span><img src="../assets/images/demo-size-before.webp" alt="Stair landing before scale adjustment" loading="lazy"></div><div><span class="comparison-label">After</span><img src="../assets/images/demo-size-after.webp" alt="Stair landing after scale adjustment" loading="lazy"></div></div><figcaption>Wider circulation and revised clearances give the camera more reliable space around the stair landing.</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>04</span><h3>Lighting pass</h3><p>Window light alone left critical circulation too dark. Selective fill lighting improves path readability while preserving contrast and atmosphere.</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="Lighting comparison image gallery">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">Before</span><img src="../assets/images/demo-light-before-1.webp" alt="Interior corridor before fill lighting" loading="lazy"></div><div><span class="comparison-label">After</span><img src="../assets/images/demo-light-after-1.webp" alt="Interior corridor after fill lighting" loading="lazy"></div></div><figcaption>Local fill separates the corridor walls and junction from the surrounding darkness.</figcaption></figure>
+              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">Before</span><img src="../assets/images/demo-light-before-2.webp" alt="Merchant area before fill lighting" loading="lazy"></div><div><span class="comparison-label">After</span><img src="../assets/images/demo-light-after-2.webp" alt="Merchant area after fill lighting" loading="lazy"></div></div><figcaption>The revised pass clarifies the merchant platform, stairs, and lower route as distinct navigable spaces.</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+          </div>
+        </article>
       </div>
     </section>
 

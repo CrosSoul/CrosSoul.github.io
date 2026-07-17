@@ -99,11 +99,51 @@
     </section>
 
     <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">04 · 设计拆解</p><h2>接下来重点补充的三个设计案例。</h2></div>
-      <div class="breakdown-list">
-        <article class="breakdown reveal"><div class="media-slot">开场引导素材</div><div><span>01</span><h3>建立方向感</h3><p>开场构图如何传达第一个目标，并提前展示之后会到达的区域。</p></div></article>
-        <article class="breakdown reveal"><div class="media-slot">电梯捷径素材</div><div><span>02</span><h3>电梯回环</h3><p>上下层拉杆、电梯状态与路线关系如何共同构成空间进度。</p></div></article>
-        <article class="breakdown reveal"><div class="media-slot">战斗布置素材</div><div><span>03</span><h3>风险与奖励</h3><p>通过敌人、拾取物和可选区域有意识地改变探索与战斗节奏。</p></div></article>
+      <div class="section-heading reveal"><p class="eyebrow">04 · 设计拆解</p><h2>把迭代过程呈现出来。</h2></div>
+      <div class="case-gallery">
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>01</span><h3>视觉引导</h3><p>利用地标、高差、框景和高对比度的互动表面持续提示下一步方向，同时避免把探索空间压缩成单向走廊。</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="视觉引导图片组">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><img src="../../assets/images/demo-guide-start.webp" alt="开场视角中的高处结构与附近敌人" loading="lazy"><figcaption>开场同时呈现眼前威胁和远处的高层结构，让玩家对路线形成初步预期。</figcaption></figure>
+              <figure class="carousel-slide"><img src="../../assets/images/demo-guide-mid.webp" alt="关卡中段的重复地标与高亮互动表面" loading="lazy"><figcaption>中段继续复用地标，并用橙色互动表面帮助玩家重新确认位置与方向。</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>02</span><h3>立体空间与捷径</h3><p>教堂用垂直路线改变玩家观察同一空间的角度，电梯则把这份空间认知转化为真正缩短回程的功能性捷径。</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="立体空间图片组">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><img src="../../assets/images/demo-church-interior.webp" alt="包含高处路线的白盒教堂内部" loading="lazy"><figcaption>教堂内部将地面战斗、高处通路和长距离视线叠加在同一空间中。</figcaption></figure>
+              <figure class="carousel-slide"><img src="../../assets/images/demo-elevator.webp" alt="白盒电梯房与互动点" loading="lazy"><figcaption>电梯连接上下层路线，让回环不仅是视觉上的重访，也能实际压缩移动时间。</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>03</span><h3>尺度与相机迭代</h3><p>测试发现部分地形与狭窄通道会干扰第三人称相机。随后通过调整净空和通行尺度，让移动与战斗画面保持可读。</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="尺度与相机迭代图片组">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><img src="../../assets/images/demo-camera-collision.webp" alt="测试中出现的相机碰撞问题" loading="lazy"><figcaption>测试记录：地形将相机挤入遮挡视角。动画源文件待补。</figcaption></figure>
+              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">调整前</span><img src="../../assets/images/demo-size-before.webp" alt="尺度调整前的楼梯平台" loading="lazy"></div><div><span class="comparison-label">调整后</span><img src="../../assets/images/demo-size-after.webp" alt="尺度调整后的楼梯平台" loading="lazy"></div></div><figcaption>加宽通行空间并重新处理净空后，相机在楼梯平台周围拥有更稳定的活动范围。</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
+          </div>
+        </article>
+
+        <article class="gallery-card reveal">
+          <div class="gallery-card-head"><span>04</span><h3>室内补光迭代</h3><p>仅依赖窗口光时，关键通路容易淹没在黑暗中。加入有选择的补光后，在保留氛围和明暗层次的同时提升了路线辨识度。</p></div>
+          <div class="carousel" data-carousel tabindex="0" aria-label="室内补光对比图片组">
+            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
+              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">补光前</span><img src="../../assets/images/demo-light-before-1.webp" alt="补光前的室内走廊" loading="lazy"></div><div><span class="comparison-label">补光后</span><img src="../../assets/images/demo-light-after-1.webp" alt="补光后的室内走廊" loading="lazy"></div></div><figcaption>局部补光将走廊墙体和转折处从大面积黑暗中分离出来。</figcaption></figure>
+              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">补光前</span><img src="../../assets/images/demo-light-before-2.webp" alt="补光前的商人区域" loading="lazy"></div><div><span class="comparison-label">补光后</span><img src="../../assets/images/demo-light-after-2.webp" alt="补光后的商人区域" loading="lazy"></div></div><figcaption>调整后的光照让商人平台、楼梯和下层路线成为清晰可区分的通行空间。</figcaption></figure>
+            </div></div>
+            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
+          </div>
+        </article>
       </div>
     </section>
 
