@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A data-informed study led by Ray Zheng on how Elden Ring's open-world structure made uncompromising difficulty more approachable.">
+  <title>Elden Ring Research — Ray Zheng</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="../index.html"><span class="brand-mark">RZ</span><span>Ray Zheng</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+    <nav class="site-nav" id="site-nav" data-nav>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="https://www.linkedin.com/in/ray-zerui-zheng-449203217/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:zz2916@nyu.edu">Contact</a>
+      <a class="language-link" href="../zh/projects/elden-ring-research.html" lang="zh-CN">中文</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="case-hero section-shell">
+      <a class="back-link" href="../index.html#work">← Selected work</a>
+      <p class="eyebrow reveal">Additional research · Data analysis</p>
+      <h1 class="reveal">An Analysis of Elden Ring’s Mainstream Success</h1>
+      <p class="case-intro reveal">A data-informed study of how open-world structure turns fixed difficulty gates into player-directed preparation, exploration, and return.</p>
+      <dl class="project-meta reveal">
+        <div><dt>Role</dt><dd>Research Lead</dd></div>
+        <div><dt>Format</dt><dd>Academic Group Study</dd></div>
+        <div><dt>Tools</dt><dd>RStudio · Public Data</dd></div>
+        <div><dt>Focus</dt><dd>Player Agency & Difficulty</dd></div>
+      </dl>
+    </header>
+
+    <section class="case-section section-shell two-column">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 · Research question</p>
+        <h2>Why did an uncompromisingly difficult game reach a mainstream audience?</h2>
+      </div>
+      <div class="prose reveal">
+        <p>The study begins with an apparent market contradiction: difficult action RPGs generally reach smaller audiences, yet Elden Ring became both one of the hardest and one of the best-selling games in its comparison set.</p>
+        <p>Its central argument is structural. Elden Ring does not make individual encounters easy. Instead, the open world lets players postpone a fixed obstacle, choose another route, gather resources, improve their build, and return on their own terms.</p>
+        <p>Difficulty remains intact, but failure is less likely to become a complete progression dead end.</p>
+      </div>
+    </section>
+
+    <section class="case-section section-shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 · Market pattern</p>
+        <h2>A visible outlier in difficulty and sales.</h2>
+      </div>
+      <div class="research-study-grid reveal">
+        <figure class="research-chart">
+          <a href="../assets/images/elden-ring-difficulty-sales.webp" target="_blank" rel="noopener" aria-label="Open the full-size difficulty and sales chart">
+            <img src="../assets/images/elden-ring-difficulty-sales.webp" alt="Scatter plot comparing community difficulty ratings and sales of modern PC action RPGs, with Elden Ring highlighted as an outlier">
+          </a>
+          <figcaption>Community difficulty ratings plotted against publicly reported or estimated sales for comparable modern PC action RPGs.</figcaption>
+        </figure>
+        <aside class="research-insight">
+          <p class="project-kicker">Interpretation</p>
+          <h3>Difficulty alone does not explain the result.</h3>
+          <p>Other demanding FromSoftware titles achieved strong but substantially smaller sales. Elden Ring’s position suggests that the surrounding progression structure changed how a broader audience experienced the same underlying design philosophy.</p>
+          <p>The chart establishes the anomaly; it does not by itself prove that open-world structure caused the sales outcome.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="case-section section-shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 · Progression behavior</p>
+        <h2>Trophy distributions reveal a shift in player priorities.</h2>
+      </div>
+      <div class="research-chart-pair reveal" aria-label="Trophy distribution comparison">
+        <figure class="research-chart">
+          <a href="../assets/images/dark-souls-3-trophy-distribution.webp" target="_blank" rel="noopener" aria-label="Open the full-size Dark Souls III trophy distribution chart">
+            <img src="../assets/images/dark-souls-3-trophy-distribution.webp" alt="Distribution of Dark Souls III trophy rarity highlighting maximum weapon reinforcement and a late story milestone" loading="lazy">
+          </a>
+          <figcaption>Dark Souls III: maximum weapon reinforcement sits below the selected story milestone within its own trophy distribution.</figcaption>
+        </figure>
+        <figure class="research-chart">
+          <a href="../assets/images/elden-ring-trophy-distribution.webp" target="_blank" rel="noopener" aria-label="Open the full-size Elden Ring trophy distribution chart">
+            <img src="../assets/images/elden-ring-trophy-distribution.webp" alt="Distribution of Elden Ring trophy rarity highlighting maximum weapon reinforcement and a mid-to-late story milestone" loading="lazy">
+          </a>
+          <figcaption>Elden Ring reverses that relationship, consistent with players prioritizing self-directed preparation before mandatory progression.</figcaption>
+        </figure>
+      </div>
+      <div class="research-table-card reveal">
+        <p class="research-table-title">Relative position within each game’s complete trophy distribution</p>
+        <div class="research-table-scroll">
+          <table>
+            <thead><tr><th>Game</th><th>Maximum weapon trophy</th><th>Selected story milestone</th></tr></thead>
+            <tbody>
+              <tr><td>Dark Souls III</td><td>44th percentile</td><td>51st percentile</td></tr>
+              <tr><td>Elden Ring</td><td>69th percentile</td><td>64th percentile</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="research-note">Percentiles normalize each trophy against the distribution of its own game, avoiding a direct comparison between two achievement systems with different overall completion patterns.</p>
+      </div>
+    </section>
+
+    <section class="case-section section-shell two-column">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 · Contribution & limits</p>
+        <h2>Research-led design analysis, presented with appropriate limits.</h2>
+      </div>
+      <div class="prose reveal">
+        <p>I led the research design, built the datasets, conducted the comparisons, created the RStudio visualizations, and developed the central argument and overall structure. Other group members contributed portions of the writing within the established outline.</p>
+        <p>The study combines public sales reports and estimates, community difficulty ratings, and PlayStation trophy data. These sources are useful for exploratory analysis, but each carries limitations in completeness, subjectivity, or cross-game comparability.</p>
+        <p>The observed patterns support a design interpretation: player-controlled routing can make high difficulty more approachable without removing the challenge itself. They are not presented as proof that one design decision alone caused Elden Ring’s commercial success.</p>
+      </div>
+    </section>
+
+    <section class="next-project section-shell reveal">
+      <p class="eyebrow">Featured project</p>
+      <a href="original-level.html"><span>Original level</span><strong>ARPG Level Prototyping Showcase</strong><span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><span>© <span data-year></span> Ray Zheng</span><span class="footer-links"><a href="https://www.linkedin.com/in/ray-zerui-zheng-449203217/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a></span></footer>
+</body>
+</html>
