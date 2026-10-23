@@ -1,140 +1,73 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A data-informed study led by Ray Zheng on how Elden Ring's open-world level design reframes difficulty through player choice, exploration, and preparation.">
-  <title>How Open-World Level Design Reframes Difficulty — Ray Zheng</title>
-  <link rel="stylesheet" href="../assets/styles.css">
-  <script src="../assets/site.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" data-header>
-    <a class="brand" href="../index.html"><span class="brand-mark">RZ</span><span>Ray Zheng</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
-    <nav class="site-nav" id="site-nav" data-nav>
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#about">About</a>
-      <a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:zz2916@nyu.edu">Contact</a>
-      <a class="language-link" href="../zh/projects/elden-ring-research.html" lang="zh-CN">中文</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <header class="case-hero section-shell">
-      <a class="back-link" href="../index.html#work">← Selected work</a>
-      <p class="eyebrow reveal">Additional research · Data analysis</p>
-      <h1 class="reveal">How Open-World Level Design Reframes Difficulty</h1>
-      <p class="case-intro reveal">A data-informed study of how Elden Ring’s open-world structure turns fixed difficulty gates into player-directed preparation, exploration, and return.</p>
-      <dl class="project-meta reveal">
-        <div><dt>Role</dt><dd>Research Lead</dd></div>
-        <div><dt>Format</dt><dd>Academic Group Study</dd></div>
-        <div><dt>Tools</dt><dd>RStudio · Public Data</dd></div>
-        <div><dt>Focus</dt><dd>Player Agency & Difficulty</dd></div>
-      </dl>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A data-informed study led by Ray Zheng on how Elden Ring&#x27;s open-world level design reframes difficulty through player choice, exploration, and preparation."><meta name="theme-color" content="#151a1d"><title>Open Worlds & Difficulty — Ray Zheng</title><link rel="canonical" href="https://crossoul.github.io/projects/elden-ring-research.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/design.css"><script src="../assets/design.js" defer></script><meta name="color-scheme" content="dark"></head>
+  <body class="en case-page case-elden-ring-research">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="brand" href="../index.html" aria-label="Ray Zheng — Home"><span class="brand-mark">RZ<span>.</span></span><span class="brand-name">Ray Zheng<small>LEVEL DESIGN</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="Main navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="lang-link" href="../zh/projects/elden-ring-research.html" lang="zh-CN">中文 <span aria-hidden="true">↗</span></a></nav>
     </header>
-
-    <section class="case-section section-shell two-column">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 · Research question</p>
-        <h2>Why did an uncompromisingly difficult game reach a mainstream audience?</h2>
-      </div>
-      <div class="prose reveal">
-        <p>The study begins with an apparent market contradiction: difficult action RPGs generally reach smaller audiences, yet Elden Ring became both one of the hardest and one of the best-selling games in its comparison set.</p>
-        <p>Its central argument is structural. Elden Ring does not make individual encounters easy. Instead, the open world lets players postpone a fixed obstacle, choose another route, gather resources, improve their build, and return on their own terms.</p>
-        <p>Difficulty remains intact, but failure is less likely to become a complete progression dead end.</p>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 · Market pattern</p>
-        <h2>A visible outlier in difficulty and sales.</h2>
-      </div>
-      <div class="research-study-grid reveal">
-        <figure class="research-chart">
-          <a href="../assets/images/elden-ring-difficulty-sales.webp" target="_blank" rel="noopener" aria-label="Open the full-size difficulty and sales chart">
-            <img src="../assets/images/elden-ring-difficulty-sales.webp" alt="Scatter plot comparing community difficulty ratings and sales of modern PC action RPGs, with Elden Ring highlighted as an outlier">
-          </a>
-          <figcaption>Community difficulty ratings plotted against publicly reported or estimated sales for comparable modern PC action RPGs.</figcaption>
-        </figure>
-        <aside class="research-insight">
-          <p class="project-kicker">Interpretation</p>
-          <h3>Difficulty alone does not explain the result.</h3>
-          <p>Other demanding FromSoftware titles achieved strong but substantially smaller sales. Elden Ring’s position suggests that the surrounding progression structure changed how a broader audience experienced the same underlying design philosophy.</p>
-          <p>The chart establishes the anomaly; it does not by itself prove that open-world structure caused the sales outcome.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">03 · Progression behavior</p>
-        <h2>Trophy distributions reveal a shift in player priorities.</h2>
-      </div>
-      <div class="research-chart-pair reveal" aria-label="Trophy distribution comparison">
-        <figure class="research-chart">
-          <a href="../assets/images/dark-souls-3-trophy-distribution.webp" target="_blank" rel="noopener" aria-label="Open the full-size Dark Souls III trophy distribution chart">
-            <img src="../assets/images/dark-souls-3-trophy-distribution.webp" alt="Distribution of Dark Souls III trophy rarity highlighting maximum weapon reinforcement; a story trophy is marked only as a within-game reference" loading="lazy">
-          </a>
-          <figcaption>Dark Souls III: the maximum-weapon trophy sits at the 44th percentile within the game’s complete trophy distribution.</figcaption>
-        </figure>
-        <figure class="research-chart">
-          <a href="../assets/images/elden-ring-trophy-distribution.webp" target="_blank" rel="noopener" aria-label="Open the full-size Elden Ring trophy distribution chart">
-            <img src="../assets/images/elden-ring-trophy-distribution.webp" alt="Distribution of Elden Ring trophy rarity highlighting maximum weapon reinforcement; a story trophy is marked only as a within-game reference" loading="lazy">
-          </a>
-          <figcaption>Elden Ring: the maximum-weapon trophy rises to the 69th percentile within its own complete trophy distribution.</figcaption>
-        </figure>
-      </div>
-
-      <div class="research-explanation reveal">
-        <div>
-          <p class="project-kicker">How to read the comparison</p>
-          <h3>Similar raw unlock rates, different relative player behavior.</h3>
+    <main id="main">
+      <header class="case-hero shell">
+        <div class="case-breadcrumb"><a href="../index.html#work">← All work</a><span>CASE STUDY / 04</span></div>
+        <div class="case-title-block"><p class="eyebrow">DATA STUDY / ELDEN RING</p><h1>Open Worlds & Difficulty</h1><p class="case-subtitle">Exploration, preparation & return in Elden Ring</p><p class="case-lede">A data-informed study of how Elden Ring’s open-world structure turns fixed difficulty gates into player-directed preparation, exploration, and return.</p></div>
+        <dl class="project-meta">
+          <div><dt>Role</dt><dd>Research Lead</dd></div>
+          <div><dt>Format</dt><dd>Academic Group Study</dd></div>
+          <div><dt>Tools</dt><dd>RStudio · Public Data</dd></div>
+          <div><dt>Focus</dt><dd>Player Agency & Difficulty</dd></div>
+        </dl>
+        <div class="quick-links"><a href="#progression">Trophy data <span>↘</span></a><a href="#limits">Scope & limits <span>↘</span></a></div>
+      </header>
+      <nav class="chapter-nav" aria-label="Project chapters">
+        <div class="shell">
+          <button class="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-links">On this page <span aria-hidden="true">＋</span></button>
+          <span class="chapter-label">ON THIS PAGE</span>
+          <div class="chapter-links" id="chapter-links"><a href="#question"><span>01</span> Question</a><a href="#market"><span>02</span> Difficulty & sales</a><a href="#progression"><span>03</span> Trophy data</a><a href="#limits"><span>04</span> Scope & limits</a></div>
         </div>
-        <div class="prose">
-          <p>At first glance, the maximum-weapon trophies look almost identical: 43.6% of Dark Souls III players and 41.4% of Elden Ring players unlocked them. That raw comparison is misleading because the two games have different overall trophy-completion patterns.</p>
-          <p>After each value is normalized against every trophy in its own game, the difference becomes clearer. Maximum weapon reinforcement sits at the 44th percentile in Dark Souls III, but at the 69th percentile in Elden Ring. In relative terms, fully upgrading a weapon is a less common priority within Dark Souls III’s achievement ecosystem and a substantially more common priority within Elden Ring’s.</p>
-          <p>This pattern is consistent with a change in player behavior. A more linear game ties routes, upgrade materials, and progression closely to a required sequence; players have fewer alternative activities that feed back into preparation when a mandatory obstacle stops them. Elden Ring’s open world lets players temporarily abandon that obstacle, explore unrelated regions, collect upgrade materials, strengthen a weapon, and return later. Equipment preparation becomes a self-directed objective rather than mainly an outcome of advancing along a fixed path.</p>
-          <p class="research-reading-note"><strong>Important reading note:</strong> the blue story markers are not equivalent progression checkpoints. The Dark Souls III marker is a late-game node, while the Elden Ring marker is an earlier mid-game reference. They are shown only to give visual context for the red maximum-weapon trophy inside each game’s own distribution; they should not be compared with each other.</p>
+      </nav>
+      <section class="case-section shell" id="question">
+        <div class="section-title"><p class="eyebrow">01 · Research question</p><h2>Why did an uncompromisingly difficult game reach a mainstream audience?</h2></div>
+        <div class="prose"><p>The study begins with an apparent market contradiction: difficult action RPGs generally reach smaller audiences, yet Elden Ring became both one of the hardest and one of the best-selling games in its comparison set.</p><p>Its central argument is structural. Elden Ring does not make individual encounters easy. Instead, the open world lets players postpone a fixed obstacle, choose another route, gather resources, improve their build, and return on their own terms.</p><p>Difficulty remains intact, but failure is less likely to become a complete progression dead end.</p></div>
+      </section>
+      <section class="case-section shell" id="market">
+        <div class="section-title"><p class="eyebrow">02 · Market pattern</p><h2>A visible outlier in difficulty and sales.</h2></div>
+        <div class="study">
+          <div class="study-copy"><p class="project-kicker">Interpretation</p><h3>Difficulty alone does not explain the result.</h3><p>Other demanding FromSoftware titles achieved strong but substantially smaller sales. Elden Ring’s position suggests that the surrounding progression structure changed how a broader audience experienced the same underlying design philosophy.</p><p>The chart establishes the anomaly; it does not by itself prove that open-world structure caused the sales outcome.</p></div>
+          <figure class="media-figure media-chart"><a href="../assets/images/elden-ring-difficulty-sales.webp" target="_blank" rel="noopener" aria-label="Open the full-size difficulty and sales chart" class="media-frame image-frame" title="Open full image"><img src="../assets/images/elden-ring-difficulty-sales.webp" alt="Scatter plot comparing community difficulty ratings and sales of modern PC action RPGs, with Elden Ring highlighted as an outlier" loading="lazy" width="991" height="687"></a><figcaption>Community difficulty ratings plotted against publicly reported or estimated sales for comparable modern PC action RPGs.</figcaption></figure>
         </div>
-      </div>
-
-      <div class="research-table-card reveal">
-        <p class="research-table-title">Maximum-weapon trophy: raw unlock rate versus relative position</p>
-        <div class="research-table-scroll">
-          <table>
-            <thead><tr><th>Game</th><th>Raw unlock rate</th><th>Percentile within its game</th></tr></thead>
-            <tbody>
-              <tr><td>Dark Souls III</td><td>43.6%</td><td>44th percentile</td></tr>
-              <tr><td>Elden Ring</td><td>41.4%</td><td>69th percentile</td></tr>
-            </tbody>
-          </table>
+      </section>
+      <section class="case-section shell" id="progression">
+        <div class="section-title"><p class="eyebrow">03 · Progression behavior</p><h2>Trophy distributions reveal a shift in player priorities.</h2></div>
+        <div class="media-pair" aria-label="Trophy distribution comparison">
+          <figure class="media-figure media-chart"><a href="../assets/images/dark-souls-3-trophy-distribution.webp" target="_blank" rel="noopener" aria-label="Open the full-size Dark Souls III trophy distribution chart" class="media-frame image-frame" title="Open full image"><img src="../assets/images/dark-souls-3-trophy-distribution.webp" alt="Distribution of Dark Souls III trophy rarity highlighting maximum weapon reinforcement; a story trophy is marked only as a within-game reference" loading="lazy" width="1156" height="687"></a><figcaption>Dark Souls III: the maximum-weapon trophy sits at the 44th percentile within the game’s complete trophy distribution.</figcaption></figure>
+          <figure class="media-figure media-chart"><a href="../assets/images/elden-ring-trophy-distribution.webp" target="_blank" rel="noopener" aria-label="Open the full-size Elden Ring trophy distribution chart" class="media-frame image-frame" title="Open full image"><img src="../assets/images/elden-ring-trophy-distribution.webp" alt="Distribution of Elden Ring trophy rarity highlighting maximum weapon reinforcement; a story trophy is marked only as a within-game reference" loading="lazy" width="1156" height="687"></a><figcaption>Elden Ring: the maximum-weapon trophy rises to the 69th percentile within its own complete trophy distribution.</figcaption></figure>
         </div>
-        <p class="research-note">The percentile answers a within-game question: how common is maximum weapon reinforcement relative to that game’s other trophies? It does not treat raw completion rates from two different achievement systems as directly equivalent.</p>
-      </div>
-    </section>
-
-    <section class="case-section section-shell two-column">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 · Contribution & limits</p>
-        <h2>Research-led design analysis, presented with appropriate limits.</h2>
-      </div>
-      <div class="prose reveal">
-        <p>I led the research design, built the datasets, conducted the comparisons, created the RStudio visualizations, and developed the central argument and overall structure. Other group members contributed portions of the writing within the established outline.</p>
-        <p>The study combines public sales reports and estimates, community difficulty ratings, and PlayStation trophy data. These sources are useful for exploratory analysis, but each carries limitations in completeness, subjectivity, or cross-game comparability.</p>
-        <p>The observed patterns support a design interpretation: player-controlled routing can make high difficulty more approachable without removing the challenge itself. They are not presented as proof that one design decision alone caused Elden Ring’s commercial success.</p>
-      </div>
-    </section>
-
-    <section class="next-project section-shell reveal">
-      <p class="eyebrow">Featured project</p>
-      <a href="original-level.html"><span>Original level</span><strong>ARPG Level Prototyping Showcase</strong><span aria-hidden="true">→</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer section-shell"><span>© <span data-year></span> Ray Zheng</span><span class="footer-links"><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a></span></footer>
-</body>
+        <div class="study-copy research-explanation">
+          <div><p class="project-kicker">How to read the comparison</p><h3>Similar raw unlock rates, different relative player behavior.</h3></div>
+          <div class="prose"><p>At first glance, the maximum-weapon trophies look almost identical: 43.6% of Dark Souls III players and 41.4% of Elden Ring players unlocked them. That raw comparison is misleading because the two games have different overall trophy-completion patterns.</p><p>After each value is normalized against every trophy in its own game, the difference becomes clearer. Maximum weapon reinforcement sits at the 44th percentile in Dark Souls III, but at the 69th percentile in Elden Ring. In relative terms, fully upgrading a weapon is a less common priority within Dark Souls III’s achievement ecosystem and a substantially more common priority within Elden Ring’s.</p><p>This pattern is consistent with a change in player behavior. A more linear game ties routes, upgrade materials, and progression closely to a required sequence; players have fewer alternative activities that feed back into preparation when a mandatory obstacle stops them. Elden Ring’s open world lets players temporarily abandon that obstacle, explore unrelated regions, collect upgrade materials, strengthen a weapon, and return later. Equipment preparation becomes a self-directed objective rather than mainly an outcome of advancing along a fixed path.</p><p class="research-reading-note"><strong>Important reading note:</strong> the blue story markers are not equivalent progression checkpoints. The Dark Souls III marker is a late-game node, while the Elden Ring marker is an earlier mid-game reference. They are shown only to give visual context for the red maximum-weapon trophy inside each game’s own distribution; they should not be compared with each other.</p></div>
+        </div>
+        <div class="research-table-card">
+          <p class="research-table-title">Maximum-weapon trophy: raw unlock rate versus relative position</p>
+          <div class="research-table-scroll" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally">
+            <table>
+              <thead><tr><th>Game</th><th>Raw unlock rate</th><th>Percentile within its game</th></tr></thead>
+              <tbody><tr><td>Dark Souls III</td><td>43.6%</td><td>44th percentile</td></tr><tr><td>Elden Ring</td><td>41.4%</td><td>69th percentile</td></tr></tbody>
+            </table>
+          </div>
+          <p class="research-note">The percentile answers a within-game question: how common is maximum weapon reinforcement relative to that game’s other trophies? It does not treat raw completion rates from two different achievement systems as directly equivalent.</p>
+        </div>
+      </section>
+      <section class="case-section shell" id="limits">
+        <div class="section-title"><p class="eyebrow">04 · Contribution & limits</p><h2>Research-led design analysis, presented with appropriate limits.</h2></div>
+        <div class="prose"><p>I led the research design, built the datasets, conducted the comparisons, created the RStudio visualizations, and developed the central argument and overall structure. Other group members contributed portions of the writing within the established outline.</p><p>The study combines public sales reports and estimates, community difficulty ratings, and PlayStation trophy data. These sources are useful for exploratory analysis, but each carries limitations in completeness, subjectivity, or cross-game comparability.</p><p>The observed patterns support a design interpretation: player-controlled routing can make high difficulty more approachable without removing the challenge itself. They are not presented as proof that one design decision alone caused Elden Ring’s commercial success.</p></div>
+      </section>
+      <section class="next-project shell"><p class="eyebrow">KEEP EXPLORING / NEXT PROJECT</p><a href="thunder-temple.html"><div><span>ORIGINAL LEVEL / UE 5.5</span><h2>Thunder Temple</h2></div><span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="footer-name" href="mailto:zz2916@nyu.edu">Get in touch <span>↗</span><small>zz2916@nyu.edu</small></a>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Ray Zheng</span><span>LEVEL DESIGN & GAMEPLAY PROTOTYPING</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a></div>
+    </footer>
+  </body>
 </html>

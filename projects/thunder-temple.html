@@ -1,462 +1,296 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Thunder Temple level design: mechanic teaching, spatial circuit puzzles, and lightning rods used for protection and cannon counterattacks."><meta name="theme-color" content="#141714"><title>Thunder Temple — Ray Zheng</title><link rel="stylesheet" href="../assets/portfolio.css"><script src="../assets/site.js" defer></script><script src="../assets/portfolio.js" defer></script>
-</head>
-<body class="portfolio-v2  temple-page document-case"><a class="skip-link" href="#main">Skip to content</a>
-<header class="pv-header shell"><a class="pv-brand" href="../index.html"><span class="monogram">RZ<span>.</span></span><span>Ray Zheng<small>LEVEL DESIGN</small></span></a>
-<button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" type="button">Menu
-</button>
-<nav class="site-nav" id="site-nav" data-nav aria-label="Main navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="mailto:zz2916@nyu.edu">Contact ↗</a><a class="lang-link" href="../zh/projects/thunder-temple.html" lang="zh-CN">中文</a>
-</nav>
-</header>
-<main id="main">
-<section class="case-intro shell">
-<a class="back-link" href="../index.html#work">← All work</a>
-<div class="doc-heading">
-<p class="overline">UNREAL ENGINE 5.5.4 / LEVEL DESIGN
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Thunder Temple level design: mechanic teaching, spatial circuit puzzles, and lightning rods used for protection and cannon counterattacks."><meta name="theme-color" content="#151a1d"><title>Thunder Temple — Ray Zheng</title><link rel="canonical" href="https://crossoul.github.io/projects/thunder-temple.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/design.css"><script src="../assets/design.js" defer></script><meta name="color-scheme" content="dark"></head>
+  <body class="en case-page case-thunder-temple">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="brand" href="../index.html" aria-label="Ray Zheng — Home"><span class="brand-mark">RZ<span>.</span></span><span class="brand-name">Ray Zheng<small>LEVEL DESIGN</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="Main navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="lang-link" href="../zh/projects/thunder-temple.html" lang="zh-CN">中文 <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main id="main">
+      <header class="case-hero shell">
+        <div class="case-breadcrumb"><a href="../index.html#work">← All work</a><span>CASE STUDY / 01</span></div>
+        <div class="case-title-block"><p class="eyebrow">ORIGINAL LEVEL / UE 5.5</p><h1>Thunder Temple</h1><p class="case-subtitle">Lightning, circuits & traversal</p><p class="case-lede">Players solve temple mechanisms by changing lightning targets and electrical connections. Later, a portable rod protects them from enemy attacks and turns the Boss’s lightning into energy for a counterattack.
+</p></div>
+        <dl class="project-meta">
+          <div><dt>CONTRIBUTION
+</dt><dd>Level design · Blueprint mechanics
+</dd></div>
+          <div><dt>ENGINE
+</dt><dd>Unreal Engine 5.5.4
+</dd></div>
+          <div><dt>PLAY TIME
+</dt><dd>20+ minutes
+</dd></div>
+          <div><dt>STRUCTURE
+</dt><dd>Linear progression + optional puzzles
+</dd></div>
+        </dl>
+        <div class="quick-links"><a href="#teaching">Teaching <span>↘</span></a><a href="#tower">Spatial puzzles <span>↘</span></a><a href="#combat">Combat <span>↘</span></a></div>
+      </header>
+      <nav class="chapter-nav" aria-label="Project chapters">
+        <div class="shell">
+          <button class="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-links">On this page <span aria-hidden="true">＋</span></button>
+          <span class="chapter-label">ON THIS PAGE</span>
+          <div class="chapter-links" id="chapter-links"><a href="#walkthrough"><span>01</span> Walkthrough</a><a href="#rules"><span>02</span> Rules</a><a href="#teaching"><span>03</span> Teaching</a><a href="#tower"><span>04</span> Spatial puzzles</a><a href="#combat"><span>05</span> Combat</a><a href="#layout"><span>06</span> Layout</a><a href="#decisions"><span>07</span> Decisions</a></div>
+        </div>
+      </nav>
+      <section class="case-section shell" id="walkthrough">
+        <div class="section-title">
+          <div><p class="overline">PROJECT WALKTHROUGH
+</p><h2>Full walkthrough & design commentary
+</h2></div>
+        </div>
+        <div class="walkthrough-embed"><iframe src="https://player.bilibili.com/player.html?bvid=BV1eAnb6xEyi&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" title="Thunder Temple walkthrough with Chinese commentary" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe></div>
+        <div class="walkthrough-meta"><span>Chinese commentary · Full video on Bilibili</span><a href="https://www.bilibili.com/video/BV1eAnb6xEyi/" target="_blank" rel="noopener">Watch on Bilibili ↗</a></div>
+        <div class="focus-list">
+          <p>The case study focuses on three aspects:
 </p>
-<h1>Thunder Temple
-</h1>
-<p class="doc-subtitle">A third-person puzzle level built around lightning rods and electric connections
+          <ol>
+            <li><a href="#teaching">How players learn attraction and routing rules</a></li>
+            <li><a href="#tower">How electric arcs affect both power and traversal</a></li>
+            <li><a href="#combat">How a puzzle tool becomes protection and a means to counterattack</a></li>
+          </ol>
+        </div>
+      </section>
+      <section class="case-section shell" id="rules">
+        <div class="section-title">
+          <div><p class="overline">01 / RULES
+</p><h2>Attracting lightning and routing power
+</h2></div>
+        </div>
+        <article class="study">
+          <div class="study-copy"><h3>Natural lightning targets
+</h3><p>Natural lightning first checks sky access, then tip material priority. When those conditions are equal, the higher rod wins. Rail controls, tip swaps, and placement let players change the target.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/natural-rod.webp" target="_blank" rel="noopener" aria-label="Enlarge: A lightning rod receives natural strikes and supplies power to mechanisms." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/natural-rod.webp" alt="A lightning rod receives natural strikes and supplies power to mechanisms." loading="lazy" width="1230" height="763"></a><figcaption>A lightning rod receives natural strikes and supplies power to mechanisms.
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>Power routing and passage states
+</h3><p>An energized rod can activate a receiver directly or feed a chain of connectors. Each connector rotates in 90-degree increments. Green receivers stay active after one charge; blue receivers require continued power.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/circuit.webp" target="_blank" rel="noopener" aria-label="Enlarge: Connectors route arcs in their facing direction; receiver lights communicate power state." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/circuit.webp" alt="Connectors route arcs in their facing direction; receiver lights communicate power state." loading="lazy" width="1168" height="614"></a><figcaption>Connectors route arcs in their facing direction; receiver lights communicate power state.
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>Portable rod constraints
+</h3><p>The player can carry one mechanism part at a time. A portable rod only works in a socket: carrying it or leaving it on the ground does not provide protection.
+</p></div>
+        </article>
+      </section>
+      <section class="case-section shell" id="teaching">
+        <div class="section-title">
+          <div><p class="overline">02 / TEACHING
+</p><h2>From predicting a target to changing its conditions
+</h2></div>
+          <p>Introduce one variable before adding priority and new interactions, then combine familiar conditions in later areas.
 </p>
-<p class="doc-lede">Players solve temple mechanisms by changing lightning targets and electrical connections. Later, a portable rod protects them from enemy attacks and turns the Boss’s lightning into energy for a counterattack.
+        </div>
+        <article class="study">
+          <div class="study-copy"><span class="study-index">01</span><h3>Height: establish a readable relationship
+</h3><p>The tutorial starts with comparable rods and a button-operated rail. With material and sky access held equal, the moving rod must rise above its competitor to change the strike target. Slot lights show the rail’s current step.
+</p><p>This first step connects the player’s action, a visible height change, and the strike result.
+</p></div>
+          <div class="media-pair">
+            <figure class="media-figure"><a href="../assets/images/thunder-temple/height-low.webp" target="_blank" rel="noopener" aria-label="Enlarge: Rail rod, control button, and slot indicators." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/height-low.webp" alt="Rail rod, control button, and slot indicators." loading="lazy" width="911" height="747"></a><figcaption>Rail rod, control button, and slot indicators.
+</figcaption></figure>
+            <figure class="media-figure"><a href="../assets/images/thunder-temple/height-high.webp" target="_blank" rel="noopener" aria-label="Enlarge: The raised rail rod; a matched-camera comparison can be added later." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/height-high.webp" alt="The raised rail rod; a matched-camera comparison can be added later." loading="lazy" width="977" height="763"></a><figcaption>The raised rail rod; a matched-camera comparison can be added later.
+</figcaption></figure>
+          </div>
+        </article>
+        <article class="study">
+          <div class="study-copy"><span class="study-index">02</span><h3>Material: revise the height-only expectation
+</h3><p>The next setup uses different material priorities, allowing a lower rod with a stronger tip to receive the strike. The player must extend the height rule by recognizing material priority.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/material.webp" target="_blank" rel="noopener" aria-label="Enlarge: Two rods with different heights and tips provide the material-priority comparison." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/material.webp" alt="Two rods with different heights and tips provide the material-priority comparison." loading="lazy" width="1036" height="723"></a><figcaption>Two rods with different heights and tips provide the material-priority comparison.
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><span class="study-index">03</span><h3>Tip swapping: apply the observed rule
+</h3><p>After material priority is established, the player can remove, install, and swap tips. They must place the stronger tip on the rod connected to the required mechanism.
+</p><p>The Tower then adds connector rotation, carrying, and blocked passages. The Ruin adds sky obstruction and portable rods, expanding combinations without making every interaction available at once.
+</p></div>
+          <figure class="media-figure film">
+            <div class="media-frame"><video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/tip-swap.webp" aria-label="Gameplay of removing and swapping rod tips."><source src="../assets/media/thunder-temple/tip-swap.mp4" type="video/mp4"></video></div>
+            <figcaption>Gameplay of removing and swapping rod tips.<span>SILENT GAMEPLAY</span></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="case-section shell" id="tower">
+        <div class="section-title">
+          <div><p class="overline">03 / SPATIAL PUZZLES
+</p><h2>Electrical routes also change the player’s route
+</h2></div>
+          <p>The Tower places circuits in traversable space: power must reach its target while the player retains a route to the exit or reward.
 </p>
-</div>
-<div class="case-cover"><img src="../assets/images/thunder-temple/garden.webp" alt="Courtyard blockout with a domed structure, steps, and low vegetation" fetchpriority="high" width="1548" height="909">
-</div>
-<dl class="case-facts">
-<div>
-<dt>CONTRIBUTION
-</dt>
-<dd>Level design · Blueprint mechanics
-</dd>
-</div>
-<div>
-<dt>ENGINE
-</dt>
-<dd>Unreal Engine 5.5.4
-</dd>
-</div>
-<div>
-<dt>PLAY TIME
-</dt>
-<dd>20+ minutes
-</dd>
-</div>
-<div>
-<dt>STRUCTURE
-</dt>
-<dd>Linear progression + optional puzzles
-</dd>
-</div>
-</dl>
-</section>
-<nav class="chapter-nav" aria-label="Project chapters">
-<div class="shell"><a href="#walkthrough">Walkthrough</a><a href="#rules">Rules</a><a href="#teaching">Teaching</a><a href="#tower">Spatial puzzles</a><a href="#combat">Combat</a><a href="#layout">Layout</a><a href="#decisions">Decisions</a>
-</div>
-</nav>
-<section class="case-section shell" id="walkthrough">
-<div class="section-title">
-<div>
-<p class="overline">PROJECT WALKTHROUGH
+        </div>
+        <article class="study">
+          <div class="study-copy"><h3>Blocked arcs and alternate routes
+</h3><p>In the first blockage-focused puzzle, energizing a mechanism unlocks a chest behind a wall, but the resulting arc blocks access. The solution uses two mechanism-controlled doors to create an alternate route.
+</p><p>Successful wiring and access to the destination must be considered together.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/arc-detour.webp" target="_blank" rel="noopener" aria-label="Enlarge: The power route and door positions must be considered together." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/arc-detour.webp" alt="The power route and door positions must be considered together." loading="lazy" width="1268" height="871"></a><figcaption>The power route and door positions must be considered together.
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>Constrain the operating position
+</h3><p>An arc across a path is insufficient if the player can operate the connector from the other side. Walls and platform edges constrain where the player can stand, making the effect on their route part of the puzzle.
+</p><p>The clips below show different operating states of the same puzzle, from different camera positions.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/arc-layout.webp" target="_blank" rel="noopener" aria-label="Enlarge: Walls and limited standing space constrain access to the connectors." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/arc-layout.webp" alt="Walls and limited standing space constrain access to the connectors." loading="lazy" width="1900" height="942"></a><figcaption>Walls and limited standing space constrain access to the connectors.
+</figcaption></figure>
+        </article>
+        <div class="state-study">
+          <div class="state-toolbar">
+            <p>OPERATING STATES
 </p>
-<h2>Full walkthrough & design commentary
-</h2>
-</div>
-</div>
-<div class="walkthrough-embed"><iframe src="https://player.bilibili.com/player.html?bvid=BV1eAnb6xEyi&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" title="Thunder Temple walkthrough with Chinese commentary" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="walkthrough-meta"><span>Chinese commentary · Full video on Bilibili</span><a href="https://www.bilibili.com/video/BV1eAnb6xEyi/" target="_blank" rel="noopener">Watch on Bilibili ↗</a>
-</div>
-<div class="doc-focus">
-<p>The case study focuses on three aspects:
-</p>
-<ol>
-<li><a href="#teaching">How players learn attraction and routing rules</a>
-</li>
-<li><a href="#tower">How electric arcs affect both power and traversal</a>
-</li>
-<li><a href="#combat">How a puzzle tool becomes protection and a means to counterattack</a>
-</li>
-</ol>
-</div>
-</section>
-<section class="case-section shell" id="rules">
-<div class="section-title">
-<div>
-<p class="overline">01 / RULES
-</p>
-<h2>Attracting lightning and routing power
-</h2>
-</div>
-</div>
-<div class="doc-rule-grid">
-<div>
-<h3>Natural lightning targets
-</h3>
-<p>Natural lightning first checks sky access, then tip material priority. When those conditions are equal, the higher rod wins. Rail controls, tip swaps, and placement let players change the target.
-</p>
-</div>
-<div>
-<h3>Power routing and passage states
-</h3>
-<p>An energized rod can activate a receiver directly or feed a chain of connectors. Each connector rotates in 90-degree increments. Green receivers stay active after one charge; blue receivers require continued power.
-</p>
-</div>
-<div>
-<h3>Portable rod constraints
-</h3>
-<p>The player can carry one mechanism part at a time. A portable rod only works in a socket: carrying it or leaving it on the ground does not provide protection.
-</p>
-</div>
-</div>
-<div class="doc-image-pair">
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/natural-rod.webp" target="_blank" rel="noopener" aria-label="Enlarge: A lightning rod receives natural strikes and supplies power to mechanisms."><img src="../assets/images/thunder-temple/natural-rod.webp" alt="A lightning rod receives natural strikes and supplies power to mechanisms." width="1230" height="763" loading="lazy"></a>
-<figcaption>A lightning rod receives natural strikes and supplies power to mechanisms.
-</figcaption>
-</figure>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/circuit.webp" target="_blank" rel="noopener" aria-label="Enlarge: Connectors route arcs in their facing direction; receiver lights communicate power state."><img src="../assets/images/thunder-temple/circuit.webp" alt="Connectors route arcs in their facing direction; receiver lights communicate power state." width="1168" height="614" loading="lazy"></a>
-<figcaption>Connectors route arcs in their facing direction; receiver lights communicate power state.
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="case-section shell" id="teaching">
-<div class="section-title">
-<div>
-<p class="overline">02 / TEACHING
-</p>
-<h2>From predicting a target to changing its conditions
-</h2>
-</div>
-<p>Introduce one variable before adding priority and new interactions, then combine familiar conditions in later areas.
-</p>
-</div>
-<div class="doc-teaching-step">
-<div class="doc-copy"><span class="doc-number">01</span>
-<h3>Height: establish a readable relationship
-</h3>
-<p>The tutorial starts with comparable rods and a button-operated rail. With material and sky access held equal, the moving rod must rise above its competitor to change the strike target. Slot lights show the rail’s current step.
-</p>
-<p>This first step connects the player’s action, a visible height change, and the strike result.
-</p>
-</div>
-<div class="doc-image-pair height-pair">
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/height-low.webp" target="_blank" rel="noopener" aria-label="Enlarge: Rail rod, control button, and slot indicators."><img src="../assets/images/thunder-temple/height-low.webp" alt="Rail rod, control button, and slot indicators." width="911" height="747" loading="lazy"></a>
-<figcaption>Rail rod, control button, and slot indicators.
-</figcaption>
-</figure>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/height-high.webp" target="_blank" rel="noopener" aria-label="Enlarge: The raised rail rod; a matched-camera comparison can be added later."><img src="../assets/images/thunder-temple/height-high.webp" alt="The raised rail rod; a matched-camera comparison can be added later." width="977" height="763" loading="lazy"></a>
-<figcaption>The raised rail rod; a matched-camera comparison can be added later.
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="doc-teaching-step">
-<div class="doc-copy"><span class="doc-number">02</span>
-<h3>Material: revise the height-only expectation
-</h3>
-<p>The next setup uses different material priorities, allowing a lower rod with a stronger tip to receive the strike. The player must extend the height rule by recognizing material priority.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/material.webp" target="_blank" rel="noopener" aria-label="Enlarge: Two rods with different heights and tips provide the material-priority comparison."><img src="../assets/images/thunder-temple/material.webp" alt="Two rods with different heights and tips provide the material-priority comparison." width="1036" height="723" loading="lazy"></a>
-<figcaption>Two rods with different heights and tips provide the material-priority comparison.
-</figcaption>
-</figure>
-</div>
-<div class="doc-teaching-step">
-<div class="doc-copy"><span class="doc-number">03</span>
-<h3>Tip swapping: apply the observed rule
-</h3>
-<p>After material priority is established, the player can remove, install, and swap tips. They must place the stronger tip on the rod connected to the required mechanism.
-</p>
-<p>The Tower then adds connector rotation, carrying, and blocked passages. The Ruin adds sky obstruction and portable rods, expanding combinations without making every interaction available at once.
-</p>
-</div>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/tip-swap.webp" aria-label="Gameplay of removing and swapping rod tips.">
-<source src="../assets/media/thunder-temple/tip-swap.mp4" type="video/mp4">
-</video>
-<figcaption>Gameplay of removing and swapping rod tips.<span>SILENT GAMEPLAY</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="case-section shell" id="tower">
-<div class="section-title">
-<div>
-<p class="overline">03 / SPATIAL PUZZLES
-</p>
-<h2>Electrical routes also change the player’s route
-</h2>
-</div>
-<p>The Tower places circuits in traversable space: power must reach its target while the player retains a route to the exit or reward.
-</p>
-</div>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>Blocked arcs and alternate routes
-</h3>
-<p>In the first blockage-focused puzzle, energizing a mechanism unlocks a chest behind a wall, but the resulting arc blocks access. The solution uses two mechanism-controlled doors to create an alternate route.
-</p>
-<p>Successful wiring and access to the destination must be considered together.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/arc-detour.webp" target="_blank" rel="noopener" aria-label="Enlarge: The power route and door positions must be considered together."><img src="../assets/images/thunder-temple/arc-detour.webp" alt="The power route and door positions must be considered together." width="1268" height="871" loading="lazy"></a>
-<figcaption>The power route and door positions must be considered together.
-</figcaption>
-</figure>
-</article>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>Constrain the operating position
-</h3>
-<p>An arc across a path is insufficient if the player can operate the connector from the other side. Walls and platform edges constrain where the player can stand, making the effect on their route part of the puzzle.
-</p>
-<p>The clips below show different operating states of the same puzzle, from different camera positions.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/arc-layout.webp" target="_blank" rel="noopener" aria-label="Enlarge: Walls and limited standing space constrain access to the connectors."><img src="../assets/images/thunder-temple/arc-layout.webp" alt="Walls and limited standing space constrain access to the connectors." width="1900" height="942" loading="lazy"></a>
-<figcaption>Walls and limited standing space constrain access to the connectors.
-</figcaption>
-</figure>
-</article>
-<div class="state-study">
-<div class="state-toolbar">
-<p>OPERATING STATES
-</p>
-<div class="state-tabs" role="tablist" aria-label="Compare operating states">
-<button type="button" id="tab-blocked" role="tab" aria-selected="true" aria-controls="state-blocked" data-state-tab="blocked">Blocked
-</button>
-<button type="button" id="tab-passage" role="tab" aria-selected="false" tabindex="-1" aria-controls="state-passage" data-state-tab="passage">Passage
-</button>
-</div>
-</div>
-<div id="state-blocked" role="tabpanel" aria-labelledby="tab-blocked" tabindex="0">
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/blocked.webp" aria-label="An arc restricts access through the doorway.">
-<source src="../assets/media/thunder-temple/blocked.mp4" type="video/mp4">
-</video>
-<figcaption>An arc restricts access through the doorway.<span>SILENT GAMEPLAY</span>
-</figcaption>
-</figure>
-</div>
-<div id="state-passage" role="tabpanel" aria-labelledby="tab-passage" tabindex="0" hidden>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/passage.webp" aria-label="Passing the doorway after changing connections.">
-<source src="../assets/media/thunder-temple/passage.mp4" type="video/mp4">
-</video>
-<figcaption>Passing the doorway after changing connections.<span>SILENT GAMEPLAY</span>
-</figcaption>
-</figure>
-</div>
-</div>
-<details class="context-film">
-<summary>Watch the continuous rewiring and traversal <span>36 SEC ↓</span>
+            <div class="state-tabs" role="tablist" aria-label="Compare operating states"><button type="button" id="tab-blocked" role="tab" aria-selected="true" aria-controls="state-blocked" data-state-tab="blocked">Blocked
+</button><button type="button" id="tab-passage" role="tab" aria-selected="false" tabindex="-1" aria-controls="state-passage" data-state-tab="passage">Passage
+</button></div>
+          </div>
+          <div id="state-blocked" role="tabpanel" aria-labelledby="tab-blocked" tabindex="0">
+            <figure class="media-figure film">
+              <div class="media-frame"><video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/blocked.webp" aria-label="An arc restricts access through the doorway."><source src="../assets/media/thunder-temple/blocked.mp4" type="video/mp4"></video></div>
+              <figcaption>An arc restricts access through the doorway.<span>SILENT GAMEPLAY</span></figcaption>
+            </figure>
+          </div>
+          <div id="state-passage" role="tabpanel" aria-labelledby="tab-passage" tabindex="0" hidden>
+            <figure class="media-figure film">
+              <div class="media-frame"><video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/passage.webp" aria-label="Passing the doorway after changing connections."><source src="../assets/media/thunder-temple/passage.mp4" type="video/mp4"></video></div>
+              <figcaption>Passing the doorway after changing connections.<span>SILENT GAMEPLAY</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <details class="context-film">
+          <summary>Watch the continuous rewiring and traversal <span>36 SEC ↓</span></summary>
+          <figure class="media-figure film">
+            <div class="media-frame"><video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/tower-full.webp" aria-label="Continuous carrying, wiring, observation, and traversal."><source src="../assets/media/thunder-temple/tower-full.mp4" type="video/mp4"></video></div>
+            <figcaption>Continuous carrying, wiring, observation, and traversal.<span>SILENT GAMEPLAY</span></figcaption>
+          </figure>
+        </details>
+        <article class="study">
+          <div class="study-copy"><h3>A 45-degree starting orientation and two circuit stages
+</h3><p>Connectors still rotate in 90-degree steps. Some begin at a 45-degree offset, with sockets positioned for diagonal connections, allowing a new circuit arrangement through the same interaction.
+</p><p>First, the blue route opens the ground-floor door. The player then changes sockets and orientations to build the magenta route through that door and reach the next connector. The same space must be reconfigured in two stages.
+</p></div>
+          <figure class="media-figure diagram-figure"><a href="../assets/images/thunder-temple/angled-circuit.webp" target="_blank" rel="noopener" aria-label="Enlarge: The blue route opens the door; the magenta route then passes through it." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/angled-circuit.webp" alt="The blue route opens the door; the magenta route then passes through it." loading="lazy" width="521" height="850"></a><figcaption>The blue route opens the door; the magenta route then passes through it.
+</figcaption><p class="media-hint">Tall diagram · Open image at full size ↗</p></figure>
+        </article>
+        <details class="supporting-detail">
+          <summary>Additional circuit puzzle: crossing a maze with limited connectors
 </summary>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/tower-full.webp" aria-label="Continuous carrying, wiring, observation, and traversal.">
-<source src="../assets/media/thunder-temple/tower-full.mp4" type="video/mp4">
-</video>
-<figcaption>Continuous carrying, wiring, observation, and traversal.<span>SILENT GAMEPLAY</span>
-</figcaption>
-</figure>
-</details>
-<article class="doc-case doc-case-tall">
-<div class="doc-copy">
-<h3>A 45-degree starting orientation and two circuit stages
-</h3>
-<p>Connectors still rotate in 90-degree steps. Some begin at a 45-degree offset, with sockets positioned for diagonal connections, allowing a new circuit arrangement through the same interaction.
+          <article class="study">
+            <div class="study-copy"><p>This puzzle began as a paper route, then used nine square structures to divide a grid. Sockets mark nodes, obstacles restrict routes, and a limited connector supply constrains the solution. The overhead image explains the route; play requires locating those connections from a third-person view.
+</p></div>
+            <figure class="media-figure diagram-figure"><a href="../assets/images/thunder-temple/maze.webp" target="_blank" rel="noopener" aria-label="Enlarge: Maze plan and connection route." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/maze.webp" alt="Maze plan and connection route." loading="lazy" width="512" height="866"></a><figcaption>Maze plan and connection route.
+</figcaption><p class="media-hint">Tall diagram · Open image at full size ↗</p></figure>
+          </article>
+        </details>
+      </section>
+      <section class="case-section shell" id="combat">
+        <div class="section-title">
+          <div><p class="overline">04 / COMBAT APPLICATION
+</p><h2>Using the rod for protection and counterattacks
+</h2></div>
+          <p>The component stays familiar, but the task changes from satisfying natural-lightning conditions to establishing a protected position before an attack.
 </p>
-<p>First, the blue route opens the ground-floor door. The player then changes sockets and orientations to build the magenta route through that door and reach the next connector. The same space must be reconfigured in two stages.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/angled-circuit.webp" target="_blank" rel="noopener" aria-label="Enlarge: The blue route opens the door; the magenta route then passes through it."><img src="../assets/images/thunder-temple/angled-circuit.webp" alt="The blue route opens the door; the magenta route then passes through it." width="521" height="850" loading="lazy"></a>
-<figcaption>The blue route opens the door; the magenta route then passes through it.
-</figcaption>
-</figure>
-</article>
-<details class="doc-extra">
-<summary>Additional circuit puzzle: crossing a maze with limited connectors
+        </div>
+        <article class="study">
+          <div class="study-copy"><h3>Enemy lightning changes the purpose of positioning
+</h3><p>Natural strikes compare height, material, and sky access. Enemy special attacks charge before targeting the player. Standing within range of an installed rod redirects the attack; outside that range, the player is still hit.
+</p><p>A shrinking ring and text communicate the timing, prompting the player to use a familiar puzzle component for protection.
+</p></div>
+          <figure class="media-figure film">
+            <div class="media-frame"><video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/redirection.webp" aria-label="An enemy telegraph and the redirected strike."><source src="../assets/media/thunder-temple/redirection.mp4" type="video/mp4"></video></div>
+            <figcaption>An enemy telegraph and the redirected strike.<span>SILENT GAMEPLAY</span></figcaption>
+          </figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>Carry the rod between attacks
+</h3><p>After the third seal is removed, the Boss can attack the player along the approach. Sockets are spaced along the route. The player carries one portable rod and moves during the roughly ten-second cooldown and subsequent charge-up.
+</p><p>Picking up the rod removes protection, and one installed position cannot cover the entire route. Before the strike, the player must stop and install the rod at the next socket, then continue after the attack.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/approach.webp" target="_blank" rel="noopener" aria-label="Enlarge: The approach remains within the Boss’s remote strike range." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/approach.webp" alt="The approach remains within the Boss’s remote strike range." loading="lazy" width="1516" height="923"></a><figcaption>The approach remains within the Boss’s remote strike range.
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>Charge cannons and reposition during cooldown
+</h3><p>Three cannons have corresponding rod sockets. Redirected lightning charges the associated cannon, which fires automatically after repeated charges and damages the Boss.
+</p><p>After firing, the cannon enters cooldown and cannot charge. The player moves the rod to another available cannon. Green, yellow, and red lights indicate availability, charging, and cooldown.
+</p><p>The demo Boss uses only the special lightning attack and is defeated through cannon fire, keeping this encounter focused on the puzzle component’s combat application.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/cannons.webp" target="_blank" rel="noopener" aria-label="Enlarge: Three cannons and their sockets form the encounter layout." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/cannons.webp" alt="Three cannons and their sockets form the encounter layout." loading="lazy" width="1489" height="889"></a><figcaption>Three cannons and their sockets form the encounter layout.
+</figcaption></figure>
+        </article>
+        <figure class="media-figure film">
+          <div class="media-frame"><video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/boss.webp" aria-label="Boss and cannon feedback following redirection."><source src="../assets/media/thunder-temple/boss.mp4" type="video/mp4"></video></div>
+          <figcaption>Boss and cannon feedback following redirection.<span>SILENT GAMEPLAY</span></figcaption>
+        </figure>
+      </section>
+      <section class="case-section shell" id="layout">
+        <div class="section-title">
+          <div><p class="overline">05 / ARCHITECTURE & PROGRESSION
+</p><h2>An open-air lightning source serving indoor mechanisms
+</h2></div>
+        </div>
+        <figure class="media-figure"><a class="media-frame image-frame" href="../assets/images/thunder-temple/garden.webp" target="_blank" rel="noopener" title="Open full image"><img src="../assets/images/thunder-temple/garden.webp" alt="Thunder Temple courtyard blockout" width="1548" height="909" loading="lazy"></a><figcaption>Courtyard blockout.</figcaption></figure>
+        <article class="study">
+          <div class="study-copy"><h3>A central tower powers surrounding buildings
+</h3><p>Rods need sky access, while the temple’s indoor mechanisms need power. This led to a central open courtyard and surrounding buildings: the tower attracts lightning and distributes it to indoor puzzles. Its dedicated tips also provide a recurring interaction point between stages.
+</p><p>Low, heavy Egyptian temple forms keep the lightning structures visually distinct and support the setting of stone ruins in a region of constant storms.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/tower-plan.webp" target="_blank" rel="noopener" aria-label="Enlarge: Tower plan: the central lightning structure and surrounding buildings." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/tower-plan.webp" alt="Tower plan: the central lightning structure and surrounding buildings." loading="lazy" width="842" height="824"></a><figcaption>Tower plan: the central lightning structure and surrounding buildings.
+</figcaption></figure>
+        </article>
+        <figure class="media-figure"><a href="../assets/images/thunder-temple/tower-exterior.webp" target="_blank" rel="noopener" aria-label="Enlarge: Tower exterior, with the collapsed dragon hidden in this view." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/tower-exterior.webp" alt="Tower exterior, with the collapsed dragon hidden in this view." loading="lazy" width="1749" height="747"></a><figcaption>Tower exterior, with the collapsed dragon hidden in this view.
+</figcaption></figure>
+        <div class="study-copy"><h3>Three seals and an optional second half of the Tower
+</h3><p>The main route moves from the central plaza through the tutorial courtyard, Tower, Ruin, and Boss approach. Each of the first three areas removes a seal. Since the Tower contains more puzzles, its seal is awarded around the halfway point, allowing players to continue the main route or explore the remaining puzzles.
+</p></div>
+        <details class="supporting-detail">
+          <summary>Environment proposal: worship, research, and everyday life in the courtyard
 </summary>
-<div class="doc-case doc-case-tall">
-<div class="doc-copy">
-<p>This puzzle began as a paper route, then used nine square structures to divide a grid. Sockets mark nodes, obstacles restrict routes, and a limited connector supply constrains the solution. The overhead image explains the route; play requires locating those connections from a third-person view.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/maze.webp" target="_blank" rel="noopener" aria-label="Enlarge: Maze plan and connection route."><img src="../assets/images/thunder-temple/maze.webp" alt="Maze plan and connection route." width="512" height="866" loading="lazy"></a>
-<figcaption>Maze plan and connection route.
-</figcaption>
-</figure>
-</div>
-</details>
-</section>
-<section class="case-section shell" id="combat">
-<div class="section-title">
-<div>
-<p class="overline">04 / COMBAT APPLICATION
-</p>
-<h2>Using the rod for protection and counterattacks
-</h2>
-</div>
-<p>The component stays familiar, but the task changes from satisfying natural-lightning conditions to establishing a protected position before an attack.
-</p>
-</div>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>Enemy lightning changes the purpose of positioning
-</h3>
-<p>Natural strikes compare height, material, and sky access. Enemy special attacks charge before targeting the player. Standing within range of an installed rod redirects the attack; outside that range, the player is still hit.
-</p>
-<p>A shrinking ring and text communicate the timing, prompting the player to use a familiar puzzle component for protection.
-</p>
-</div>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/redirection.webp" aria-label="An enemy telegraph and the redirected strike.">
-<source src="../assets/media/thunder-temple/redirection.mp4" type="video/mp4">
-</video>
-<figcaption>An enemy telegraph and the redirected strike.<span>SILENT GAMEPLAY</span>
-</figcaption>
-</figure>
-</article>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>Carry the rod between attacks
-</h3>
-<p>After the third seal is removed, the Boss can attack the player along the approach. Sockets are spaced along the route. The player carries one portable rod and moves during the roughly ten-second cooldown and subsequent charge-up.
-</p>
-<p>Picking up the rod removes protection, and one installed position cannot cover the entire route. Before the strike, the player must stop and install the rod at the next socket, then continue after the attack.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/approach.webp" target="_blank" rel="noopener" aria-label="Enlarge: The approach remains within the Boss’s remote strike range."><img src="../assets/images/thunder-temple/approach.webp" alt="The approach remains within the Boss’s remote strike range." width="1516" height="923" loading="lazy"></a>
-<figcaption>The approach remains within the Boss’s remote strike range.
-</figcaption>
-</figure>
-</article>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>Charge cannons and reposition during cooldown
-</h3>
-<p>Three cannons have corresponding rod sockets. Redirected lightning charges the associated cannon, which fires automatically after repeated charges and damages the Boss.
-</p>
-<p>After firing, the cannon enters cooldown and cannot charge. The player moves the rod to another available cannon. Green, yellow, and red lights indicate availability, charging, and cooldown.
-</p>
-<p>The demo Boss uses only the special lightning attack and is defeated through cannon fire, keeping this encounter focused on the puzzle component’s combat application.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/cannons.webp" target="_blank" rel="noopener" aria-label="Enlarge: Three cannons and their sockets form the encounter layout."><img src="../assets/images/thunder-temple/cannons.webp" alt="Three cannons and their sockets form the encounter layout." width="1489" height="889" loading="lazy"></a>
-<figcaption>Three cannons and their sockets form the encounter layout.
-</figcaption>
-</figure>
-</article>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../assets/media/thunder-temple/boss.webp" aria-label="Boss and cannon feedback following redirection.">
-<source src="../assets/media/thunder-temple/boss.mp4" type="video/mp4">
-</video>
-<figcaption>Boss and cannon feedback following redirection.<span>SILENT GAMEPLAY</span>
-</figcaption>
-</figure>
-</section>
-<section class="case-section shell" id="layout">
-<div class="section-title">
-<div>
-<p class="overline">05 / ARCHITECTURE & PROGRESSION
-</p>
-<h2>An open-air lightning source serving indoor mechanisms
-</h2>
-</div>
-</div>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>A central tower powers surrounding buildings
-</h3>
-<p>Rods need sky access, while the temple’s indoor mechanisms need power. This led to a central open courtyard and surrounding buildings: the tower attracts lightning and distributes it to indoor puzzles. Its dedicated tips also provide a recurring interaction point between stages.
-</p>
-<p>Low, heavy Egyptian temple forms keep the lightning structures visually distinct and support the setting of stone ruins in a region of constant storms.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/tower-plan.webp" target="_blank" rel="noopener" aria-label="Enlarge: Tower plan: the central lightning structure and surrounding buildings."><img src="../assets/images/thunder-temple/tower-plan.webp" alt="Tower plan: the central lightning structure and surrounding buildings." width="842" height="824" loading="lazy"></a>
-<figcaption>Tower plan: the central lightning structure and surrounding buildings.
-</figcaption>
-</figure>
-</article>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/tower-exterior.webp" target="_blank" rel="noopener" aria-label="Enlarge: Tower exterior, with the collapsed dragon hidden in this view."><img src="../assets/images/thunder-temple/tower-exterior.webp" alt="Tower exterior, with the collapsed dragon hidden in this view." width="1749" height="747" loading="lazy"></a>
-<figcaption>Tower exterior, with the collapsed dragon hidden in this view.
-</figcaption>
-</figure>
-<div class="doc-copy doc-wide">
-<h3>Three seals and an optional second half of the Tower
-</h3>
-<p>The main route moves from the central plaza through the tutorial courtyard, Tower, Ruin, and Boss approach. Each of the first three areas removes a seal. Since the Tower contains more puzzles, its seal is awarded around the halfway point, allowing players to continue the main route or explore the remaining puzzles.
-</p>
-</div>
-<details class="doc-extra">
-<summary>Environment proposal: worship, research, and everyday life in the courtyard
+          <div class="study-copy"><p>The courtyard proposal uses altar motifs, equipment maintenance, gardens, and domestic objects to show how its inhabitants used lightning. Rods serve as religious symbols and protect living areas, while diagrams in the research area could hint at later mechanisms. This is an extension proposal, not a fully implemented environment.
+</p></div>
+          <figure class="media-figure"><a href="../assets/images/thunder-temple/courtyard-plan.webp" target="_blank" rel="noopener" aria-label="Enlarge: Proposed courtyard zones for worship, combat, gardens, research, and domestic use." class="media-frame image-frame" title="Open full image"><img src="../assets/images/thunder-temple/courtyard-plan.webp" alt="Proposed courtyard zones for worship, combat, gardens, research, and domestic use." loading="lazy" width="1165" height="502"></a><figcaption>Proposed courtyard zones for worship, combat, gardens, research, and domestic use.
+</figcaption></figure>
+        </details>
+      </section>
+      <section class="case-section shell" id="decisions">
+        <div class="section-title">
+          <div><p class="overline">06 / DESIGN DECISIONS
+</p><h2>Changes and scope decisions during production
+</h2></div>
+        </div>
+        <div class="note-list">
+          <article class="note-item"><h3>Height competition needs a local scope
+</h3><p>With one shared source, each new rod competed with every earlier target, pushing later puzzles toward ever-higher positions. Strike Zones limit competition to each puzzle, and completed puzzle states are locked to avoid interference.
+</p></article>
+          <article class="note-item"><h3>Find more puzzle variety in circuits and space
+</h3><p>Height alone offered limited variety and constrained top-down observation and lower placements. I retained it as a teaching rule and developed more of the Tower around blocked passages, socket positions, and circuit reconfiguration.
+</p></article>
+          <article class="note-item"><h3>Concentrate combat around the approach and cannons
+</h3><p>I considered mobile enemies as puzzle power sources, but positioning, target selection, and behavior control added scope. The remote approach and cannon encounter reuse one special-strike system and concentrate combat on the rod mechanic.
+</p></article>
+          <article class="note-item"><h3>Improve feedback for distant mechanisms
+</h3><p>Doors opened from the control console are outside the player’s view, and large rods require repeated upward camera movement. Short camera shots could communicate those changes more clearly.
+</p></article>
+        </div>
+        <details class="supporting-detail">
+          <summary>Contribution and asset sources
 </summary>
-<div class="doc-copy doc-wide">
-<p>The courtyard proposal uses altar motifs, equipment maintenance, gardens, and domestic objects to show how its inhabitants used lightning. Rods serve as religious symbols and protect living areas, while diagrams in the research area could hint at later mechanisms. This is an extension proposal, not a fully implemented environment.
-</p>
-</div>
-<figure class="doc-figure "><a href="../assets/images/thunder-temple/courtyard-plan.webp" target="_blank" rel="noopener" aria-label="Enlarge: Proposed courtyard zones for worship, combat, gardens, research, and domestic use."><img src="../assets/images/thunder-temple/courtyard-plan.webp" alt="Proposed courtyard zones for worship, combat, gardens, research, and domestic use." width="1165" height="502" loading="lazy"></a>
-<figcaption>Proposed courtyard zones for worship, combat, gardens, research, and domestic use.
-</figcaption>
-</figure>
-</details>
-</section>
-<section class="case-section shell" id="decisions">
-<div class="section-title">
-<div>
-<p class="overline">06 / DESIGN DECISIONS
-</p>
-<h2>Changes and scope decisions during production
-</h2>
-</div>
-</div>
-<div class="doc-decisions">
-<article>
-<h3>Height competition needs a local scope
-</h3>
-<p>With one shared source, each new rod competed with every earlier target, pushing later puzzles toward ever-higher positions. Strike Zones limit competition to each puzzle, and completed puzzle states are locked to avoid interference.
-</p>
-</article>
-<article>
-<h3>Find more puzzle variety in circuits and space
-</h3>
-<p>Height alone offered limited variety and constrained top-down observation and lower placements. I retained it as a teaching rule and developed more of the Tower around blocked passages, socket positions, and circuit reconfiguration.
-</p>
-</article>
-<article>
-<h3>Concentrate combat around the approach and cannons
-</h3>
-<p>I considered mobile enemies as puzzle power sources, but positioning, target selection, and behavior control added scope. The remote approach and cannon encounter reuse one special-strike system and concentrate combat on the rod mechanic.
-</p>
-</article>
-<article>
-<h3>Improve feedback for distant mechanisms
-</h3>
-<p>Doors opened from the control console are outside the player’s view, and large rods require repeated upward camera movement. Short camera shots could communicate those changes more clearly.
-</p>
-</article>
-</div>
-<details class="doc-extra">
-<summary>Contribution and asset sources
-</summary>
-<div class="doc-copy doc-wide">
-<p>I designed the layouts and puzzles and implemented the Blueprint mechanisms, using AI for learning and debugging support. Health, flasks, HUD, bonfire interactions, and other foundations were adapted from my earlier demo.
-</p>
-<p>Third-party assets include Epic’s Third Person template, Blocking Starter Pack, Free Spline VFX, Dragon for Boss Monster, Item Pickup VFX, KEStatues Lite, Rock Environment Pack, and Light Foliage. Arc endpoints, blocking behavior, and mechanism interactions were adapted for the project.
-</p>
-</div>
-</details>
-</section>
-<section class="case-next shell">
-<p class="overline">NEXT PROJECT
-</p><a href="original-level.html">
-<h2>ARPG Level Blockout
-</h2><span>↗</span></a>
-</section>
-</main>
-<footer class="pv-footer shell"><span>© <span data-year></span> Ray Zheng</span><span>SPACE / SYSTEMS / PLAYER CHOICE</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a>
-</footer>
-</body>
+          <div class="study-copy"><p>I designed the layouts and puzzles and implemented the Blueprint mechanisms, using AI for learning and debugging support. Health, flasks, HUD, bonfire interactions, and other foundations were adapted from my earlier demo.
+</p><p>Third-party assets include Epic’s Third Person template, Blocking Starter Pack, Free Spline VFX, Dragon for Boss Monster, Item Pickup VFX, KEStatues Lite, Rock Environment Pack, and Light Foliage. Arc endpoints, blocking behavior, and mechanism interactions were adapted for the project.
+</p></div>
+        </details>
+      </section>
+      <section class="next-project shell"><p class="eyebrow">KEEP EXPLORING / NEXT PROJECT</p><a href="original-level.html"><div><span>ORIGINAL LEVEL / UE 5.5</span><h2>Soulslike Level Blockout</h2></div><span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="footer-name" href="mailto:zz2916@nyu.edu">Get in touch <span>↗</span><small>zz2916@nyu.edu</small></a>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Ray Zheng</span><span>LEVEL DESIGN & GAMEPLAY PROTOTYPING</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a></div>
+    </footer>
+  </body>
 </html>

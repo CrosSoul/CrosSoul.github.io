@@ -1,462 +1,296 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="雷电神殿关卡设计：机制教学、电弧空间解谜，以及引雷针在防御和炮台战中的应用。"><meta name="theme-color" content="#141714"><title>Thunder Temple — Ray Zheng</title><link rel="stylesheet" href="../../assets/portfolio.css"><script src="../../assets/site.js" defer></script><script src="../../assets/portfolio.js" defer></script>
-</head>
-<body class="portfolio-v2 zh-v2 temple-page document-case"><a class="skip-link" href="#main">跳到正文</a>
-<header class="pv-header shell"><a class="pv-brand" href="../index.html"><span class="monogram">RZ<span>.</span></span><span>Ray Zheng<small>关卡设计</small></span></a>
-<button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" type="button">菜单
-</button>
-<nav class="site-nav" id="site-nav" data-nav aria-label="主导航"><a href="../index.html#work">作品</a><a href="../index.html#about">关于</a><a href="mailto:zz2916@nyu.edu">联系 ↗</a><a class="lang-link" href="../../projects/thunder-temple.html" lang="en">EN</a>
-</nav>
-</header>
-<main id="main">
-<section class="case-intro shell">
-<a class="back-link" href="../index.html#work">← 全部作品</a>
-<div class="doc-heading">
-<p class="overline">UNREAL ENGINE 5.5.4 / LEVEL DESIGN
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="雷电神殿关卡设计：机制教学、电弧空间解谜，以及引雷针在防御和炮台战中的应用。"><meta name="theme-color" content="#151a1d"><title>雷电神殿 — Ray Zheng</title><link rel="canonical" href="https://crossoul.github.io/zh/projects/thunder-temple.html"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/design.css"><script src="../../assets/design.js" defer></script><meta name="color-scheme" content="dark"></head>
+  <body class="zh case-page case-thunder-temple">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header shell">
+      <a class="brand" href="../index.html" aria-label="Ray Zheng — 首页"><span class="brand-mark">RZ<span>.</span></span><span class="brand-name">Ray Zheng<small>LEVEL DESIGN</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">菜单 <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="主导航"><a href="../index.html#work">作品</a><a href="../index.html#about">关于</a><a href="../index.html#contact">联系</a><a class="lang-link" href="../../projects/thunder-temple.html" lang="en">EN <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main id="main">
+      <header class="case-hero shell">
+        <div class="case-breadcrumb"><a href="../index.html#work">← 全部作品</a><span>CASE STUDY / 01</span></div>
+        <div class="case-title-block"><p class="eyebrow">原创关卡 / UE 5.5</p><h1>雷电神殿</h1><p class="case-subtitle">引雷、导电与空间通行</p><p class="case-lede">玩家通过调整引雷条件和导电线路解开神殿机关，在后半段利用可移动引雷针规避敌人攻击，最终把 Boss 的雷击转化为炮台的反击能源。
+</p></div>
+        <dl class="project-meta">
+          <div><dt>工作内容
+</dt><dd>关卡设计 · 机关蓝图
+</dd></div>
+          <div><dt>引擎
+</dt><dd>Unreal Engine 5.5.4
+</dd></div>
+          <div><dt>游玩时长
+</dt><dd>20+ 分钟
+</dd></div>
+          <div><dt>关卡结构
+</dt><dd>线性主线 + 可选支线
+</dd></div>
+        </dl>
+        <div class="quick-links"><a href="#teaching">教学递进 <span>↘</span></a><a href="#tower">空间解谜 <span>↘</span></a><a href="#combat">战斗应用 <span>↘</span></a></div>
+      </header>
+      <nav class="chapter-nav" aria-label="项目章节">
+        <div class="shell">
+          <button class="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-links">本页目录 <span aria-hidden="true">＋</span></button>
+          <span class="chapter-label">本页目录</span>
+          <div class="chapter-links" id="chapter-links"><a href="#walkthrough"><span>01</span> 完整视频</a><a href="#rules"><span>02</span> 基本规则</a><a href="#teaching"><span>03</span> 教学递进</a><a href="#tower"><span>04</span> 空间解谜</a><a href="#combat"><span>05</span> 战斗应用</a><a href="#layout"><span>06</span> 建筑与流程</a><a href="#decisions"><span>07</span> 调整与取舍</a></div>
+        </div>
+      </nav>
+      <section class="case-section shell" id="walkthrough">
+        <div class="section-title">
+          <div><p class="overline">PROJECT WALKTHROUGH
+</p><h2>完整演示与设计讲解
+</h2></div>
+        </div>
+        <div class="walkthrough-embed"><iframe src="https://player.bilibili.com/player.html?bvid=BV1eAnb6xEyi&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" title="雷电神殿完整演示与设计讲解（中文）" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe></div>
+        <div class="walkthrough-meta"><span>中文讲解 · B 站完整视频</span><a href="https://www.bilibili.com/video/BV1eAnb6xEyi/" target="_blank" rel="noopener">前往 B 站观看 ↗</a></div>
+        <div class="focus-list">
+          <p>以下重点介绍三个方面：
 </p>
-<h1>雷电神殿
-</h1>
-<p class="doc-subtitle">围绕引雷针与电弧连接设计的第三人称解谜关卡
+          <ol>
+            <li><a href="#teaching">玩家怎样逐步学会引雷与导电规则</a></li>
+            <li><a href="#tower">电弧如何同时影响供电与玩家通行</a></li>
+            <li><a href="#combat">引雷针怎样从解谜工具用于防御和反击</a></li>
+          </ol>
+        </div>
+      </section>
+      <section class="case-section shell" id="rules">
+        <div class="section-title">
+          <div><p class="overline">01 / RULES
+</p><h2>引雷与导电的基本规则
+</h2></div>
+        </div>
+        <article class="study">
+          <div class="study-copy"><h3>自然雷的目标选择
+</h3><p>自然雷先检查引雷针上方是否露天，再比较针头的材料优先级；前两项相同时，较高的引雷针优先。玩家通过轨道升降、更换针头和安装位置来改变目标。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/natural-rod.webp" target="_blank" rel="noopener" aria-label="放大图片：引雷针接收自然落雷，为机关提供能量。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/natural-rod.webp" alt="引雷针接收自然落雷，为机关提供能量。" loading="lazy" width="1230" height="763"></a><figcaption>引雷针接收自然落雷，为机关提供能量。
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>能量传递与通路状态
+</h3><p>引雷针获得能量后，可以直接激活接收机关，也可以通过导电机关的电弧继续传递。导电机关每次旋转 90 度。绿色接收机关充能一次便保持开启，蓝色接收机关需要持续供电。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/circuit.webp" target="_blank" rel="noopener" aria-label="放大图片：导电机关沿朝向传递电弧，接收机关的灯光显示供电状态。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/circuit.webp" alt="导电机关沿朝向传递电弧，接收机关的灯光显示供电状态。" loading="lazy" width="1168" height="614"></a><figcaption>导电机关沿朝向传递电弧，接收机关的灯光显示供电状态。
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>可移动引雷针的限制
+</h3><p>玩家同一时间只能持有一个机关构件。可移动引雷针必须安装进插槽才能生效，拿在手中或交换放在地面上都不能提供保护。
+</p></div>
+        </article>
+      </section>
+      <section class="case-section shell" id="teaching">
+        <div class="section-title">
+          <div><p class="overline">02 / TEACHING
+</p><h2>从判断雷击目标到主动改变条件
+</h2></div>
+          <p>先让玩家认识一个变量，再增加优先级和操作方式；进入后续区域后，再把已经学过的条件组合起来。
 </p>
-<p class="doc-lede">玩家通过调整引雷条件和导电线路解开神殿机关，在后半段利用可移动引雷针规避敌人攻击，最终把 Boss 的雷击转化为炮台的反击能源。
+        </div>
+        <article class="study">
+          <div class="study-copy"><span class="study-index">01</span><h3>高度：先建立直观判断
+</h3><p>教程先使用同类引雷针，让玩家通过按钮改变轨道引雷针的高度。相同材料、同样露天时，升高到竞争目标上方才能改变雷击结果。槽位指示灯显示轨道已经移动到哪一档。
+</p><p>这一关先让玩家把自己的操作、高度变化和雷击结果联系起来。
+</p></div>
+          <div class="media-pair">
+            <figure class="media-figure"><a href="../../assets/images/thunder-temple/height-low.webp" target="_blank" rel="noopener" aria-label="放大图片：轨道引雷针与按钮、槽位指示灯。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/height-low.webp" alt="轨道引雷针与按钮、槽位指示灯。" loading="lazy" width="911" height="747"></a><figcaption>轨道引雷针与按钮、槽位指示灯。
+</figcaption></figure>
+            <figure class="media-figure"><a href="../../assets/images/thunder-temple/height-high.webp" target="_blank" rel="noopener" aria-label="放大图片：升高后的轨道引雷针；后续配图可继续补充同机位对比。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/height-high.webp" alt="升高后的轨道引雷针；后续配图可继续补充同机位对比。" loading="lazy" width="977" height="763"></a><figcaption>升高后的轨道引雷针；后续配图可继续补充同机位对比。
+</figcaption></figure>
+          </div>
+        </article>
+        <article class="study">
+          <div class="study-copy"><span class="study-index">02</span><h3>材料：修正只看高度的预期
+</h3><p>接着放入材料优先级不同的目标，让较低但更强的针头获得雷击。玩家需要在刚学会的高度规则上，再理解材料优先于高度，而不是把结果看成随机。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/material.webp" target="_blank" rel="noopener" aria-label="放大图片：两根引雷针的高度与针头不同，为材料优先级的比较提供场景。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/material.webp" alt="两根引雷针的高度与针头不同，为材料优先级的比较提供场景。" loading="lazy" width="1036" height="723"></a><figcaption>两根引雷针的高度与针头不同，为材料优先级的比较提供场景。
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><span class="study-index">03</span><h3>换针头：把观察到的规则用于解题
+</h3><p>理解材料作用后，玩家获得取下、安装和交换针头的操作。此时需要把强引雷针头装到连接正确机关的针体上，主动创造通关条件。
+</p><p>后续塔楼加入旋转、搬运导电机关和线路阻路，废墟再加入天空遮挡与可移动引雷针，逐步增加组合，而不是一次开放所有操作。
+</p></div>
+          <figure class="media-figure film">
+            <div class="media-frame"><video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/tip-swap.webp" aria-label="取放与交换针头的实机片段。"><source src="../../assets/media/thunder-temple/tip-swap.mp4" type="video/mp4"></video></div>
+            <figcaption>取放与交换针头的实机片段。<span>静音实机</span></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="case-section shell" id="tower">
+        <div class="section-title">
+          <div><p class="overline">03 / SPATIAL PUZZLES
+</p><h2>电弧线路也会改变玩家的通路
+</h2></div>
+          <p>塔楼把连线结果放进可行走的空间里。玩家除了让电到达目标，还需要考虑操作后自己能否到达出口或奖励。
 </p>
-</div>
-<div class="case-cover"><img src="../../assets/images/thunder-temple/garden.webp" alt="庭院白盒场景中的圆顶建筑、台阶与低矮植被" fetchpriority="high" width="1548" height="909">
-</div>
-<dl class="case-facts">
-<div>
-<dt>工作内容
-</dt>
-<dd>关卡设计 · 机关蓝图
-</dd>
-</div>
-<div>
-<dt>引擎
-</dt>
-<dd>Unreal Engine 5.5.4
-</dd>
-</div>
-<div>
-<dt>游玩时长
-</dt>
-<dd>20+ 分钟
-</dd>
-</div>
-<div>
-<dt>关卡结构
-</dt>
-<dd>线性主线 + 可选支线
-</dd>
-</div>
-</dl>
-</section>
-<nav class="chapter-nav" aria-label="项目章节">
-<div class="shell"><a href="#walkthrough">完整视频</a><a href="#rules">基本规则</a><a href="#teaching">教学递进</a><a href="#tower">空间解谜</a><a href="#combat">战斗应用</a><a href="#layout">建筑与流程</a><a href="#decisions">调整与取舍</a>
-</div>
-</nav>
-<section class="case-section shell" id="walkthrough">
-<div class="section-title">
-<div>
-<p class="overline">PROJECT WALKTHROUGH
+        </div>
+        <article class="study">
+          <div class="study-copy"><h3>电弧阻路与绕行
+</h3><p>第一个以阻路为核心的谜题中，玩家需要激活机关来开启墙后的宝箱，但转动机关后，电弧会挡住通往宝箱的位置。解法是同时利用机关控制的两扇门，开出一条绕行路线。
+</p><p>因此，接线是否成功和玩家能否走到目标，需要一起考虑。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/arc-detour.webp" target="_blank" rel="noopener" aria-label="放大图片：供电线路与门的位置需要共同考虑。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/arc-detour.webp" alt="供电线路与门的位置需要共同考虑。" loading="lazy" width="1268" height="871"></a><figcaption>供电线路与门的位置需要共同考虑。
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>限制操作位置，避免绕过谜题
+</h3><p>仅在路上放一条电弧还不够：如果玩家能从机关另一侧操作，就可以轻易绕过阻挡。我在部分导电机关侧面放置墙体，或利用平台边缘限制站位，让玩家必须从会受到线路影响的一侧操作。
+</p><p>下方两段视频展示同一谜题的不同操作状态，镜头位置不同。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/arc-layout.webp" target="_blank" rel="noopener" aria-label="放大图片：墙体与有限的站立空间限制机关的操作方向。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/arc-layout.webp" alt="墙体与有限的站立空间限制机关的操作方向。" loading="lazy" width="1900" height="942"></a><figcaption>墙体与有限的站立空间限制机关的操作方向。
+</figcaption></figure>
+        </article>
+        <div class="state-study">
+          <div class="state-toolbar">
+            <p>操作状态对照
 </p>
-<h2>完整演示与设计讲解
-</h2>
-</div>
-</div>
-<div class="walkthrough-embed"><iframe src="https://player.bilibili.com/player.html?bvid=BV1eAnb6xEyi&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" title="雷电神殿完整演示与设计讲解（中文）" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="walkthrough-meta"><span>中文讲解 · B 站完整视频</span><a href="https://www.bilibili.com/video/BV1eAnb6xEyi/" target="_blank" rel="noopener">前往 B 站观看 ↗</a>
-</div>
-<div class="doc-focus">
-<p>以下重点介绍三个方面：
-</p>
-<ol>
-<li><a href="#teaching">玩家怎样逐步学会引雷与导电规则</a>
-</li>
-<li><a href="#tower">电弧如何同时影响供电与玩家通行</a>
-</li>
-<li><a href="#combat">引雷针怎样从解谜工具用于防御和反击</a>
-</li>
-</ol>
-</div>
-</section>
-<section class="case-section shell" id="rules">
-<div class="section-title">
-<div>
-<p class="overline">01 / RULES
-</p>
-<h2>引雷与导电的基本规则
-</h2>
-</div>
-</div>
-<div class="doc-rule-grid">
-<div>
-<h3>自然雷的目标选择
-</h3>
-<p>自然雷先检查引雷针上方是否露天，再比较针头的材料优先级；前两项相同时，较高的引雷针优先。玩家通过轨道升降、更换针头和安装位置来改变目标。
-</p>
-</div>
-<div>
-<h3>能量传递与通路状态
-</h3>
-<p>引雷针获得能量后，可以直接激活接收机关，也可以通过导电机关的电弧继续传递。导电机关每次旋转 90 度。绿色接收机关充能一次便保持开启，蓝色接收机关需要持续供电。
-</p>
-</div>
-<div>
-<h3>可移动引雷针的限制
-</h3>
-<p>玩家同一时间只能持有一个机关构件。可移动引雷针必须安装进插槽才能生效，拿在手中或交换放在地面上都不能提供保护。
-</p>
-</div>
-</div>
-<div class="doc-image-pair">
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/natural-rod.webp" target="_blank" rel="noopener" aria-label="放大图片：引雷针接收自然落雷，为机关提供能量。"><img src="../../assets/images/thunder-temple/natural-rod.webp" alt="引雷针接收自然落雷，为机关提供能量。" width="1230" height="763" loading="lazy"></a>
-<figcaption>引雷针接收自然落雷，为机关提供能量。
-</figcaption>
-</figure>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/circuit.webp" target="_blank" rel="noopener" aria-label="放大图片：导电机关沿朝向传递电弧，接收机关的灯光显示供电状态。"><img src="../../assets/images/thunder-temple/circuit.webp" alt="导电机关沿朝向传递电弧，接收机关的灯光显示供电状态。" width="1168" height="614" loading="lazy"></a>
-<figcaption>导电机关沿朝向传递电弧，接收机关的灯光显示供电状态。
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="case-section shell" id="teaching">
-<div class="section-title">
-<div>
-<p class="overline">02 / TEACHING
-</p>
-<h2>从判断雷击目标到主动改变条件
-</h2>
-</div>
-<p>先让玩家认识一个变量，再增加优先级和操作方式；进入后续区域后，再把已经学过的条件组合起来。
-</p>
-</div>
-<div class="doc-teaching-step">
-<div class="doc-copy"><span class="doc-number">01</span>
-<h3>高度：先建立直观判断
-</h3>
-<p>教程先使用同类引雷针，让玩家通过按钮改变轨道引雷针的高度。相同材料、同样露天时，升高到竞争目标上方才能改变雷击结果。槽位指示灯显示轨道已经移动到哪一档。
-</p>
-<p>这一关先让玩家把自己的操作、高度变化和雷击结果联系起来。
-</p>
-</div>
-<div class="doc-image-pair height-pair">
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/height-low.webp" target="_blank" rel="noopener" aria-label="放大图片：轨道引雷针与按钮、槽位指示灯。"><img src="../../assets/images/thunder-temple/height-low.webp" alt="轨道引雷针与按钮、槽位指示灯。" width="911" height="747" loading="lazy"></a>
-<figcaption>轨道引雷针与按钮、槽位指示灯。
-</figcaption>
-</figure>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/height-high.webp" target="_blank" rel="noopener" aria-label="放大图片：升高后的轨道引雷针；后续配图可继续补充同机位对比。"><img src="../../assets/images/thunder-temple/height-high.webp" alt="升高后的轨道引雷针；后续配图可继续补充同机位对比。" width="977" height="763" loading="lazy"></a>
-<figcaption>升高后的轨道引雷针；后续配图可继续补充同机位对比。
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="doc-teaching-step">
-<div class="doc-copy"><span class="doc-number">02</span>
-<h3>材料：修正只看高度的预期
-</h3>
-<p>接着放入材料优先级不同的目标，让较低但更强的针头获得雷击。玩家需要在刚学会的高度规则上，再理解材料优先于高度，而不是把结果看成随机。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/material.webp" target="_blank" rel="noopener" aria-label="放大图片：两根引雷针的高度与针头不同，为材料优先级的比较提供场景。"><img src="../../assets/images/thunder-temple/material.webp" alt="两根引雷针的高度与针头不同，为材料优先级的比较提供场景。" width="1036" height="723" loading="lazy"></a>
-<figcaption>两根引雷针的高度与针头不同，为材料优先级的比较提供场景。
-</figcaption>
-</figure>
-</div>
-<div class="doc-teaching-step">
-<div class="doc-copy"><span class="doc-number">03</span>
-<h3>换针头：把观察到的规则用于解题
-</h3>
-<p>理解材料作用后，玩家获得取下、安装和交换针头的操作。此时需要把强引雷针头装到连接正确机关的针体上，主动创造通关条件。
-</p>
-<p>后续塔楼加入旋转、搬运导电机关和线路阻路，废墟再加入天空遮挡与可移动引雷针，逐步增加组合，而不是一次开放所有操作。
-</p>
-</div>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/tip-swap.webp" aria-label="取放与交换针头的实机片段。">
-<source src="../../assets/media/thunder-temple/tip-swap.mp4" type="video/mp4">
-</video>
-<figcaption>取放与交换针头的实机片段。<span>静音实机</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="case-section shell" id="tower">
-<div class="section-title">
-<div>
-<p class="overline">03 / SPATIAL PUZZLES
-</p>
-<h2>电弧线路也会改变玩家的通路
-</h2>
-</div>
-<p>塔楼把连线结果放进可行走的空间里。玩家除了让电到达目标，还需要考虑操作后自己能否到达出口或奖励。
-</p>
-</div>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>电弧阻路与绕行
-</h3>
-<p>第一个以阻路为核心的谜题中，玩家需要激活机关来开启墙后的宝箱，但转动机关后，电弧会挡住通往宝箱的位置。解法是同时利用机关控制的两扇门，开出一条绕行路线。
-</p>
-<p>因此，接线是否成功和玩家能否走到目标，需要一起考虑。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/arc-detour.webp" target="_blank" rel="noopener" aria-label="放大图片：供电线路与门的位置需要共同考虑。"><img src="../../assets/images/thunder-temple/arc-detour.webp" alt="供电线路与门的位置需要共同考虑。" width="1268" height="871" loading="lazy"></a>
-<figcaption>供电线路与门的位置需要共同考虑。
-</figcaption>
-</figure>
-</article>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>限制操作位置，避免绕过谜题
-</h3>
-<p>仅在路上放一条电弧还不够：如果玩家能从机关另一侧操作，就可以轻易绕过阻挡。我在部分导电机关侧面放置墙体，或利用平台边缘限制站位，让玩家必须从会受到线路影响的一侧操作。
-</p>
-<p>下方两段视频展示同一谜题的不同操作状态，镜头位置不同。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/arc-layout.webp" target="_blank" rel="noopener" aria-label="放大图片：墙体与有限的站立空间限制机关的操作方向。"><img src="../../assets/images/thunder-temple/arc-layout.webp" alt="墙体与有限的站立空间限制机关的操作方向。" width="1900" height="942" loading="lazy"></a>
-<figcaption>墙体与有限的站立空间限制机关的操作方向。
-</figcaption>
-</figure>
-</article>
-<div class="state-study">
-<div class="state-toolbar">
-<p>操作状态对照
-</p>
-<div class="state-tabs" role="tablist" aria-label="切换操作状态">
-<button type="button" id="tab-blocked" role="tab" aria-selected="true" aria-controls="state-blocked" data-state-tab="blocked">电弧阻路
-</button>
-<button type="button" id="tab-passage" role="tab" aria-selected="false" tabindex="-1" aria-controls="state-passage" data-state-tab="passage">调整后通过
-</button>
-</div>
-</div>
-<div id="state-blocked" role="tabpanel" aria-labelledby="tab-blocked" tabindex="0">
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/blocked.webp" aria-label="门口电弧限制通行。">
-<source src="../../assets/media/thunder-temple/blocked.mp4" type="video/mp4">
-</video>
-<figcaption>门口电弧限制通行。<span>静音实机</span>
-</figcaption>
-</figure>
-</div>
-<div id="state-passage" role="tabpanel" aria-labelledby="tab-passage" tabindex="0" hidden>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/passage.webp" aria-label="改变连接后通过门洞。">
-<source src="../../assets/media/thunder-temple/passage.mp4" type="video/mp4">
-</video>
-<figcaption>改变连接后通过门洞。<span>静音实机</span>
-</figcaption>
-</figure>
-</div>
-</div>
-<details class="context-film">
-<summary>查看连续接线与通行过程 <span>36 SEC ↓</span>
+            <div class="state-tabs" role="tablist" aria-label="切换操作状态"><button type="button" id="tab-blocked" role="tab" aria-selected="true" aria-controls="state-blocked" data-state-tab="blocked">电弧阻路
+</button><button type="button" id="tab-passage" role="tab" aria-selected="false" tabindex="-1" aria-controls="state-passage" data-state-tab="passage">调整后通过
+</button></div>
+          </div>
+          <div id="state-blocked" role="tabpanel" aria-labelledby="tab-blocked" tabindex="0">
+            <figure class="media-figure film">
+              <div class="media-frame"><video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/blocked.webp" aria-label="门口电弧限制通行。"><source src="../../assets/media/thunder-temple/blocked.mp4" type="video/mp4"></video></div>
+              <figcaption>门口电弧限制通行。<span>静音实机</span></figcaption>
+            </figure>
+          </div>
+          <div id="state-passage" role="tabpanel" aria-labelledby="tab-passage" tabindex="0" hidden>
+            <figure class="media-figure film">
+              <div class="media-frame"><video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/passage.webp" aria-label="改变连接后通过门洞。"><source src="../../assets/media/thunder-temple/passage.mp4" type="video/mp4"></video></div>
+              <figcaption>改变连接后通过门洞。<span>静音实机</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <details class="context-film">
+          <summary>查看连续接线与通行过程 <span>36 SEC ↓</span></summary>
+          <figure class="media-figure film">
+            <div class="media-frame"><video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/tower-full.webp" aria-label="保留取放、接线、移动观察与通过出口的连续过程。"><source src="../../assets/media/thunder-temple/tower-full.mp4" type="video/mp4"></video></div>
+            <figcaption>保留取放、接线、移动观察与通过出口的连续过程。<span>静音实机</span></figcaption>
+          </figure>
+        </details>
+        <article class="study">
+          <div class="study-copy"><h3>45 度初始朝向与两阶段改线
+</h3><p>导电机关仍然每次转动 90 度，但我把部分机关的初始朝向预设为偏转 45 度，并按斜向连接关系安排插槽。玩家沿用已有操作，也能组成不同于横平竖直的线路。
+</p><p>先通过图中蓝色路线开启一楼的门，再更换机关使用的插槽、调整朝向，让第二条线路穿过已打开的门，连接门后的机关。同一空间需要在两个阶段重新布置。
+</p></div>
+          <figure class="media-figure diagram-figure"><a href="../../assets/images/thunder-temple/angled-circuit.webp" target="_blank" rel="noopener" aria-label="放大图片：蓝色线路先开门，紫色线路再穿过门连接下一个目标。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/angled-circuit.webp" alt="蓝色线路先开门，紫色线路再穿过门连接下一个目标。" loading="lazy" width="521" height="850"></a><figcaption>蓝色线路先开门，紫色线路再穿过门连接下一个目标。
+</figcaption><p class="media-hint">流程长图 · 点击图片查看完整尺寸 ↗</p></figure>
+        </article>
+        <details class="supporting-detail">
+          <summary>另一个连线案例：有限机关穿过迷宫
 </summary>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/tower-full.webp" aria-label="保留取放、接线、移动观察与通过出口的连续过程。">
-<source src="../../assets/media/thunder-temple/tower-full.mp4" type="video/mp4">
-</video>
-<figcaption>保留取放、接线、移动观察与通过出口的连续过程。<span>静音实机</span>
-</figcaption>
-</figure>
-</details>
-<article class="doc-case doc-case-tall">
-<div class="doc-copy">
-<h3>45 度初始朝向与两阶段改线
-</h3>
-<p>导电机关仍然每次转动 90 度，但我把部分机关的初始朝向预设为偏转 45 度，并按斜向连接关系安排插槽。玩家沿用已有操作，也能组成不同于横平竖直的线路。
+          <article class="study">
+            <div class="study-copy"><p>这个谜题先在纸上规划线路，再用九个方形结构分割格子，在节点放置插槽、用障碍限制可选路线，并提供有限数量的导电机关。俯视图用于解释解法，实际游玩则需要玩家在第三人称视角中逐步确认连接位置。
+</p></div>
+            <figure class="media-figure diagram-figure"><a href="../../assets/images/thunder-temple/maze.webp" target="_blank" rel="noopener" aria-label="放大图片：迷宫俯视与连接路线。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/maze.webp" alt="迷宫俯视与连接路线。" loading="lazy" width="512" height="866"></a><figcaption>迷宫俯视与连接路线。
+</figcaption><p class="media-hint">流程长图 · 点击图片查看完整尺寸 ↗</p></figure>
+          </article>
+        </details>
+      </section>
+      <section class="case-section shell" id="combat">
+        <div class="section-title">
+          <div><p class="overline">04 / COMBAT APPLICATION
+</p><h2>把引雷针用于防御和反击
+</h2></div>
+          <p>玩家操作的仍是熟悉的构件，但需要解决的问题从满足自然雷条件，变成在攻击到来前创造受保护的位置。
 </p>
-<p>先通过图中蓝色路线开启一楼的门，再更换机关使用的插槽、调整朝向，让第二条线路穿过已打开的门，连接门后的机关。同一空间需要在两个阶段重新布置。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/angled-circuit.webp" target="_blank" rel="noopener" aria-label="放大图片：蓝色线路先开门，紫色线路再穿过门连接下一个目标。"><img src="../../assets/images/thunder-temple/angled-circuit.webp" alt="蓝色线路先开门，紫色线路再穿过门连接下一个目标。" width="521" height="850" loading="lazy"></a>
-<figcaption>蓝色线路先开门，紫色线路再穿过门连接下一个目标。
-</figcaption>
-</figure>
-</article>
-<details class="doc-extra">
-<summary>另一个连线案例：有限机关穿过迷宫
+        </div>
+        <article class="study">
+          <div class="study-copy"><h3>敌人雷击改变了位置选择的目的
+</h3><p>自然雷会比较高度、材料和天空暴露；敌人的特殊雷击则在蓄力后锁定玩家。玩家站在已安装引雷针的有效范围内，才能把攻击引走。离开范围，雷击仍会击中玩家。
+</p><p>收缩光圈与文字提示交代攻击时间，引导玩家把之前用于解谜的构件当作防御工具。
+</p></div>
+          <figure class="media-figure film">
+            <div class="media-frame"><video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/redirection.webp" aria-label="敌人的预警与引雷结果。"><source src="../../assets/media/thunder-temple/redirection.mp4" type="video/mp4"></video></div>
+            <figcaption>敌人的预警与引雷结果。<span>静音实机</span></figcaption>
+          </figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>利用攻击间隙搬运引雷针
+</h3><p>第三道封印解除后，Boss 已经能够攻击前进通道上的玩家。通道沿途布置多个插槽，玩家携带一根可移动引雷针，在约十秒的攻击冷却与蓄力间隙内前进。
+</p><p>拿起引雷针便失去保护，靠近旧插槽也无法保护整条路线。玩家需要在雷击前停下，把针安装到下一处插槽，再等待攻击结束后继续前进。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/approach.webp" target="_blank" rel="noopener" aria-label="放大图片：Boss 战前的通道持续受到远程雷击覆盖。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/approach.webp" alt="Boss 战前的通道持续受到远程雷击覆盖。" loading="lazy" width="1516" height="923"></a><figcaption>Boss 战前的通道持续受到远程雷击覆盖。
+</figcaption></figure>
+        </article>
+        <article class="study">
+          <div class="study-copy"><h3>炮台充能与冷却换位
+</h3><p>Boss 场地设有三个炮台及对应插槽。把雷击引向已安装的引雷针后，能量会传入对应炮台；多次充能后自动发射，削减 Boss 血量。
+</p><p>发射后的炮台进入冷却，不能继续充能。玩家因此需要拔起引雷针，转移到其他可用炮台。绿、黄、红指示灯分别表示可用、充能中与冷却状态。
+</p><p>本 Demo 的 Boss 只使用特殊雷击，胜利依靠炮台完成，集中展示解谜构件与战斗机制的结合。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/cannons.webp" target="_blank" rel="noopener" aria-label="放大图片：三个炮台与插槽构成 Boss 战的主要场地配置。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/cannons.webp" alt="三个炮台与插槽构成 Boss 战的主要场地配置。" loading="lazy" width="1489" height="889"></a><figcaption>三个炮台与插槽构成 Boss 战的主要场地配置。
+</figcaption></figure>
+        </article>
+        <figure class="media-figure film">
+          <div class="media-frame"><video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/boss.webp" aria-label="引雷后的 Boss 状态与炮台反馈。"><source src="../../assets/media/thunder-temple/boss.mp4" type="video/mp4"></video></div>
+          <figcaption>引雷后的 Boss 状态与炮台反馈。<span>静音实机</span></figcaption>
+        </figure>
+      </section>
+      <section class="case-section shell" id="layout">
+        <div class="section-title">
+          <div><p class="overline">05 / ARCHITECTURE & PROGRESSION
+</p><h2>露天引雷与室内机关的布局
+</h2></div>
+        </div>
+        <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/thunder-temple/garden.webp" target="_blank" rel="noopener" title="查看完整图片"><img src="../../assets/images/thunder-temple/garden.webp" alt="雷电神殿庭院白盒场景" width="1548" height="909" loading="lazy"></a><figcaption>庭院白盒场景。</figcaption></figure>
+        <article class="study">
+          <div class="study-copy"><h3>中央高塔为周围建筑供电
+</h3><p>引雷针必须露天，而神殿内的机关需要电能，这个条件促成了中央天井与四周建筑的布局：雷电在中央高塔被引入，再输送到室内的解谜区域。高塔上的专用针头也成为各阶段之间反复返回的交互位置。
+</p><p>建筑参考低矮、厚重的埃及神殿，让引雷设施在轮廓上保持突出，并与常年雷暴中的石质遗迹设定相配。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/tower-plan.webp" target="_blank" rel="noopener" aria-label="放大图片：塔楼区域俯视：中央引雷设施与四周建筑。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/tower-plan.webp" alt="塔楼区域俯视：中央引雷设施与四周建筑。" loading="lazy" width="842" height="824"></a><figcaption>塔楼区域俯视：中央引雷设施与四周建筑。
+</figcaption></figure>
+        </article>
+        <figure class="media-figure"><a href="../../assets/images/thunder-temple/tower-exterior.webp" target="_blank" rel="noopener" aria-label="放大图片：塔楼区域外观；此图隐藏了倒伏在建筑上的巨龙。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/tower-exterior.webp" alt="塔楼区域外观；此图隐藏了倒伏在建筑上的巨龙。" loading="lazy" width="1749" height="747"></a><figcaption>塔楼区域外观；此图隐藏了倒伏在建筑上的巨龙。
+</figcaption></figure>
+        <div class="study-copy"><h3>三道封印与塔楼的可选后半程
+</h3><p>主线从中央广场进入庭院教程，再经侧路进入塔楼、废墟和 Boss 前进通道。三个区域各解除一道封印。塔楼包含较多谜题，因此把封印放在完成约一半内容的位置，让玩家可以继续主线，也可以留下或返回探索剩余关卡。
+</p></div>
+        <details class="supporting-detail">
+          <summary>环境设计提案：庭院的祭祀、研究与生活用途
 </summary>
-<div class="doc-case doc-case-tall">
-<div class="doc-copy">
-<p>这个谜题先在纸上规划线路，再用九个方形结构分割格子，在节点放置插槽、用障碍限制可选路线，并提供有限数量的导电机关。俯视图用于解释解法，实际游玩则需要玩家在第三人称视角中逐步确认连接位置。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/maze.webp" target="_blank" rel="noopener" aria-label="放大图片：迷宫俯视与连接路线。"><img src="../../assets/images/thunder-temple/maze.webp" alt="迷宫俯视与连接路线。" width="512" height="866" loading="lazy"></a>
-<figcaption>迷宫俯视与连接路线。
-</figcaption>
-</figure>
-</div>
-</details>
-</section>
-<section class="case-section shell" id="combat">
-<div class="section-title">
-<div>
-<p class="overline">04 / COMBAT APPLICATION
-</p>
-<h2>把引雷针用于防御和反击
-</h2>
-</div>
-<p>玩家操作的仍是熟悉的构件，但需要解决的问题从满足自然雷条件，变成在攻击到来前创造受保护的位置。
-</p>
-</div>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>敌人雷击改变了位置选择的目的
-</h3>
-<p>自然雷会比较高度、材料和天空暴露；敌人的特殊雷击则在蓄力后锁定玩家。玩家站在已安装引雷针的有效范围内，才能把攻击引走。离开范围，雷击仍会击中玩家。
-</p>
-<p>收缩光圈与文字提示交代攻击时间，引导玩家把之前用于解谜的构件当作防御工具。
-</p>
-</div>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/redirection.webp" aria-label="敌人的预警与引雷结果。">
-<source src="../../assets/media/thunder-temple/redirection.mp4" type="video/mp4">
-</video>
-<figcaption>敌人的预警与引雷结果。<span>静音实机</span>
-</figcaption>
-</figure>
-</article>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>利用攻击间隙搬运引雷针
-</h3>
-<p>第三道封印解除后，Boss 已经能够攻击前进通道上的玩家。通道沿途布置多个插槽，玩家携带一根可移动引雷针，在约十秒的攻击冷却与蓄力间隙内前进。
-</p>
-<p>拿起引雷针便失去保护，靠近旧插槽也无法保护整条路线。玩家需要在雷击前停下，把针安装到下一处插槽，再等待攻击结束后继续前进。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/approach.webp" target="_blank" rel="noopener" aria-label="放大图片：Boss 战前的通道持续受到远程雷击覆盖。"><img src="../../assets/images/thunder-temple/approach.webp" alt="Boss 战前的通道持续受到远程雷击覆盖。" width="1516" height="923" loading="lazy"></a>
-<figcaption>Boss 战前的通道持续受到远程雷击覆盖。
-</figcaption>
-</figure>
-</article>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>炮台充能与冷却换位
-</h3>
-<p>Boss 场地设有三个炮台及对应插槽。把雷击引向已安装的引雷针后，能量会传入对应炮台；多次充能后自动发射，削减 Boss 血量。
-</p>
-<p>发射后的炮台进入冷却，不能继续充能。玩家因此需要拔起引雷针，转移到其他可用炮台。绿、黄、红指示灯分别表示可用、充能中与冷却状态。
-</p>
-<p>本 Demo 的 Boss 只使用特殊雷击，胜利依靠炮台完成，集中展示解谜构件与战斗机制的结合。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/cannons.webp" target="_blank" rel="noopener" aria-label="放大图片：三个炮台与插槽构成 Boss 战的主要场地配置。"><img src="../../assets/images/thunder-temple/cannons.webp" alt="三个炮台与插槽构成 Boss 战的主要场地配置。" width="1489" height="889" loading="lazy"></a>
-<figcaption>三个炮台与插槽构成 Boss 战的主要场地配置。
-</figcaption>
-</figure>
-</article>
-<figure class="film">
-<video controls playsinline muted preload="none" poster="../../assets/media/thunder-temple/boss.webp" aria-label="引雷后的 Boss 状态与炮台反馈。">
-<source src="../../assets/media/thunder-temple/boss.mp4" type="video/mp4">
-</video>
-<figcaption>引雷后的 Boss 状态与炮台反馈。<span>静音实机</span>
-</figcaption>
-</figure>
-</section>
-<section class="case-section shell" id="layout">
-<div class="section-title">
-<div>
-<p class="overline">05 / ARCHITECTURE & PROGRESSION
-</p>
-<h2>露天引雷与室内机关的布局
-</h2>
-</div>
-</div>
-<article class="doc-case">
-<div class="doc-copy">
-<h3>中央高塔为周围建筑供电
-</h3>
-<p>引雷针必须露天，而神殿内的机关需要电能，这个条件促成了中央天井与四周建筑的布局：雷电在中央高塔被引入，再输送到室内的解谜区域。高塔上的专用针头也成为各阶段之间反复返回的交互位置。
-</p>
-<p>建筑参考低矮、厚重的埃及神殿，让引雷设施在轮廓上保持突出，并与常年雷暴中的石质遗迹设定相配。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/tower-plan.webp" target="_blank" rel="noopener" aria-label="放大图片：塔楼区域俯视：中央引雷设施与四周建筑。"><img src="../../assets/images/thunder-temple/tower-plan.webp" alt="塔楼区域俯视：中央引雷设施与四周建筑。" width="842" height="824" loading="lazy"></a>
-<figcaption>塔楼区域俯视：中央引雷设施与四周建筑。
-</figcaption>
-</figure>
-</article>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/tower-exterior.webp" target="_blank" rel="noopener" aria-label="放大图片：塔楼区域外观；此图隐藏了倒伏在建筑上的巨龙。"><img src="../../assets/images/thunder-temple/tower-exterior.webp" alt="塔楼区域外观；此图隐藏了倒伏在建筑上的巨龙。" width="1749" height="747" loading="lazy"></a>
-<figcaption>塔楼区域外观；此图隐藏了倒伏在建筑上的巨龙。
-</figcaption>
-</figure>
-<div class="doc-copy doc-wide">
-<h3>三道封印与塔楼的可选后半程
-</h3>
-<p>主线从中央广场进入庭院教程，再经侧路进入塔楼、废墟和 Boss 前进通道。三个区域各解除一道封印。塔楼包含较多谜题，因此把封印放在完成约一半内容的位置，让玩家可以继续主线，也可以留下或返回探索剩余关卡。
-</p>
-</div>
-<details class="doc-extra">
-<summary>环境设计提案：庭院的祭祀、研究与生活用途
+          <div class="study-copy"><p>在白盒庭院基础上，我设想用祭坛纹饰、设备维修痕迹、花园与生活用品说明先民怎样利用雷电。引雷设施既是信仰符号，也保护生活区域；研究区保留装置原理刻纹，为后续机关提供环境线索。这部分是扩展设计方案，尚未按图完整制作。
+</p></div>
+          <figure class="media-figure"><a href="../../assets/images/thunder-temple/courtyard-plan.webp" target="_blank" rel="noopener" aria-label="放大图片：庭院扩展设计分区：祭祀、战斗、花园、研究与生活区域。" class="media-frame image-frame" title="查看完整图片"><img src="../../assets/images/thunder-temple/courtyard-plan.webp" alt="庭院扩展设计分区：祭祀、战斗、花园、研究与生活区域。" loading="lazy" width="1165" height="502"></a><figcaption>庭院扩展设计分区：祭祀、战斗、花园、研究与生活区域。
+</figcaption></figure>
+        </details>
+      </section>
+      <section class="case-section shell" id="decisions">
+        <div class="section-title">
+          <div><p class="overline">06 / DESIGN DECISIONS
+</p><h2>制作中的调整与取舍
+</h2></div>
+        </div>
+        <div class="note-list">
+          <article class="note-item"><h3>高度竞争需要局部范围
+</h3><p>最初所有引雷针共用雷源，新增机关就必须比较前面所有目标，容易迫使后续关卡越做越高。我用 Strike Zone 限定每个谜题参与竞争的引雷针，并在完成后锁定该谜题状态，避免互相干扰。
+</p></article>
+          <article class="note-item"><h3>把更多解谜变化放在线路与空间中
+</h3><p>单纯比较高度的变化有限，也限制了从高处观察、向低处布置机关的可能。因此我保留高度作为教学规则，把更多谜题放在塔楼，通过电弧阻路、插槽位置和线路重组增加变化。
+</p></article>
+          <article class="note-item"><h3>用前进通道和炮台收拢战斗范围
+</h3><p>曾考虑让可移动敌人成为解谜电源，但敌人位置、攻击选择和行为控制会增加制作量。最终采用 Boss 远程通道与炮台战，复用同一套特殊雷击，使战斗内容集中在引雷针的应用上。
+</p></article>
+          <article class="note-item"><h3>仍需改善远处机关的反馈
+</h3><p>中控台开启的门不在玩家视野内，大型引雷针也需要频繁抬头观察。后续应加入短镜头展示关键变化，减少玩家操作后不知道哪里发生变化的情况。
+</p></article>
+        </div>
+        <details class="supporting-detail">
+          <summary>个人工作与资产来源
 </summary>
-<div class="doc-copy doc-wide">
-<p>在白盒庭院基础上，我设想用祭坛纹饰、设备维修痕迹、花园与生活用品说明先民怎样利用雷电。引雷设施既是信仰符号，也保护生活区域；研究区保留装置原理刻纹，为后续机关提供环境线索。这部分是扩展设计方案，尚未按图完整制作。
-</p>
-</div>
-<figure class="doc-figure "><a href="../../assets/images/thunder-temple/courtyard-plan.webp" target="_blank" rel="noopener" aria-label="放大图片：庭院扩展设计分区：祭祀、战斗、花园、研究与生活区域。"><img src="../../assets/images/thunder-temple/courtyard-plan.webp" alt="庭院扩展设计分区：祭祀、战斗、花园、研究与生活区域。" width="1165" height="502" loading="lazy"></a>
-<figcaption>庭院扩展设计分区：祭祀、战斗、花园、研究与生活区域。
-</figcaption>
-</figure>
-</details>
-</section>
-<section class="case-section shell" id="decisions">
-<div class="section-title">
-<div>
-<p class="overline">06 / DESIGN DECISIONS
-</p>
-<h2>制作中的调整与取舍
-</h2>
-</div>
-</div>
-<div class="doc-decisions">
-<article>
-<h3>高度竞争需要局部范围
-</h3>
-<p>最初所有引雷针共用雷源，新增机关就必须比较前面所有目标，容易迫使后续关卡越做越高。我用 Strike Zone 限定每个谜题参与竞争的引雷针，并在完成后锁定该谜题状态，避免互相干扰。
-</p>
-</article>
-<article>
-<h3>把更多解谜变化放在线路与空间中
-</h3>
-<p>单纯比较高度的变化有限，也限制了从高处观察、向低处布置机关的可能。因此我保留高度作为教学规则，把更多谜题放在塔楼，通过电弧阻路、插槽位置和线路重组增加变化。
-</p>
-</article>
-<article>
-<h3>用前进通道和炮台收拢战斗范围
-</h3>
-<p>曾考虑让可移动敌人成为解谜电源，但敌人位置、攻击选择和行为控制会增加制作量。最终采用 Boss 远程通道与炮台战，复用同一套特殊雷击，使战斗内容集中在引雷针的应用上。
-</p>
-</article>
-<article>
-<h3>仍需改善远处机关的反馈
-</h3>
-<p>中控台开启的门不在玩家视野内，大型引雷针也需要频繁抬头观察。后续应加入短镜头展示关键变化，减少玩家操作后不知道哪里发生变化的情况。
-</p>
-</article>
-</div>
-<details class="doc-extra">
-<summary>个人工作与资产来源
-</summary>
-<div class="doc-copy doc-wide">
-<p>我负责关卡布局、谜题设计与机关蓝图实现，制作过程中使用 AI 辅助学习与排错。生命、血瓶、HUD、篝火等基础系统由我的前作迁入，再适配本项目交互。
-</p>
-<p>第三方资产包括 Epic 第三人称模板、Blocking Starter Pack、Free Spline VFX、Dragon for Boss Monster、Item Pickup VFX、KEStatues Lite、Rock Environment Pack 和 Light Foliage。电弧动态端点、阻挡及机关交互按本项目需要调整。
-</p>
-</div>
-</details>
-</section>
-<section class="case-next shell">
-<p class="overline">继续浏览
-</p><a href="original-level.html">
-<h2>类魂关卡白盒
-</h2><span>↗</span></a>
-</section>
-</main>
-<footer class="pv-footer shell"><span>© <span data-year></span> Ray Zheng</span><span>关卡 · 机制 · 玩家选择</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a>
-</footer>
-</body>
+          <div class="study-copy"><p>我负责关卡布局、谜题设计与机关蓝图实现，制作过程中使用 AI 辅助学习与排错。生命、血瓶、HUD、篝火等基础系统由我的前作迁入，再适配本项目交互。
+</p><p>第三方资产包括 Epic 第三人称模板、Blocking Starter Pack、Free Spline VFX、Dragon for Boss Monster、Item Pickup VFX、KEStatues Lite、Rock Environment Pack 和 Light Foliage。电弧动态端点、阻挡及机关交互按本项目需要调整。
+</p></div>
+        </details>
+      </section>
+      <section class="next-project shell"><p class="eyebrow">继续浏览 / 下一个项目</p><a href="original-level.html"><div><span>原创关卡 / UE 5.5</span><h2>类魂关卡白盒</h2></div><span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="footer-name" href="mailto:zz2916@nyu.edu">联系我 <span>↗</span><small>zz2916@nyu.edu</small></a>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Ray Zheng</span><span>LEVEL DESIGN & GAMEPLAY PROTOTYPING</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">回到顶部 ↑</a></div>
+    </footer>
+  </body>
 </html>

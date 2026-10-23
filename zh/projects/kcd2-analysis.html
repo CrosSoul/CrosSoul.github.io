@@ -1,120 +1,84 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ray Zheng对《天国：拯救2》任务“绝境丧钟”的关卡设计分析。">
-  <title>《天国：拯救2》关卡分析：绝境丧钟 — Ray Zheng</title>
-  <link rel="stylesheet" href="../../assets/styles.css">
-  <script src="../../assets/site.js" defer></script>
-</head>
-<body class="zh-page">
-  <a class="skip-link" href="#main">跳到主要内容</a>
-  <header class="site-header" data-header>
-    <a class="brand" href="../index.html"><span class="brand-mark">RZ</span><span>Ray Zheng</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>菜单</button>
-    <nav class="site-nav" id="site-nav" data-nav>
-      <a href="../index.html#work">作品</a>
-      <a href="../index.html#about">关于我</a>
-      <a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:zz2916@nyu.edu">联系</a>
-      <a class="language-link" href="../../projects/kcd2-analysis.html" lang="en">EN</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <header class="case-hero section-shell">
-      <a class="back-link" href="../index.html#work">← 返回作品列表</a>
-      <p class="eyebrow reveal">关卡分析 · 天国：拯救2</p>
-      <h1 class="reveal">绝境丧钟</h1>
-      <p class="case-intro reveal">一个限时城堡渗透任务，如何通过空间分区、动态身份、环境钟声与多种系统路线，同时服务初见玩家的紧张感和多周目玩家的自由度。</p>
-      <dl class="project-meta reveal">
-        <div><dt>分析重点</dt><dd>空间叙事与系统设计</dd></div>
-        <div><dt>关卡类型</dt><dd>封闭箱庭</dd></div>
-        <div><dt>研究方法</dt><dd>实机测试与路线对比</dd></div>
-        <div><dt>完整文档</dt><dd>中文9页分析报告</dd></div>
-      </dl>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Ray Zheng对《天国：拯救2》任务“绝境丧钟”的关卡设计分析。"><meta name="theme-color" content="#151a1d"><title>绝境丧钟 — Ray Zheng</title><link rel="canonical" href="https://crossoul.github.io/zh/projects/kcd2-analysis.html"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/design.css"><script src="../../assets/design.js" defer></script><meta name="color-scheme" content="dark"></head>
+  <body class="zh case-page case-kcd2-analysis">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header shell">
+      <a class="brand" href="../index.html" aria-label="Ray Zheng — 首页"><span class="brand-mark">RZ<span>.</span></span><span class="brand-name">Ray Zheng<small>LEVEL DESIGN</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">菜单 <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="主导航"><a href="../index.html#work">作品</a><a href="../index.html#about">关于</a><a href="../index.html#contact">联系</a><a class="lang-link" href="../../projects/kcd2-analysis.html" lang="en">EN <span aria-hidden="true">↗</span></a></nav>
     </header>
-
-    <figure class="case-cover section-shell reveal">
-      <img src="../../assets/images/kcd2-castle.webp" alt="绝境丧钟任务所在的特洛斯基城堡空中视角">
-      <figcaption>玩家从城堡外围开始行动，最终进入权限最严格的两座塔楼。</figcaption>
-    </figure>
-
-    <section class="case-section section-shell two-column">
-      <div class="section-heading reveal"><p class="eyebrow">01 · 核心体验</p><h2>一段用垂直空间表达的身份跨越。</h2></div>
-      <div class="prose reveal">
-        <p>亨利以囚犯和劳工身份从外围广场开始。为了到达少女塔顶层、找到身负重伤的托马斯队长，玩家必须逐步取得合法权限，或通过潜行、犯罪和系统漏洞绕开身份限制。</p>
-        <p>由下至上的空间推进同时也是社会身份的变化。搬运、打铁、帮厨等支线并非独立内容，而是动态改变玩家可以合法进入的区域。</p>
-        <a class="button button-quiet" href="../../assets/reports/kcd2-level-analysis-cn.pdf" target="_blank" rel="noopener">查看完整中文版 PDF ↗</a>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">02 · 空间分区</p><h2>从宽松外围逐步收紧的漏斗结构。</h2></div>
-      <figure class="wide-figure reveal">
-        <img src="../../assets/images/kcd2-zoning.webp" alt="标注公共区、驱离区和敌对区的特洛斯基城堡俯视图">
-        <figcaption>动线从宽阔的外围广场收束至连接通道，最终压缩进狭窄的塔楼内部。</figcaption>
-      </figure>
-      <div class="zone-grid">
-        <article class="zone zone-green reveal"><span>绿色</span><h3>公共区域</h3><p>用于观察、规划和完成前置劳动的低压力空间；只要不犯罪，玩家可以安全活动。</p></article>
-        <article class="zone zone-blue reveal"><span>蓝色</span><h3>驱离缓冲区</h3><p>未获许可进入时，AI先警告并尝试劝离，为探索、潜行和走错路提供可恢复的后果。</p></article>
-        <article class="zone zone-red reveal"><span>红色</span><h3>敌对禁区</h3><p>一旦产生视线接触便可能触发逮捕或战斗，迫使玩家严格管理潜行路线与行动时机。</p></article>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">03 · 路线分析</p><h2>目标不变，玩家支付的代价不同。</h2></div>
-      <figure class="wide-figure reveal">
-        <img src="../../assets/images/kcd2-paths.webp" alt="标注多种通关路线的特洛斯基城堡俯视图">
-        <figcaption>合法身份、空间捷径、道具捷径与涌现式解法可以根据角色能力、玩家操作和地图知识自由组合。</figcaption>
-      </figure>
-      <div class="route-table-wrap reveal">
-        <table class="route-table">
-          <thead><tr><th>路线</th><th>核心交换</th><th>风险</th><th>耗时</th><th>玩家要求</th></tr></thead>
-          <tbody>
-            <tr><td>守法流程</td><td>用时间换安全</td><td>低</td><td>高</td><td>耐心与按部就班</td></tr>
-            <tr><td>水井捷径</td><td>用血量换位置</td><td>高</td><td>中</td><td>观察力与潜行</td></tr>
-            <tr><td>偷取退烧药</td><td>用犯罪换效率</td><td>中</td><td>低</td><td>探索与游戏知识</td></tr>
-            <tr><td>强闯速通</td><td>用沉浸感换速度</td><td>中</td><td>极低</td><td>地图背板与机制理解</td></tr>
-            <tr><td>正面战斗</td><td>用声誉换控制权</td><td>极高</td><td>高</td><td>战斗技巧</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="case-section section-shell two-column">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 · 听觉倒计时</p>
-        <h2>心理压力很强，实际容错很高。</h2>
-        <img class="inline-evidence" src="../../assets/images/kcd2-bell.webp" alt="第一次钟声响起时亨利提示还剩十一响">
-      </div>
-      <div class="prose reveal">
-        <p>任务没有使用传统UI倒计时，而是通过城堡钟声和亨利的焦虑台词提示时间。玩家能感到“时间正在减少”，却无法精确知道还剩多少分钟。</p>
-        <div class="finding"><strong>实测结论</strong><span>效率测试中，完整守法主流程约消耗两次钟声，而总预算为十二次。约80%的时间冗余被留给初见找路、阅读、搜刮与建立空间认知。</span></div>
-        <p>钟声的目的不是禁止探索，而是防止玩家无限停留。它用叙事层面的紧张感推动行动，同时在数值层面保护RPG的探索体验。</p>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">05 · 复盘与改进</p><h2>从描述问题，进一步走向可执行方案。</h2></div>
-      <div class="issue-grid">
-        <article class="issue reveal"><span>01</span><h3>难度曲线倒置</h3><p>外围蓝区的巡逻密度高、路线交叉复杂；塔楼高潮段却以背对玩家的静态守卫为主。可在楼梯与走廊增加移动守卫，并调整关键房间守卫朝向。</p></article>
-        <article class="issue reveal"><span>02</span><h3>关键道具缺少线索</h3><p>退烧药捷径缺乏前置提示。可以通过神父或厨娘的一句环境对话提供逻辑线索，同时保留玩家自行发现的乐趣。</p></article>
-      </div>
-      <div class="lighting-comparison reveal">
-        <figure><img src="../../assets/images/kcd2-light-front.webp" alt="阁楼高亮区域将视线吸引到死路"><figcaption>当前：高对比光源将注意力引向非交互死角。</figcaption></figure>
-        <figure><img src="../../assets/images/kcd2-light-rear.webp" alt="关键阶梯隐藏在玩家身后的深色阴影中"><figcaption>问题：关键阶梯被隐藏在低照度阴影中。</figcaption></figure>
-        <div><span>03</span><h3>视觉引导产生误导</h3><p>将局部光源移至阶梯附近，或在入口侧墙引入自然光。目标是在不添加突兀路径标记的前提下修正视觉暗示。</p></div>
-      </div>
-    </section>
-
-    <section class="next-project section-shell reveal">
-      <p class="eyebrow">下一个项目</p>
-      <a href="original-level.html"><span>原创UE5关卡</span><strong>ARPG类魂关卡白盒展示</strong><span aria-hidden="true">→</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer section-shell"><span>© <span data-year></span> Ray Zheng</span><span class="footer-links"><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a></span></footer>
-</body>
+    <main id="main">
+      <header class="case-hero shell">
+        <div class="case-breadcrumb"><a href="../index.html#work">← 全部作品</a><span>CASE STUDY / 03</span></div>
+        <div class="case-title-block"><p class="eyebrow">关卡分析 / 天国：拯救 II</p><h1>绝境丧钟</h1><p class="case-subtitle">《天国：拯救 II》城堡渗透关卡分析</p><p class="case-lede">一个限时城堡渗透任务，如何通过空间分区、动态身份、环境钟声与多种系统路线，同时服务初见玩家的紧张感和多周目玩家的自由度。</p></div>
+        <dl class="project-meta">
+          <div><dt>分析重点</dt><dd>空间叙事与系统设计</dd></div>
+          <div><dt>关卡类型</dt><dd>封闭箱庭</dd></div>
+          <div><dt>研究方法</dt><dd>实机测试与路线对比</dd></div>
+          <div><dt>完整文档</dt><dd>中文9页分析报告</dd></div>
+        </dl>
+        <div class="quick-links"><a href="#routes">路线分析 <span>↘</span></a><a href="../../assets/reports/kcd2-level-analysis-cn.pdf" target="_blank" rel="noopener">完整分析 PDF <span>↗</span></a></div>
+      </header>
+      <nav class="chapter-nav" aria-label="项目章节">
+        <div class="shell">
+          <button class="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-links">本页目录 <span aria-hidden="true">＋</span></button>
+          <span class="chapter-label">本页目录</span>
+          <div class="chapter-links" id="chapter-links"><a href="#experience"><span>01</span> 核心体验</a><a href="#zoning"><span>02</span> 空间分区</a><a href="#routes"><span>03</span> 路线分析</a><a href="#countdown"><span>04</span> 听觉倒计时</a><a href="#review"><span>05</span> 复盘与改进</a></div>
+        </div>
+      </nav>
+      <section class="case-section shell" id="experience">
+        <div class="section-title"><p class="eyebrow">01 · 核心体验</p><h2>一段用垂直空间表达的身份跨越。</h2></div>
+        <div class="prose"><p>亨利以囚犯和劳工身份从外围广场开始。为了到达少女塔顶层、找到身负重伤的托马斯队长，玩家必须逐步取得合法权限，或通过潜行、犯罪和系统漏洞绕开身份限制。</p><p>由下至上的空间推进同时也是社会身份的变化。搬运、打铁、帮厨等支线并非独立内容，而是动态改变玩家可以合法进入的区域。</p><a class="button button-quiet" href="../../assets/reports/kcd2-level-analysis-cn.pdf" target="_blank" rel="noopener">查看完整中文版 PDF ↗</a></div>
+        <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/kcd2-castle.webp" target="_blank" rel="noopener" title="查看完整图片"><img src="../../assets/images/kcd2-castle.webp" alt="特洛斯基城堡全景" width="1800" height="1013" loading="lazy"></a><figcaption>特洛斯基城堡：从外围广场逐步进入塔楼。</figcaption></figure>
+      </section>
+      <section class="case-section shell" id="zoning">
+        <div class="section-title"><p class="eyebrow">02 · 空间分区</p><h2>从宽松外围逐步收紧的漏斗结构。</h2></div>
+        <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/kcd2-zoning.webp" target="_blank" rel="noopener" aria-label="查看完整图片：标注公共区、驱离区和敌对区的特洛斯基城堡俯视图" title="查看完整图片"><img src="../../assets/images/kcd2-zoning.webp" alt="标注公共区、驱离区和敌对区的特洛斯基城堡俯视图" loading="lazy" width="1467" height="825"></a><figcaption>动线从宽阔的外围广场收束至连接通道，最终压缩进狭窄的塔楼内部。</figcaption></figure>
+        <div class="note-list">
+          <article class="note-item"><span>绿色</span><h3>公共区域</h3><p>用于观察、规划和完成前置劳动的低压力空间；只要不犯罪，玩家可以安全活动。</p></article>
+          <article class="note-item"><span>蓝色</span><h3>驱离缓冲区</h3><p>未获许可进入时，AI先警告并尝试劝离，为探索、潜行和走错路提供可恢复的后果。</p></article>
+          <article class="note-item"><span>红色</span><h3>敌对禁区</h3><p>一旦产生视线接触便可能触发逮捕或战斗，迫使玩家严格管理潜行路线与行动时机。</p></article>
+        </div>
+      </section>
+      <section class="case-section shell" id="routes">
+        <div class="section-title"><p class="eyebrow">03 · 路线分析</p><h2>目标不变，玩家支付的代价不同。</h2></div>
+        <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/kcd2-paths.webp" target="_blank" rel="noopener" aria-label="查看完整图片：标注多种通关路线的特洛斯基城堡俯视图" title="查看完整图片"><img src="../../assets/images/kcd2-paths.webp" alt="标注多种通关路线的特洛斯基城堡俯视图" loading="lazy" width="1490" height="838"></a><figcaption>合法身份、空间捷径、道具捷径与涌现式解法可以根据角色能力、玩家操作和地图知识自由组合。</figcaption></figure>
+        <div class="route-table-wrap" tabindex="0" role="region" aria-label="数据对照表，可左右滚动">
+          <table class="route-table">
+            <thead><tr><th>路线</th><th>核心交换</th><th>风险</th><th>耗时</th><th>玩家要求</th></tr></thead>
+            <tbody><tr><td>守法流程</td><td>用时间换安全</td><td>低</td><td>高</td><td>耐心与按部就班</td></tr><tr><td>水井捷径</td><td>用血量换位置</td><td>高</td><td>中</td><td>观察力与潜行</td></tr><tr><td>偷取退烧药</td><td>用犯罪换效率</td><td>中</td><td>低</td><td>探索与游戏知识</td></tr><tr><td>强闯速通</td><td>用沉浸感换速度</td><td>中</td><td>极低</td><td>地图背板与机制理解</td></tr><tr><td>正面战斗</td><td>用声誉换控制权</td><td>极高</td><td>高</td><td>战斗技巧</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="case-section shell" id="countdown">
+        <div class="section-title"><p class="eyebrow">04 · 听觉倒计时</p><h2>心理压力很强，实际容错很高。</h2></div>
+        <div class="prose">
+          <p>任务没有使用传统UI倒计时，而是通过城堡钟声和亨利的焦虑台词提示时间。玩家能感到“时间正在减少”，却无法精确知道还剩多少分钟。</p>
+          <div class="finding"><strong>实测结论</strong><span>效率测试中，完整守法主流程约消耗两次钟声，而总预算为十二次。约80%的时间冗余被留给初见找路、阅读、搜刮与建立空间认知。</span></div>
+          <p>钟声的目的不是禁止探索，而是防止玩家无限停留。它用叙事层面的紧张感推动行动，同时在数值层面保护RPG的探索体验。</p>
+        </div>
+        <figure class="media-figure media-excerpt"><a class="media-frame image-frame" href="../../assets/images/kcd2-bell.webp" target="_blank" rel="noopener" aria-label="查看完整图片：第一次钟声响起时亨利提示还剩十一响" title="查看完整图片"><img class="inline-evidence" src="../../assets/images/kcd2-bell.webp" alt="第一次钟声响起时亨利提示还剩十一响" loading="lazy" width="661" height="136"></a></figure>
+      </section>
+      <section class="case-section shell" id="review">
+        <div class="section-title"><p class="eyebrow">05 · 复盘与改进</p><h2>从描述问题，进一步走向可执行方案。</h2></div>
+        <div class="note-list">
+          <article class="note-item"><span>01</span><h3>难度曲线倒置</h3><p>外围蓝区的巡逻密度高、路线交叉复杂；塔楼高潮段却以背对玩家的静态守卫为主。可在楼梯与走廊增加移动守卫，并调整关键房间守卫朝向。</p></article>
+          <article class="note-item"><span>02</span><h3>关键道具缺少线索</h3><p>退烧药捷径缺乏前置提示。可以通过神父或厨娘的一句环境对话提供逻辑线索，同时保留玩家自行发现的乐趣。</p></article>
+        </div>
+        <div class="study">
+          <div class="study-copy"><span>03</span><h3>视觉引导产生误导</h3><p>将局部光源移至阶梯附近，或在入口侧墙引入自然光。目标是在不添加突兀路径标记的前提下修正视觉暗示。</p></div>
+          <div class="media-pair">
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/kcd2-light-front.webp" target="_blank" rel="noopener" aria-label="查看完整图片：阁楼高亮区域将视线吸引到死路" title="查看完整图片"><img src="../../assets/images/kcd2-light-front.webp" alt="阁楼高亮区域将视线吸引到死路" loading="lazy" width="1600" height="900"></a><figcaption>当前：高对比光源将注意力引向非交互死角。</figcaption></figure>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/kcd2-light-rear.webp" target="_blank" rel="noopener" aria-label="查看完整图片：关键阶梯隐藏在玩家身后的深色阴影中" title="查看完整图片"><img src="../../assets/images/kcd2-light-rear.webp" alt="关键阶梯隐藏在玩家身后的深色阴影中" loading="lazy" width="1600" height="900"></a><figcaption>问题：关键阶梯被隐藏在低照度阴影中。</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      <section class="next-project shell"><p class="eyebrow">继续浏览 / 下一个项目</p><a href="elden-ring-research.html"><div><span>数据研究 / 艾尔登法环</span><h2>开放世界与难度体验</h2></div><span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="footer-name" href="mailto:zz2916@nyu.edu">联系我 <span>↗</span><small>zz2916@nyu.edu</small></a>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Ray Zheng</span><span>LEVEL DESIGN & GAMEPLAY PROTOTYPING</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">回到顶部 ↑</a></div>
+    </footer>
+  </body>
 </html>

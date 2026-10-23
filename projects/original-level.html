@@ -1,170 +1,114 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ARPG Level Prototyping Showcase — an original action level designed and built by Ray Zheng in Unreal Engine 5.">
-  <title>ARPG Level Prototyping Showcase — Ray Zheng</title>
-  <link rel="stylesheet" href="../assets/styles.css">
-  <script src="../assets/site.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" data-header>
-    <a class="brand" href="../index.html"><span class="brand-mark">RZ</span><span>Ray Zheng</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
-    <nav class="site-nav" id="site-nav" data-nav>
-      <a href="../index.html#work">Work</a>
-      <a href="../index.html#about">About</a>
-      <a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:zz2916@nyu.edu">Contact</a>
-      <a class="language-link" href="../zh/projects/original-level.html" lang="zh-CN">中文</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <header class="case-hero section-shell">
-      <a class="back-link" href="../index.html#work">← Selected work</a>
-      <p class="eyebrow reveal">Original level · Unreal Engine 5</p>
-      <h1 class="reveal">ARPG Level Prototyping Showcase</h1>
-      <p class="case-intro reveal">A third-person whitebox level exploring spatial reorientation, risk-and-reward routing, combat rhythm, and the satisfaction of unlocking a meaningful shortcut.</p>
-      <dl class="project-meta reveal">
-        <div><dt>Role</dt><dd>Level Designer</dd></div>
-        <div><dt>Engine</dt><dd>Unreal Engine 5.5</dd></div>
-        <div><dt>Format</dt><dd>Solo portfolio project</dd></div>
-        <div><dt>Status</dt><dd>Case study in progress</dd></div>
-      </dl>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="ARPG Level Prototyping Showcase — an original action level designed and built by Ray Zheng in Unreal Engine 5."><meta name="theme-color" content="#151a1d"><title>Soulslike Level Blockout — Ray Zheng</title><link rel="canonical" href="https://crossoul.github.io/projects/original-level.html"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/design.css"><script src="../assets/design.js" defer></script><meta name="color-scheme" content="dark"></head>
+  <body class="en case-page case-original-level">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="brand" href="../index.html" aria-label="Ray Zheng — Home"><span class="brand-mark">RZ<span>.</span></span><span class="brand-name">Ray Zheng<small>LEVEL DESIGN</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="Main navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="lang-link" href="../zh/projects/original-level.html" lang="zh-CN">中文 <span aria-hidden="true">↗</span></a></nav>
     </header>
-
-    <section class="section-shell media-block reveal">
-      <div class="video-embed">
-        <iframe src="https://www.youtube-nocookie.com/embed/0X0Hq3Q2DQ0?rel=0" title="ARPG Level Prototyping Showcase — full English walkthrough by Ray Zheng" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="video-meta">
-        <span>Full English walkthrough · 2560×1440 · 60 fps</span>
-        <a href="https://www.youtube.com/watch?v=0X0Hq3Q2DQ0" target="_blank" rel="noopener">Watch on YouTube ↗</a>
-      </div>
-    </section>
-
-    <section class="case-section section-shell two-column">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 · Overview</p>
-        <h2>Designing a route the player gradually learns to own.</h2>
-      </div>
-      <div class="prose reveal">
-        <p>The level is structured around a legible critical path with layered side spaces, vertical crossings, and a loopback that changes how the player understands the environment on return.</p>
-        <p>This first framework will be refined with final map metrics, encounter beats, and development-time details after the walkthrough is uploaded.</p>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 · Design pillars</p>
-        <h2>Three questions guided the blockout.</h2>
-      </div>
-      <div class="pillar-grid">
-        <article class="pillar reveal"><span>01</span><h3>Can the player read the goal?</h3><p>Use sightlines, contrast, framing, and landmark relationships to establish direction without removing discovery.</p></article>
-        <article class="pillar reveal"><span>02</span><h3>Does movement reveal new meaning?</h3><p>Layer routes vertically so familiar spaces gain new context when viewed from above, below, or across a gap.</p></article>
-        <article class="pillar reveal"><span>03</span><h3>Does the return feel earned?</h3><p>Use the elevator and lever system as a functional shortcut that compresses traversal and confirms spatial understanding.</p></article>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">03 · Level flow</p>
-        <h2>Critical path, optional routes, and layered loopbacks.</h2>
-      </div>
-      <article class="flow-study reveal">
-        <a class="flow-image" href="../assets/images/demo-full-level.webp" target="_blank" rel="noopener" aria-label="Open full-resolution level flow map">
-          <img src="../assets/images/demo-full-level.webp" alt="Annotated overhead map of the complete level showing the critical path, optional routes, enemies, checkpoints, vertical transitions, and shortcut mechanisms">
-        </a>
-        <div class="flow-notes">
-          <p class="project-kicker">Whole-level flow</p>
-          <h3>One critical route, multiple changes of pace.</h3>
-          <p>The macro layout connects exterior approaches, interior spaces, a cave route, and the church arena. Optional branches add pickups and combat pressure before reconnecting with the main route.</p>
-          <ul class="diagram-legend" aria-label="Map legend translated into English">
-            <li><span class="legend-line legend-critical"></span>Critical path</li>
-            <li><span class="legend-line legend-optional"></span>Optional route</li>
-            <li><span class="legend-line legend-underground"></span>Underground route</li>
-            <li><span class="legend-symbol legend-checkpoint">⚑</span>Checkpoint</li>
-            <li><span class="legend-symbol legend-enemy">⊗</span>Enemy</li>
-            <li><span class="legend-symbol legend-vertical">⇅</span>Vertical transition</li>
-            <li><span class="legend-symbol legend-shortcut">⌁</span>Shortcut mechanism</li>
-          </ul>
+    <main id="main">
+      <header class="case-hero shell">
+        <div class="case-breadcrumb"><a href="../index.html#work">← All work</a><span>CASE STUDY / 02</span></div>
+        <div class="case-title-block"><p class="eyebrow">ORIGINAL LEVEL / UE 5.5</p><h1>Soulslike Level Blockout</h1><p class="case-subtitle">Third-person ARPG · Vertical routes & loopbacks</p><p class="case-lede">A third-person whitebox level exploring spatial reorientation, risk-and-reward routing, combat rhythm, and the satisfaction of unlocking a meaningful shortcut.</p></div>
+        <dl class="project-meta">
+          <div><dt>Role</dt><dd>Level Designer</dd></div>
+          <div><dt>Engine</dt><dd>Unreal Engine 5.5</dd></div>
+          <div><dt>Format</dt><dd>Solo portfolio project</dd></div>
+          <div><dt>Status</dt><dd>Whitebox prototype</dd></div>
+        </dl>
+        <div class="quick-links"><a href="#flow">Level flow <span>↘</span></a><a href="#iteration">Design & iteration <span>↘</span></a></div>
+      </header>
+      <nav class="chapter-nav" aria-label="Project chapters">
+        <div class="shell">
+          <button class="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-links">On this page <span aria-hidden="true">＋</span></button>
+          <span class="chapter-label">ON THIS PAGE</span>
+          <div class="chapter-links" id="chapter-links"><a href="#walkthrough"><span>01</span> Walkthrough</a><a href="#overview"><span>02</span> Overview</a><a href="#pillars"><span>03</span> Design focus</a><a href="#flow"><span>04</span> Level flow</a><a href="#iteration"><span>05</span> Design & iteration</a></div>
         </div>
-      </article>
-
-      <article class="flow-study flow-study-reverse reveal">
-        <a class="flow-image" href="../assets/images/demo-church-flow.webp" target="_blank" rel="noopener" aria-label="Open full-resolution church flow diagram">
-          <img src="../assets/images/demo-church-flow.webp" alt="Four annotated overhead views of the church combat sandbox showing floor changes, branching routes, enemy positions, checkpoints, and shortcuts">
-        </a>
-        <div class="flow-notes">
-          <p class="project-kicker">Church combat sandbox</p>
-          <h3>Routes overlap across four levels.</h3>
-          <p>The church is treated as a compact multi-level sandbox rather than a single corridor. Ground-floor movement, elevated paths, drop-downs, and shortcuts repeatedly cross the same combat space from new angles.</p>
-          <p class="flow-hint">Select either diagram to inspect the full-resolution version.</p>
+      </nav>
+      <section class="shell media-block" id="walkthrough">
+        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/0X0Hq3Q2DQ0?rel=0" title="ARPG Level Prototyping Showcase — full English walkthrough by Ray Zheng" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe></div>
+        <div class="video-meta"><span>Full English walkthrough · 2560×1440 · 60 fps</span><a href="https://www.youtube.com/watch?v=0X0Hq3Q2DQ0" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </section>
+      <section class="case-section shell" id="overview">
+        <div class="section-title"><p class="eyebrow">01 · Overview</p><h2>Designing a route the player gradually learns to own.</h2></div>
+        <div class="prose"><p>The level is structured around a legible critical path with layered side spaces, vertical crossings, and a loopback that changes how the player understands the environment on return.</p><p>The diagrams, screenshots, and test recordings below show how the space was organized and revised during blockout.</p></div>
+      </section>
+      <section class="case-section shell" id="pillars">
+        <div class="section-title"><p class="eyebrow">02 · Design pillars</p><h2>Three questions guided the blockout.</h2></div>
+        <div class="note-list">
+          <article class="note-item"><span>01</span><h3>Can the player read the goal?</h3><p>Use sightlines, contrast, framing, and landmark relationships to establish direction without removing discovery.</p></article>
+          <article class="note-item"><span>02</span><h3>Does movement reveal new meaning?</h3><p>Layer routes vertically so familiar spaces gain new context when viewed from above, below, or across a gap.</p></article>
+          <article class="note-item"><span>03</span><h3>Does the return feel earned?</h3><p>Use the elevator and lever system as a functional shortcut that compresses traversal and confirms spatial understanding.</p></article>
         </div>
-      </article>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 · Design breakdown</p>
-        <h2>Iteration made visible.</h2>
-      </div>
-      <div class="case-gallery">
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>01</span><h3>Visual guidance</h3><p>Landmarks, elevation, framed openings, and contrasting interaction surfaces keep the next destination readable without reducing the space to a corridor.</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="Visual guidance image gallery">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><img src="../assets/images/demo-guide-start.webp" alt="Opening view toward the elevated structure and nearby enemies" loading="lazy"><figcaption>The opening view establishes both immediate danger and the elevated structure that anchors the route.</figcaption></figure>
-              <figure class="carousel-slide"><img src="../assets/images/demo-guide-mid.webp" alt="Mid-route street with repeated landmarks and highlighted interaction surfaces" loading="lazy"><figcaption>Repeated landmarks and orange interaction surfaces help the player reorient midway through the level.</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+      </section>
+      <section class="case-section shell" id="flow">
+        <div class="section-title"><p class="eyebrow">03 · Level flow</p><h2>Critical path, optional routes, and layered loopbacks.</h2></div>
+        <article class="study">
+          <div class="study-copy">
+            <p class="project-kicker">Whole-level flow</p>
+            <h3>One critical route, multiple changes of pace.</h3>
+            <p>The macro layout connects exterior approaches, interior spaces, a cave route, and the church arena. Optional branches add pickups and combat pressure before reconnecting with the main route.</p>
+            <ul class="diagram-legend" aria-label="Map legend translated into English">
+              <li><span class="legend-line legend-critical"></span>Critical path</li>
+              <li><span class="legend-line legend-optional"></span>Optional route</li>
+              <li><span class="legend-line legend-underground"></span>Underground route</li>
+              <li><span class="legend-symbol legend-checkpoint">⚑</span>Checkpoint</li>
+              <li><span class="legend-symbol legend-enemy">⊗</span>Enemy</li>
+              <li><span class="legend-symbol legend-vertical">⇅</span>Vertical transition</li>
+              <li><span class="legend-symbol legend-shortcut">⌁</span>Shortcut mechanism</li>
+            </ul>
           </div>
+          <figure class="media-figure diagram-figure"><a class="media-frame image-frame" href="../assets/images/demo-full-level.webp" target="_blank" rel="noopener" aria-label="Open full-resolution level flow map" title="Open full image"><img src="../assets/images/demo-full-level.webp" alt="Annotated overhead map of the complete level showing the critical path, optional routes, enemies, checkpoints, vertical transitions, and shortcut mechanisms" loading="lazy" width="1604" height="1800"></a><p class="media-hint">Tall diagram · Open image at full size ↗</p></figure>
         </article>
-
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>02</span><h3>Layered space and loopback</h3><p>The church turns vertical traversal into a change of perspective, while the elevator converts that spatial knowledge into a useful return route.</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="Layered space image gallery">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><img src="../assets/images/demo-church-interior.webp" alt="Whitebox church interior with overhead traversal structures" loading="lazy"><figcaption>The church interior layers floor-level combat with overhead traversal and long sightlines.</figcaption></figure>
-              <figure class="carousel-slide"><img src="../assets/images/demo-elevator.webp" alt="Whitebox elevator room and interaction point" loading="lazy"><figcaption>The elevator room provides a functional shortcut between floors rather than a purely decorative loopback.</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
-          </div>
+        <article class="study">
+          <div class="study-copy"><p class="project-kicker">Church combat sandbox</p><h3>Routes overlap across four levels.</h3><p>The church is treated as a compact multi-level sandbox rather than a single corridor. Ground-floor movement, elevated paths, drop-downs, and shortcuts repeatedly cross the same combat space from new angles.</p><p class="flow-hint">Select either diagram to inspect the full-resolution version.</p></div>
+          <figure class="media-figure diagram-figure"><a class="media-frame image-frame" href="../assets/images/demo-church-flow.webp" target="_blank" rel="noopener" aria-label="Open full-resolution church flow diagram" title="Open full image"><img src="../assets/images/demo-church-flow.webp" alt="Four annotated overhead views of the church combat sandbox showing floor changes, branching routes, enemy positions, checkpoints, and shortcuts" loading="lazy" width="1519" height="1800"></a><p class="media-hint">Tall diagram · Open image at full size ↗</p></figure>
         </article>
-
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>03</span><h3>Scale and camera iteration</h3><p>Playtesting exposed places where terrain and narrow circulation interfered with the third-person camera. Clearances were adjusted to keep movement and combat readable.</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="Scale and camera iteration image gallery">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><img src="../assets/images/demo-camera-collision-final.gif" alt="Animated playtest showing the camera colliding with terrain and obstructing the view"><figcaption>Playtest evidence: terrain pushes the camera into an obstructed view and limits spatial awareness.</figcaption></figure>
-              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">Before</span><img src="../assets/images/demo-size-before.webp" alt="Stair landing before scale adjustment" loading="lazy"></div><div><span class="comparison-label">After</span><img src="../assets/images/demo-size-after.webp" alt="Stair landing after scale adjustment" loading="lazy"></div></div><figcaption>Wider circulation and revised clearances give the camera more reliable space around the stair landing.</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
-          </div>
-        </article>
-
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>04</span><h3>Lighting pass</h3><p>Window light alone left critical circulation too dark. Selective fill lighting improves path readability while preserving contrast and atmosphere.</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="Lighting comparison image gallery">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">Before</span><img src="../assets/images/demo-light-before-1.webp" alt="Interior corridor before fill lighting" loading="lazy"></div><div><span class="comparison-label">After</span><img src="../assets/images/demo-light-after-1.webp" alt="Interior corridor after fill lighting" loading="lazy"></div></div><figcaption>Local fill separates the corridor walls and junction from the surrounding darkness.</figcaption></figure>
-              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">Before</span><img src="../assets/images/demo-light-before-2.webp" alt="Merchant area before fill lighting" loading="lazy"></div><div><span class="comparison-label">After</span><img src="../assets/images/demo-light-after-2.webp" alt="Merchant area after fill lighting" loading="lazy"></div></div><figcaption>The revised pass clarifies the merchant platform, stairs, and lower route as distinct navigable spaces.</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous image">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="Next image">→</button></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="next-project section-shell reveal">
-      <p class="eyebrow">Next project</p>
-      <a href="kcd2-analysis.html"><span>Level analysis</span><strong>For Whom the Bell Tolls</strong><span aria-hidden="true">→</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer section-shell"><span>© <span data-year></span> Ray Zheng</span><span class="footer-links"><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a></span></footer>
-</body>
+      </section>
+      <section class="case-section shell" id="iteration">
+        <div class="section-title"><p class="eyebrow">04 · Design breakdown</p><h2>Iteration made visible.</h2></div>
+        <div class="study-list">
+          <article class="study">
+            <div class="study-copy"><span>01</span><h3>Visual guidance</h3><p>Landmarks, elevation, framed openings, and contrasting interaction surfaces keep the next destination readable without reducing the space to a corridor.</p></div>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../assets/images/demo-guide-start.webp" target="_blank" rel="noopener" aria-label="Open full image: Opening view toward the elevated structure and nearby enemies" title="Open full image"><img src="../assets/images/demo-guide-start.webp" alt="Opening view toward the elevated structure and nearby enemies" loading="lazy" width="1600" height="770"></a><figcaption>The opening view establishes both immediate danger and the elevated structure that anchors the route.</figcaption></figure>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../assets/images/demo-guide-mid.webp" target="_blank" rel="noopener" aria-label="Open full image: Mid-route street with repeated landmarks and highlighted interaction surfaces" title="Open full image"><img src="../assets/images/demo-guide-mid.webp" alt="Mid-route street with repeated landmarks and highlighted interaction surfaces" loading="lazy" width="1600" height="772"></a><figcaption>Repeated landmarks and orange interaction surfaces help the player reorient midway through the level.</figcaption></figure>
+          </article>
+          <article class="study">
+            <div class="study-copy"><span>02</span><h3>Layered space and loopback</h3><p>The church turns vertical traversal into a change of perspective, while the elevator converts that spatial knowledge into a useful return route.</p></div>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../assets/images/demo-church-interior.webp" target="_blank" rel="noopener" aria-label="Open full image: Whitebox church interior with overhead traversal structures" title="Open full image"><img src="../assets/images/demo-church-interior.webp" alt="Whitebox church interior with overhead traversal structures" loading="lazy" width="1600" height="866"></a><figcaption>The church interior layers floor-level combat with overhead traversal and long sightlines.</figcaption></figure>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../assets/images/demo-elevator.webp" target="_blank" rel="noopener" aria-label="Open full image: Whitebox elevator room and interaction point" title="Open full image"><img src="../assets/images/demo-elevator.webp" alt="Whitebox elevator room and interaction point" loading="lazy" width="1600" height="866"></a><figcaption>The elevator room provides a functional shortcut between floors rather than a purely decorative loopback.</figcaption></figure>
+          </article>
+          <article class="study">
+            <div class="study-copy"><span>03</span><h3>Scale and camera iteration</h3><p>Playtesting exposed places where terrain and narrow circulation interfered with the third-person camera. Clearances were adjusted to keep movement and combat readable.</p></div>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../assets/images/demo-camera-collision-final.gif" target="_blank" rel="noopener" aria-label="Open full image: Animated playtest showing the camera colliding with terrain and obstructing the view" title="Open full image"><img src="../assets/images/demo-camera-collision-final.gif" alt="Animated playtest showing the camera colliding with terrain and obstructing the view" loading="lazy" width="640" height="310"></a><figcaption>Playtest evidence: terrain pushes the camera into an obstructed view and limits spatial awareness.</figcaption></figure>
+            <div class="media-pair">
+              <figure class="media-figure"><figcaption class="comparison-label">Before</figcaption><a class="media-frame image-frame" href="../assets/images/demo-size-before.webp" target="_blank" rel="noopener" aria-label="Open full image: Stair landing before scale adjustment" title="Open full image"><img src="../assets/images/demo-size-before.webp" alt="Stair landing before scale adjustment" loading="lazy" width="1600" height="772"></a></figure>
+              <figure class="media-figure"><figcaption class="comparison-label">After</figcaption><a class="media-frame image-frame" href="../assets/images/demo-size-after.webp" target="_blank" rel="noopener" aria-label="Open full image: Stair landing after scale adjustment" title="Open full image"><img src="../assets/images/demo-size-after.webp" alt="Stair landing after scale adjustment" loading="lazy" width="1600" height="772"></a></figure>
+            </div>
+            <p class="pair-caption">Wider circulation and revised clearances give the camera more reliable space around the stair landing.</p>
+          </article>
+          <article class="study">
+            <div class="study-copy"><span>04</span><h3>Lighting pass</h3><p>Window light alone left critical circulation too dark. Selective fill lighting improves path readability while preserving contrast and atmosphere.</p></div>
+            <div class="media-pair">
+              <figure class="media-figure"><figcaption class="comparison-label">Before</figcaption><a class="media-frame image-frame" href="../assets/images/demo-light-before-1.webp" target="_blank" rel="noopener" aria-label="Open full image: Interior corridor before fill lighting" title="Open full image"><img src="../assets/images/demo-light-before-1.webp" alt="Interior corridor before fill lighting" loading="lazy" width="1600" height="772"></a></figure>
+              <figure class="media-figure"><figcaption class="comparison-label">After</figcaption><a class="media-frame image-frame" href="../assets/images/demo-light-after-1.webp" target="_blank" rel="noopener" aria-label="Open full image: Interior corridor after fill lighting" title="Open full image"><img src="../assets/images/demo-light-after-1.webp" alt="Interior corridor after fill lighting" loading="lazy" width="1600" height="772"></a></figure>
+            </div>
+            <p class="pair-caption">Local fill separates the corridor walls and junction from the surrounding darkness.</p>
+            <div class="media-pair">
+              <figure class="media-figure"><figcaption class="comparison-label">Before</figcaption><a class="media-frame image-frame" href="../assets/images/demo-light-before-2.webp" target="_blank" rel="noopener" aria-label="Open full image: Merchant area before fill lighting" title="Open full image"><img src="../assets/images/demo-light-before-2.webp" alt="Merchant area before fill lighting" loading="lazy" width="1600" height="772"></a></figure>
+              <figure class="media-figure"><figcaption class="comparison-label">After</figcaption><a class="media-frame image-frame" href="../assets/images/demo-light-after-2.webp" target="_blank" rel="noopener" aria-label="Open full image: Merchant area after fill lighting" title="Open full image"><img src="../assets/images/demo-light-after-2.webp" alt="Merchant area after fill lighting" loading="lazy" width="1600" height="772"></a></figure>
+            </div>
+            <p class="pair-caption">The revised pass clarifies the merchant platform, stairs, and lower route as distinct navigable spaces.</p>
+          </article>
+        </div>
+      </section>
+      <section class="next-project shell"><p class="eyebrow">KEEP EXPLORING / NEXT PROJECT</p><a href="kcd2-analysis.html"><div><span>LEVEL ANALYSIS / KCD II</span><h2>For Whom the Bell Tolls</h2></div><span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="footer-name" href="mailto:zz2916@nyu.edu">Get in touch <span>↗</span><small>zz2916@nyu.edu</small></a>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Ray Zheng</span><span>LEVEL DESIGN & GAMEPLAY PROTOTYPING</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">Back to top ↑</a></div>
+    </footer>
+  </body>
 </html>

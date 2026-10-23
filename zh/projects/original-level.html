@@ -1,158 +1,114 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ray Zheng使用Unreal Engine 5独立设计并制作的ARPG类魂关卡白盒展示。">
-  <title>ARPG类魂关卡白盒展示 — Ray Zheng</title>
-  <link rel="stylesheet" href="../../assets/styles.css">
-  <script src="../../assets/site.js" defer></script>
-</head>
-<body class="zh-page">
-  <a class="skip-link" href="#main">跳到主要内容</a>
-  <header class="site-header" data-header>
-    <a class="brand" href="../index.html"><span class="brand-mark">RZ</span><span>Ray Zheng</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>菜单</button>
-    <nav class="site-nav" id="site-nav" data-nav>
-      <a href="../index.html#work">作品</a>
-      <a href="../index.html#about">关于我</a>
-      <a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:zz2916@nyu.edu">联系</a>
-      <a class="language-link" href="../../projects/original-level.html" lang="en">EN</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <header class="case-hero section-shell">
-      <a class="back-link" href="../index.html#work">← 返回作品列表</a>
-      <p class="eyebrow reveal">原创关卡 · Unreal Engine 5</p>
-      <h1 class="reveal">ARPG类魂关卡白盒展示</h1>
-      <p class="case-intro reveal">一个第三人称ARPG白盒关卡，围绕空间再认知、风险收益路线、战斗节奏，以及开通捷径后的回归体验展开。</p>
-      <dl class="project-meta reveal">
-        <div><dt>职责</dt><dd>关卡设计</dd></div>
-        <div><dt>引擎</dt><dd>Unreal Engine 5.5</dd></div>
-        <div><dt>形式</dt><dd>个人作品集项目</dd></div>
-        <div><dt>状态</dt><dd>持续完善中</dd></div>
-      </dl>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Ray Zheng使用Unreal Engine 5独立设计并制作的ARPG类魂关卡白盒展示。"><meta name="theme-color" content="#151a1d"><title>类魂关卡白盒 — Ray Zheng</title><link rel="canonical" href="https://crossoul.github.io/zh/projects/original-level.html"><link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../assets/design.css"><script src="../../assets/design.js" defer></script><meta name="color-scheme" content="dark"></head>
+  <body class="zh case-page case-original-level">
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header shell">
+      <a class="brand" href="../index.html" aria-label="Ray Zheng — 首页"><span class="brand-mark">RZ<span>.</span></span><span class="brand-name">Ray Zheng<small>LEVEL DESIGN</small></span></a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">菜单 <span aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" data-nav aria-label="主导航"><a href="../index.html#work">作品</a><a href="../index.html#about">关于</a><a href="../index.html#contact">联系</a><a class="lang-link" href="../../projects/original-level.html" lang="en">EN <span aria-hidden="true">↗</span></a></nav>
     </header>
-
-    <section class="section-shell media-block reveal">
-      <div class="video-embed bilibili-embed">
-        <iframe src="https://player.bilibili.com/player.html?bvid=BV135Ma6aEf3&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" title="ARPG类魂关卡白盒展示中文版完整视频" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="video-meta">
-        <span>中文版完整展示 · 2560×1440 · 60帧</span>
-        <a href="https://www.bilibili.com/video/BV135Ma6aEf3" target="_blank" rel="noopener">前往哔哩哔哩观看 ↗</a>
-      </div>
-    </section>
-
-    <section class="case-section section-shell two-column">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 · 项目概览</p>
-        <h2>让玩家逐步读懂空间，并最终掌握它。</h2>
-      </div>
-      <div class="prose reveal">
-        <p>关卡以清晰的主线路径为骨架，在其中穿插立体交叉、可选空间和阶段性回环。玩家再次经过熟悉区域时，会从新的高度、方向或路线重新理解之前见过的空间。</p>
-        <p>这一页面将随截图和迭代材料继续补充，包括更具体的战斗节拍、空间尺度与测试结论。</p>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">02 · 设计支柱</p><h2>白盒阶段始终围绕三个问题。</h2></div>
-      <div class="pillar-grid">
-        <article class="pillar reveal"><span>01</span><h3>玩家能否读懂目标？</h3><p>通过视线、明暗对比、构图框景与地标关系建立方向感，同时保留探索空间。</p></article>
-        <article class="pillar reveal"><span>02</span><h3>移动能否带来新理解？</h3><p>利用垂直路线，让同一空间从上方、下方与对面呈现新的意义。</p></article>
-        <article class="pillar reveal"><span>03</span><h3>回归是否值得？</h3><p>将电梯和拉杆设计成真正压缩路程的功能性捷径，让玩家确认自己已经掌握关卡。</p></article>
-      </div>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">03 · 关卡流程</p><h2>主线、支线与立体回环。</h2></div>
-      <article class="flow-study reveal">
-        <a class="flow-image" href="../../assets/images/demo-full-level.webp" target="_blank" rel="noopener" aria-label="打开全关卡高清流程图">
-          <img src="../../assets/images/demo-full-level.webp" alt="标注了主线、支线、敌人、篝火、上下楼与捷径的全关卡俯视流程图">
-        </a>
-        <div class="flow-notes">
-          <p class="project-kicker">全关卡流程</p>
-          <h3>一条主线，多次节奏转换。</h3>
-          <p>整体动线连接室外路径、建筑内部、地下洞穴与教堂战斗区域。支路通过奖励、敌人和空间变化创造短暂偏离，随后重新汇入主要流程。</p>
-          <ul class="diagram-legend" aria-label="流程图图例">
-            <li><span class="legend-line legend-critical"></span>主动线</li><li><span class="legend-line legend-optional"></span>次动线</li>
-            <li><span class="legend-line legend-underground"></span>地下路线</li><li><span class="legend-symbol legend-checkpoint">⚑</span>篝火补给点</li>
-            <li><span class="legend-symbol legend-enemy">⊗</span>敌人</li><li><span class="legend-symbol legend-vertical">⇅</span>上下楼</li>
-            <li><span class="legend-symbol legend-shortcut">⌁</span>捷径机关</li>
-          </ul>
+    <main id="main">
+      <header class="case-hero shell">
+        <div class="case-breadcrumb"><a href="../index.html#work">← 全部作品</a><span>CASE STUDY / 02</span></div>
+        <div class="case-title-block"><p class="eyebrow">原创关卡 / UE 5.5</p><h1>类魂关卡白盒</h1><p class="case-subtitle">第三人称 ARPG · 立体路线与回环</p><p class="case-lede">一个第三人称ARPG白盒关卡，围绕空间再认知、风险收益路线、战斗节奏，以及开通捷径后的回归体验展开。</p></div>
+        <dl class="project-meta">
+          <div><dt>职责</dt><dd>关卡设计</dd></div>
+          <div><dt>引擎</dt><dd>Unreal Engine 5.5</dd></div>
+          <div><dt>形式</dt><dd>个人作品集项目</dd></div>
+          <div><dt>状态</dt><dd>白盒原型</dd></div>
+        </dl>
+        <div class="quick-links"><a href="#flow">关卡流程 <span>↘</span></a><a href="#iteration">设计与迭代 <span>↘</span></a></div>
+      </header>
+      <nav class="chapter-nav" aria-label="项目章节">
+        <div class="shell">
+          <button class="chapter-toggle" type="button" aria-expanded="false" aria-controls="chapter-links">本页目录 <span aria-hidden="true">＋</span></button>
+          <span class="chapter-label">本页目录</span>
+          <div class="chapter-links" id="chapter-links"><a href="#walkthrough"><span>01</span> 完整视频</a><a href="#overview"><span>02</span> 项目概览</a><a href="#pillars"><span>03</span> 设计重点</a><a href="#flow"><span>04</span> 关卡流程</a><a href="#iteration"><span>05</span> 设计与迭代</a></div>
         </div>
-      </article>
-
-      <article class="flow-study flow-study-reverse reveal">
-        <a class="flow-image" href="../../assets/images/demo-church-flow.webp" target="_blank" rel="noopener" aria-label="打开教堂高清流程图">
-          <img src="../../assets/images/demo-church-flow.webp" alt="展示教堂多层路线、敌人位置、上下层切换与捷径的四张俯视图">
-        </a>
-        <div class="flow-notes">
-          <p class="project-kicker">教堂战斗小箱庭</p>
-          <h3>四层路线交叠在同一个战斗空间。</h3>
-          <p>教堂不是一条单向走廊，而是一个紧凑的多层小箱庭。一楼战斗、高层路径、跳下点和捷径不断从新角度穿过同一空间。</p>
-          <p class="flow-hint">点击流程图可以查看高清版本。</p>
+      </nav>
+      <section class="shell media-block" id="walkthrough">
+        <div class="video-embed bilibili-embed"><iframe src="https://player.bilibili.com/player.html?bvid=BV135Ma6aEf3&amp;page=1&amp;high_quality=1&amp;danmaku=0&amp;autoplay=0" title="ARPG类魂关卡白盒展示中文版完整视频" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture; encrypted-media" allowfullscreen></iframe></div>
+        <div class="video-meta"><span>中文版完整展示 · 2560×1440 · 60帧</span><a href="https://www.bilibili.com/video/BV135Ma6aEf3" target="_blank" rel="noopener">前往哔哩哔哩观看 ↗</a></div>
+      </section>
+      <section class="case-section shell" id="overview">
+        <div class="section-title"><p class="eyebrow">01 · 项目概览</p><h2>让玩家逐步读懂空间，并最终掌握它。</h2></div>
+        <div class="prose"><p>关卡以清晰的主线路径为骨架，在其中穿插立体交叉、可选空间和阶段性回环。玩家再次经过熟悉区域时，会从新的高度、方向或路线重新理解之前见过的空间。</p><p>下方通过流程图、场景截图和测试记录，说明空间组织与白盒迭代。</p></div>
+      </section>
+      <section class="case-section shell" id="pillars">
+        <div class="section-title"><p class="eyebrow">02 · 设计支柱</p><h2>白盒阶段始终围绕三个问题。</h2></div>
+        <div class="note-list">
+          <article class="note-item"><span>01</span><h3>玩家能否读懂目标？</h3><p>通过视线、明暗对比、构图框景与地标关系建立方向感，同时保留探索空间。</p></article>
+          <article class="note-item"><span>02</span><h3>移动能否带来新理解？</h3><p>利用垂直路线，让同一空间从上方、下方与对面呈现新的意义。</p></article>
+          <article class="note-item"><span>03</span><h3>回归是否值得？</h3><p>将电梯和拉杆设计成真正压缩路程的功能性捷径，让玩家确认自己已经掌握关卡。</p></article>
         </div>
-      </article>
-    </section>
-
-    <section class="case-section section-shell">
-      <div class="section-heading reveal"><p class="eyebrow">04 · 设计拆解</p><h2>把迭代过程呈现出来。</h2></div>
-      <div class="case-gallery">
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>01</span><h3>视觉引导</h3><p>利用地标、高差、框景和高对比度的互动表面持续提示下一步方向，同时避免把探索空间压缩成单向走廊。</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="视觉引导图片组">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><img src="../../assets/images/demo-guide-start.webp" alt="开场视角中的高处结构与附近敌人" loading="lazy"><figcaption>开场同时呈现眼前威胁和远处的高层结构，让玩家对路线形成初步预期。</figcaption></figure>
-              <figure class="carousel-slide"><img src="../../assets/images/demo-guide-mid.webp" alt="关卡中段的重复地标与高亮互动表面" loading="lazy"><figcaption>中段继续复用地标，并用橙色互动表面帮助玩家重新确认位置与方向。</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
+      </section>
+      <section class="case-section shell" id="flow">
+        <div class="section-title"><p class="eyebrow">03 · 关卡流程</p><h2>主线、支线与立体回环。</h2></div>
+        <article class="study">
+          <div class="study-copy">
+            <p class="project-kicker">全关卡流程</p>
+            <h3>一条主线，多次节奏转换。</h3>
+            <p>整体动线连接室外路径、建筑内部、地下洞穴与教堂战斗区域。支路通过奖励、敌人和空间变化创造短暂偏离，随后重新汇入主要流程。</p>
+            <ul class="diagram-legend" aria-label="流程图图例">
+              <li><span class="legend-line legend-critical"></span>主动线</li>
+              <li><span class="legend-line legend-optional"></span>次动线</li>
+              <li><span class="legend-line legend-underground"></span>地下路线</li>
+              <li><span class="legend-symbol legend-checkpoint">⚑</span>篝火补给点</li>
+              <li><span class="legend-symbol legend-enemy">⊗</span>敌人</li>
+              <li><span class="legend-symbol legend-vertical">⇅</span>上下楼</li>
+              <li><span class="legend-symbol legend-shortcut">⌁</span>捷径机关</li>
+            </ul>
           </div>
+          <figure class="media-figure diagram-figure"><a class="media-frame image-frame" href="../../assets/images/demo-full-level.webp" target="_blank" rel="noopener" aria-label="打开全关卡高清流程图" title="查看完整图片"><img src="../../assets/images/demo-full-level.webp" alt="标注了主线、支线、敌人、篝火、上下楼与捷径的全关卡俯视流程图" loading="lazy" width="1604" height="1800"></a><p class="media-hint">流程长图 · 点击图片查看完整尺寸 ↗</p></figure>
         </article>
-
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>02</span><h3>立体空间与捷径</h3><p>教堂用垂直路线改变玩家观察同一空间的角度，电梯则把这份空间认知转化为真正缩短回程的功能性捷径。</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="立体空间图片组">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><img src="../../assets/images/demo-church-interior.webp" alt="包含高处路线的白盒教堂内部" loading="lazy"><figcaption>教堂内部将地面战斗、高处通路和长距离视线叠加在同一空间中。</figcaption></figure>
-              <figure class="carousel-slide"><img src="../../assets/images/demo-elevator.webp" alt="白盒电梯房与互动点" loading="lazy"><figcaption>电梯连接上下层路线，让回环不仅是视觉上的重访，也能实际压缩移动时间。</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
-          </div>
+        <article class="study">
+          <div class="study-copy"><p class="project-kicker">教堂战斗小箱庭</p><h3>四层路线交叠在同一个战斗空间。</h3><p>教堂不是一条单向走廊，而是一个紧凑的多层小箱庭。一楼战斗、高层路径、跳下点和捷径不断从新角度穿过同一空间。</p><p class="flow-hint">点击流程图可以查看高清版本。</p></div>
+          <figure class="media-figure diagram-figure"><a class="media-frame image-frame" href="../../assets/images/demo-church-flow.webp" target="_blank" rel="noopener" aria-label="打开教堂高清流程图" title="查看完整图片"><img src="../../assets/images/demo-church-flow.webp" alt="展示教堂多层路线、敌人位置、上下层切换与捷径的四张俯视图" loading="lazy" width="1519" height="1800"></a><p class="media-hint">流程长图 · 点击图片查看完整尺寸 ↗</p></figure>
         </article>
-
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>03</span><h3>尺度与相机迭代</h3><p>测试发现部分地形与狭窄通道会干扰第三人称相机。随后通过调整净空和通行尺度，让移动与战斗画面保持可读。</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="尺度与相机迭代图片组">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><img src="../../assets/images/demo-camera-collision-final.gif" alt="测试中相机被地形碰撞并遮挡视野的动态画面"><figcaption>测试记录：地形将相机挤入遮挡视角，明显限制了玩家对周围空间的判断。</figcaption></figure>
-              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">调整前</span><img src="../../assets/images/demo-size-before.webp" alt="尺度调整前的楼梯平台" loading="lazy"></div><div><span class="comparison-label">调整后</span><img src="../../assets/images/demo-size-after.webp" alt="尺度调整后的楼梯平台" loading="lazy"></div></div><figcaption>加宽通行空间并重新处理净空后，相机在楼梯平台周围拥有更稳定的活动范围。</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
-          </div>
-        </article>
-
-        <article class="gallery-card reveal">
-          <div class="gallery-card-head"><span>04</span><h3>室内补光迭代</h3><p>仅依赖窗口光时，关键通路容易淹没在黑暗中。加入有选择的补光后，在保留氛围和明暗层次的同时提升了路线辨识度。</p></div>
-          <div class="carousel" data-carousel tabindex="0" aria-label="室内补光对比图片组">
-            <div class="carousel-viewport"><div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">补光前</span><img src="../../assets/images/demo-light-before-1.webp" alt="补光前的室内走廊" loading="lazy"></div><div><span class="comparison-label">补光后</span><img src="../../assets/images/demo-light-after-1.webp" alt="补光后的室内走廊" loading="lazy"></div></div><figcaption>局部补光将走廊墙体和转折处从大面积黑暗中分离出来。</figcaption></figure>
-              <figure class="carousel-slide"><div class="comparison-pair"><div><span class="comparison-label">补光前</span><img src="../../assets/images/demo-light-before-2.webp" alt="补光前的商人区域" loading="lazy"></div><div><span class="comparison-label">补光后</span><img src="../../assets/images/demo-light-after-2.webp" alt="补光后的商人区域" loading="lazy"></div></div><figcaption>调整后的光照让商人平台、楼梯和下层路线成为清晰可区分的通行空间。</figcaption></figure>
-            </div></div>
-            <div class="carousel-controls"><button type="button" data-carousel-prev aria-label="上一张图片">←</button><span data-carousel-status aria-live="polite">1 / 2</span><button type="button" data-carousel-next aria-label="下一张图片">→</button></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="next-project section-shell reveal">
-      <p class="eyebrow">下一个项目</p>
-      <a href="kcd2-analysis.html"><span>商业游戏关卡分析</span><strong>绝境丧钟</strong><span aria-hidden="true">→</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer section-shell"><span>© <span data-year></span> Ray Zheng</span><span class="footer-links"><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a></span></footer>
-</body>
+      </section>
+      <section class="case-section shell" id="iteration">
+        <div class="section-title"><p class="eyebrow">04 · 设计拆解</p><h2>视觉引导、立体空间与白盒迭代。</h2></div>
+        <div class="study-list">
+          <article class="study">
+            <div class="study-copy"><span>01</span><h3>视觉引导</h3><p>利用地标、高差、框景和高对比度的互动表面持续提示下一步方向，同时避免把探索空间压缩成单向走廊。</p></div>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/demo-guide-start.webp" target="_blank" rel="noopener" aria-label="查看完整图片：开场视角中的高处结构与附近敌人" title="查看完整图片"><img src="../../assets/images/demo-guide-start.webp" alt="开场视角中的高处结构与附近敌人" loading="lazy" width="1600" height="770"></a><figcaption>开场同时呈现眼前威胁和远处的高层结构，让玩家对路线形成初步预期。</figcaption></figure>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/demo-guide-mid.webp" target="_blank" rel="noopener" aria-label="查看完整图片：关卡中段的重复地标与高亮互动表面" title="查看完整图片"><img src="../../assets/images/demo-guide-mid.webp" alt="关卡中段的重复地标与高亮互动表面" loading="lazy" width="1600" height="772"></a><figcaption>中段继续复用地标，并用橙色互动表面帮助玩家重新确认位置与方向。</figcaption></figure>
+          </article>
+          <article class="study">
+            <div class="study-copy"><span>02</span><h3>立体空间与捷径</h3><p>教堂用垂直路线改变玩家观察同一空间的角度，电梯则把这份空间认知转化为真正缩短回程的功能性捷径。</p></div>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/demo-church-interior.webp" target="_blank" rel="noopener" aria-label="查看完整图片：包含高处路线的白盒教堂内部" title="查看完整图片"><img src="../../assets/images/demo-church-interior.webp" alt="包含高处路线的白盒教堂内部" loading="lazy" width="1600" height="866"></a><figcaption>教堂内部将地面战斗、高处通路和长距离视线叠加在同一空间中。</figcaption></figure>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/demo-elevator.webp" target="_blank" rel="noopener" aria-label="查看完整图片：白盒电梯房与互动点" title="查看完整图片"><img src="../../assets/images/demo-elevator.webp" alt="白盒电梯房与互动点" loading="lazy" width="1600" height="866"></a><figcaption>电梯连接上下层路线，让回环不仅是视觉上的重访，也能实际压缩移动时间。</figcaption></figure>
+          </article>
+          <article class="study">
+            <div class="study-copy"><span>03</span><h3>尺度与相机迭代</h3><p>测试发现部分地形与狭窄通道会干扰第三人称相机。随后通过调整净空和通行尺度，让移动与战斗画面保持可读。</p></div>
+            <figure class="media-figure"><a class="media-frame image-frame" href="../../assets/images/demo-camera-collision-final.gif" target="_blank" rel="noopener" aria-label="查看完整图片：测试中相机被地形碰撞并遮挡视野的动态画面" title="查看完整图片"><img src="../../assets/images/demo-camera-collision-final.gif" alt="测试中相机被地形碰撞并遮挡视野的动态画面" loading="lazy" width="640" height="310"></a><figcaption>测试记录：地形将相机挤入遮挡视角，明显限制了玩家对周围空间的判断。</figcaption></figure>
+            <div class="media-pair">
+              <figure class="media-figure"><figcaption class="comparison-label">调整前</figcaption><a class="media-frame image-frame" href="../../assets/images/demo-size-before.webp" target="_blank" rel="noopener" aria-label="查看完整图片：尺度调整前的楼梯平台" title="查看完整图片"><img src="../../assets/images/demo-size-before.webp" alt="尺度调整前的楼梯平台" loading="lazy" width="1600" height="772"></a></figure>
+              <figure class="media-figure"><figcaption class="comparison-label">调整后</figcaption><a class="media-frame image-frame" href="../../assets/images/demo-size-after.webp" target="_blank" rel="noopener" aria-label="查看完整图片：尺度调整后的楼梯平台" title="查看完整图片"><img src="../../assets/images/demo-size-after.webp" alt="尺度调整后的楼梯平台" loading="lazy" width="1600" height="772"></a></figure>
+            </div>
+            <p class="pair-caption">加宽通行空间并重新处理净空后，相机在楼梯平台周围拥有更稳定的活动范围。</p>
+          </article>
+          <article class="study">
+            <div class="study-copy"><span>04</span><h3>室内补光迭代</h3><p>仅依赖窗口光时，关键通路容易淹没在黑暗中。加入有选择的补光后，在保留氛围和明暗层次的同时提升了路线辨识度。</p></div>
+            <div class="media-pair">
+              <figure class="media-figure"><figcaption class="comparison-label">补光前</figcaption><a class="media-frame image-frame" href="../../assets/images/demo-light-before-1.webp" target="_blank" rel="noopener" aria-label="查看完整图片：补光前的室内走廊" title="查看完整图片"><img src="../../assets/images/demo-light-before-1.webp" alt="补光前的室内走廊" loading="lazy" width="1600" height="772"></a></figure>
+              <figure class="media-figure"><figcaption class="comparison-label">补光后</figcaption><a class="media-frame image-frame" href="../../assets/images/demo-light-after-1.webp" target="_blank" rel="noopener" aria-label="查看完整图片：补光后的室内走廊" title="查看完整图片"><img src="../../assets/images/demo-light-after-1.webp" alt="补光后的室内走廊" loading="lazy" width="1600" height="772"></a></figure>
+            </div>
+            <p class="pair-caption">局部补光将走廊墙体和转折处从大面积黑暗中分离出来。</p>
+            <div class="media-pair">
+              <figure class="media-figure"><figcaption class="comparison-label">补光前</figcaption><a class="media-frame image-frame" href="../../assets/images/demo-light-before-2.webp" target="_blank" rel="noopener" aria-label="查看完整图片：补光前的商人区域" title="查看完整图片"><img src="../../assets/images/demo-light-before-2.webp" alt="补光前的商人区域" loading="lazy" width="1600" height="772"></a></figure>
+              <figure class="media-figure"><figcaption class="comparison-label">补光后</figcaption><a class="media-frame image-frame" href="../../assets/images/demo-light-after-2.webp" target="_blank" rel="noopener" aria-label="查看完整图片：补光后的商人区域" title="查看完整图片"><img src="../../assets/images/demo-light-after-2.webp" alt="补光后的商人区域" loading="lazy" width="1600" height="772"></a></figure>
+            </div>
+            <p class="pair-caption">调整后的光照让商人平台、楼梯和下层路线成为清晰可区分的通行空间。</p>
+          </article>
+        </div>
+      </section>
+      <section class="next-project shell"><p class="eyebrow">继续浏览 / 下一个项目</p><a href="kcd2-analysis.html"><div><span>关卡分析 / 天国：拯救 II</span><h2>绝境丧钟</h2></div><span aria-hidden="true">↗</span></a></section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="footer-name" href="mailto:zz2916@nyu.edu">联系我 <span>↗</span><small>zz2916@nyu.edu</small></a>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Ray Zheng</span><span>LEVEL DESIGN & GAMEPLAY PROTOTYPING</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#main">回到顶部 ↑</a></div>
+    </footer>
+  </body>
 </html>
