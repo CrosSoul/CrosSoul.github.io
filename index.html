@@ -1,146 +1,130 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ray Zheng — level designer focused on readable, interconnected spaces and systemic gameplay.">
-  <title>Ray Zheng — Level Designer</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/site.js" defer></script>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Level design and Unreal Engine prototypes by Ray Zheng. Spaces, systems, and player decisions."><meta name="theme-color" content="#141714"><title>Ray Zheng — Level Design Portfolio</title><link rel="stylesheet" href="assets/portfolio.css"><script src="assets/site.js" defer></script><script src="assets/portfolio.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" data-header>
-    <a class="brand" href="index.html" aria-label="Ray Zheng, home">
-      <span class="brand-mark">RZ</span>
-      <span>Ray Zheng</span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
-    <nav class="site-nav" id="site-nav" data-nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:zz2916@nyu.edu">Contact</a>
-      <a class="language-link" href="zh/index.html" lang="zh-CN">中文</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero section-shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Level design portfolio · New York</p>
-        <h1>I design spaces that make players <em>read, choose, and remember.</em></h1>
-        <p class="hero-lede">I’m Ray Zheng, a level designer working in Unreal Engine. My work explores interconnected layouts, spatial guidance, encounter pacing, and systemic player choice.</p>
-        <div class="button-row">
-          <a class="button button-primary" href="#work">View selected work</a>
-          <a class="button button-quiet" href="mailto:zz2916@nyu.edu">zz2916@nyu.edu</a>
-        </div>
-      </div>
-
-      <div class="route-panel reveal" aria-label="Abstract level route diagram">
-        <div class="route-grid"></div>
-        <span class="route-label route-label-a">Entry</span>
-        <span class="route-label route-label-b">Choice</span>
-        <span class="route-label route-label-c">Loopback</span>
-        <span class="route-label route-label-d">Goal</span>
-        <span class="route-node node-a"></span>
-        <span class="route-node node-b"></span>
-        <span class="route-node node-c"></span>
-        <span class="route-node node-d"></span>
-        <svg class="route-lines" viewBox="0 0 600 460" role="img" aria-label="A branching route reconnecting at the goal">
-          <path d="M70 345 C150 345 155 248 250 248 S350 112 455 112" />
-          <path d="M250 248 C330 280 335 350 450 350 C515 350 535 280 505 220 C490 190 470 155 455 112" />
-        </svg>
-        <p class="route-caption">Readable choices.<br>Meaningful returns.</p>
-      </div>
-    </section>
-
-    <section class="work section-shell" id="work">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Selected work</p>
-        <h2>Two ways of studying space: building it and breaking it down.</h2>
-      </div>
-
-      <article class="project-card project-card-featured reveal">
-        <a class="project-visual image-visual" href="projects/original-level.html" aria-label="View ARPG Level Prototyping Showcase">
-          <img src="assets/images/arpg-showcase-cover.webp" alt="Cover artwork for ARPG Level Prototyping Showcase featuring a lone warrior approaching a monumental gothic church">
-          <span class="visual-status">Watch walkthrough · 1440p60</span>
-          <span class="visual-index">01</span>
-        </a>
-        <div class="project-card-copy">
-          <p class="project-kicker">Original level · Unreal Engine 5</p>
-          <h3><a href="projects/original-level.html">ARPG Level Prototyping Showcase</a></h3>
-          <p>A third-person whitebox level built to demonstrate layered traversal, spatial reorientation, combat pacing, and shortcut-driven progression.</p>
-          <ul class="tag-list" aria-label="Project tags">
-            <li>Level blockout</li>
-            <li>Blueprint scripting</li>
-            <li>Player guidance</li>
-          </ul>
-          <a class="text-link" href="projects/original-level.html">View case study <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <a class="project-visual image-visual" href="projects/kcd2-analysis.html" aria-label="View Kingdom Come Deliverance II level analysis">
-          <img src="assets/images/kcd2-castle.webp" alt="Aerial view of Trosky Castle from Kingdom Come: Deliverance II">
-          <span class="visual-index">02</span>
-        </a>
-        <div class="project-card-copy">
-          <p class="project-kicker">Level analysis · Kingdom Come: Deliverance II</p>
-          <h3><a href="projects/kcd2-analysis.html">For Whom the Bell Tolls</a></h3>
-          <p>A systems-focused breakdown of a timed castle infiltration: spatial zoning, lawful and emergent routes, diegetic pressure, AI behavior, and actionable redesign proposals.</p>
-          <ul class="tag-list" aria-label="Project tags">
-            <li>Spatial analysis</li>
-            <li>Immersive sim</li>
-            <li>Post-mortem</li>
-          </ul>
-          <a class="text-link" href="projects/kcd2-analysis.html">Read analysis <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-
-      <article class="research-teaser reveal">
-        <div class="research-teaser-title">
-          <p class="project-kicker">03 · Additional research</p>
-          <h3><a href="projects/elden-ring-research.html">How Open-World Level Design Reframes Difficulty</a></h3>
-        </div>
-        <div class="research-teaser-copy">
-          <p>A data-informed study of how Elden Ring’s open-world structure turns fixed difficulty gates into player-directed preparation, exploration, and return.</p>
-          <ul class="tag-list" aria-label="Research tags">
-            <li>Research lead</li><li>Data analysis</li><li>RStudio</li>
-          </ul>
-          <a class="text-link" href="projects/elden-ring-research.html">View research summary <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
-    </section>
-
-    <section class="about section-shell" id="about">
-      <div class="section-heading reveal">
-        <p class="eyebrow">About</p>
-        <h2>Design through observation, iteration, and player intent.</h2>
-      </div>
-      <div class="about-grid reveal">
-        <p>I’m an NYU undergraduate transitioning my analytical background into level design. I build playable spaces in Unreal Engine and study shipped levels to understand how layout, rules, AI, and presentation shape player decisions.</p>
-        <dl class="fact-list">
-          <div><dt>Focus</dt><dd>Level Design</dd></div>
-          <div><dt>Tools</dt><dd>Unreal Engine 5 · Blueprints</dd></div>
-          <div><dt>Location</dt><dd>New York, NY</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="contact section-shell reveal">
-      <p class="eyebrow">Let’s talk</p>
-      <h2>Interested in how I think about playable space?</h2>
-      <div class="button-row contact-actions">
-        <a class="button button-primary" href="mailto:zz2916@nyu.edu">Email Ray</a>
-        <a class="button button-quiet" href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">View LinkedIn</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer section-shell">
-    <span>© <span data-year></span> Ray Zheng</span>
-    <a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn</a>
-  </footer>
+<body class="portfolio-v2  home-page"><a class="skip-link" href="#main">Skip to content</a>
+<header class="pv-header shell"><a class="pv-brand" href="index.html"><span class="monogram">RZ<span>.</span></span><span>Ray Zheng<small>LEVEL DESIGN</small></span></a>
+<button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav" type="button">Menu
+</button>
+<nav class="site-nav" id="site-nav" data-nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="mailto:zz2916@nyu.edu">Contact ↗</a><a class="lang-link" href="zh/index.html" lang="zh-CN">中文</a>
+</nav>
+</header>
+<main id="main">
+<section class="home-hero shell">
+<div class="hero-heading">
+<p class="overline">RAY ZHENG / LEVEL DESIGN PORTFOLIO
+</p>
+<h1>Readable spaces.<br>Meaningful choices.
+</h1>
+<p class="hero-description">I build levels and gameplay prototypes in Unreal Engine, exploring how spatial layouts, mechanics, and player learning shape an experience.
+</p><a class="solid-link" href="#work">Explore the work <span>↓</span></a>
+</div>
+        <a class="hero-window" href="projects/thunder-temple.html"><img src="assets/images/thunder-temple-entry-gameplay.webp" alt="Thunder Temple blockout gameplay: courtyard, character, and petrified dragon" fetchpriority="high" width="1817" height="866"><span class="image-topline">UNREAL ENGINE 5.5 <span>01 / THUNDER TEMPLE</span></span>
+<div class="hero-window-title"><span>LATEST PROJECT / SYSTEMIC LEVEL DESIGN</span><strong>Thunder<br>Temple<span>↗</span></strong>
+</div><span class="image-footnote">GAMEPLAY / HUD REMOVED</span></a>
+</section>
+<div class="practice-strip shell"><span>DESIGN & BUILD</span>
+<p>Unreal Engine 5 <span>/</span> Blueprints <span>/</span> Spaces & systems
+</p><a href="#work">SELECTED WORK 01—04 ↓</a>
+</div>
+<section class="selected shell" id="work">
+<div class="section-title">
+<div>
+<p class="overline">SELECTED WORK
+</p>
+<h2>From rules to spaces.
+</h2>
+</div>
+<p>Original levels, close readings of shipped games, and data-informed research.
+</p>
+</div>
+<article class="feature-project"><a class="feature-image" href="projects/thunder-temple.html"><img src="assets/images/thunder-temple-entry-gameplay.webp" alt="Thunder Temple courtyard blockout gameplay" loading="lazy" width="1817" height="866"><span class="image-badge">01 / ORIGINAL LEVEL</span><span class="image-arrow">↗</span></a>
+<div class="feature-copy">
+<p class="overline">UE 5.5 · BLUEPRINTS
+</p>
+<h3><a href="projects/thunder-temple.html">Thunder Temple</a>
+</h3>
+<p>First decide where lightning strikes, then where its energy goes. A third-person level prototype about lightning, circuits, and traversal.
+</p>
+<ul class="chips">
+<li>Mechanic teaching
+</li>
+<li>Spatial puzzles
+</li>
+<li>Combat application
+</li>
+</ul><a class="under-link" href="projects/thunder-temple.html">Explore the case study <span>↗</span></a>
+</div>
+</article>
+<div class="project-pair">
+<article class="work-item"><a class="work-image" href="projects/original-level.html"><img src="assets/images/arpg-showcase-cover.webp" alt="ARPG level showcase cover" loading="lazy" width="900" height="560"><span class="image-badge">02 / ORIGINAL LEVEL</span></a>
+<div class="work-item-heading">
+<h3><a href="projects/original-level.html">ARPG Level Blockout</a>
+</h3><span>↗</span>
+</div>
+<p>Layered traversal, a compact church encounter, and shortcuts that change how familiar spaces are understood.
+</p>
+<p class="work-tags">SPATIAL GUIDANCE / ENCOUNTER PACING / ITERATION
+</p>
+</article>
+<article class="work-item"><a class="work-image" href="projects/kcd2-analysis.html"><img src="assets/images/kcd2-castle.webp" alt="Trosky Castle in Kingdom Come Deliverance II" loading="lazy" width="900" height="560"><span class="image-badge">03 / LEVEL ANALYSIS</span></a>
+<div class="work-item-heading">
+<h3><a href="projects/kcd2-analysis.html">For Whom the Bell Tolls</a>
+</h3><span>↗</span>
+</div>
+<p>A close reading of Kingdom Come: Deliverance II: access, route tradeoffs, and an audible countdown in a castle infiltration.
+</p>
+<p class="work-tags">SPATIAL ZONING / PLAY ANALYSIS / REDESIGN
+</p>
+</article>
+</div>
+<article class="research-row"><span class="research-number">04</span>
+<div>
+<p class="overline">ADDITIONAL RESEARCH / ELDEN RING
+</p>
+<h3><a href="projects/elden-ring-research.html">How open worlds reframe difficulty</a>
+</h3>
+<p>A study of exploration, preparation, and return, with explicit limits on what the data can establish.
+</p>
+</div><a class="circle-link" href="projects/elden-ring-research.html" aria-label="View research">↗</a>
+</article>
+</section>
+<section class="about-section shell" id="about">
+<p class="overline">ABOUT
+</p>
+<div class="about-layout">
+<h2>Observe play.<br>Question space.
+</h2>
+<div>
+<p>I’m an NYU undergraduate applying an analytical background to level design. I build playable spaces in Unreal Engine and study shipped levels to understand how layout, rules, AI, and presentation shape player decisions.
+</p>
+<dl class="about-facts">
+<div>
+<dt>FOCUS
+</dt>
+<dd>Level design & gameplay prototyping
+</dd>
+</div>
+<div>
+<dt>TOOLS
+</dt>
+<dd>Unreal Engine 5 · Blueprints
+</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+<section class="contact-section shell">
+<p class="overline">GET IN TOUCH
+</p>
+<div>
+<h2>Let’s talk<br>playable spaces.
+</h2><a class="under-link" href="mailto:zz2916@nyu.edu">zz2916@nyu.edu <span>↗</span></a>
+</div>
+</section>
+</main>
+<footer class="pv-footer shell"><span>© <span data-year></span> Ray Zheng</span><span>SPACE / SYSTEMS / PLAYER CHOICE</span><a href="https://www.linkedin.com/in/zerui-zheng" target="_blank" rel="noopener">LinkedIn ↗</a>
+</footer>
 </body>
 </html>
